@@ -1,0 +1,375 @@
+/*CSS reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*common setting*/
+body,*{
+	font-family: '微軟正黑體';
+	box-sizing: border-box;
+}
+
+#wrap{
+	width:1024px;
+	margin: 0 auto;
+}
+
+
+.clearfix:after{
+	content:'';
+	display: table;
+	clear: both;
+}
+
+a{
+	text-decoration: none;
+}
+h1{
+	font-size:2rem;
+	font-weight: normal;
+}
+h2{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+h3{
+	font-weight: bold;
+	font-size: 1.17em;
+}
+img{
+	vertical-align: sub;
+}
+
+#nav li a{
+	font-weight: bolder;
+}
+
+input,.button{
+	border:0;
+	border-radius: 4px;
+}
+input{
+	padding-left: 9px;
+}
+input:focus{
+	background: #EEEEEE;
+}
+
+.button, #content .product .intro > li, input{
+	transition:linear .3s;
+}
+
+/*header*/
+#social-media{
+	background-color: #f6f6f6;
+}
+
+#social-media ul{
+	float: right;
+	margin-right: 5px;
+	line-height: 28px;
+}
+#social-media li{
+	float: left;
+	margin-right: 5px;
+}
+
+/*粉絲團右邊的的|*/
+#social-media .erect-wrap{
+	box-sizing: border-box;
+	padding-top: 2px;
+}
+#social-media .erect{
+	display: inline-block;
+	height: 14px;
+	border: 1px solid #cccccc;
+	border-width:1px;
+}
+
+#social-media .fb a{
+	color:#4460a0;
+}
+
+#social-media .twitter a{
+	color:#00aaec;
+}
+
+#nav{
+	height: 50px;
+}
+#nav .logo{
+	float: left;
+}
+#nav .nav{
+	float: right;
+}
+#nav .header-logo{
+	display: block;
+	margin-top: 8px;
+	height: 36px;
+	width: 170px;
+	background: url(../img/header-logo_03.png);
+	text-indent: -999px;
+	overflow: hidden;
+}
+#nav li{
+	float: left;
+	line-height: 50px;
+	margin:0 10px 0 25px;
+}
+
+#nav li a{
+	display: block;
+	height: 100%;
+	padding:0 8px;
+	color:#00cc99;
+}
+
+
+#nav li a.active{
+	border-bottom: 3px solid #00cc99; 
+}
+
+/*content*/
+#content{
+	width: 100%;
+}
+#content .banner{
+	margin-top: 3px;
+	padding: 120px 0;
+	height: 397px;
+	width: 1024px;
+	background: url(../img/banner_02.jpg) center;
+	background-size: cover;
+	box-sizing: border-box;
+	color:white;
+}
+#content .banner:hover{
+	cursor: pointer;
+}
+#content .banner .rect{
+	padding:35px 20px;
+	background:rgba(0,0,0,0.2);
+}
+#content h1{
+	margin:5px 0;
+}
+
+#content .product{
+	width: 100%;
+	margin: 65px 0 0 0;
+	box-sizing: border-box;
+	padding: 23px 0 0 18px;
+}
+
+#content .product ul{
+	width: 100%;
+
+}
+#content .product .intro .img{
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	height: 137px;
+}
+#content .product .intro > li{
+	box-sizing: border-box;
+	float: left;
+	height: 325px;
+	width: 300px;
+	margin: 0 15px;
+	padding:13px ;
+	text-align: center;
+	border:0.3px solid #f1f1f1;
+	border-top: 0;
+	box-shadow: 0 2px 1px 0px #dbdbdb;
+}
+#content .product .intro > li:hover{
+	cursor:pointer;
+	box-shadow: 0 2px 20px 0px #dbdbdb;
+}
+#content .product .intro > li .vertical-align{
+	padding-top: 15px;
+}
+#content .product .intro > li h3{
+	line-height: 1.5;
+}
+#content .product .intro > li p{
+	line-height: 1.5;
+	text-align: justify;
+}
+
+
+#content .product .intro .jquery  ul{
+	padding-left: 6px;
+}
+#content .product .intro .jquery li{
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 9px;
+	background: url(../img/list-stly-square-_07.jpg) no-repeat center left;
+}
+
+
+#content .comparison{
+	margin-top: 55px;
+}
+#content .comparison h2{
+	text-align: center;
+}
+
+#content .comparison table{
+	width: 840px;
+	margin: 30px auto 0 auto;
+}
+#wrap #content .comparison tr:hover{
+	background: #E0E0E0;
+}
+#content .comparison th{
+	background: #f7f7f7;
+	font-weight: bolder;
+}
+#content .comparison td,th{
+	box-sizing: border-box;
+	width: 230px;
+	padding: 13px 0;
+	border-top:1px solid #dddddd ;
+	border-bottom:1px solid #dddddd ;
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left;
+}
+#content .comparison table tr th:last-child{
+	width: 150px;
+}
+#content .comparison table tr td:last-child{
+	width: 150px;
+}
+#content .comparison table tr td:nth-child(1){
+	padding-left:21px;
+}
+#content .comparison table tr th:nth-child(1){
+	padding-left:21px;
+}
+
+#content .comparison table .colored{
+	color:#42b392;
+}
+
+
+#content .messege-us{
+	margin-top: 60px;
+	padding: 30px 20px 20px;
+	height:405px;
+	background:url(../img/form-bg_15.jpg) repeat-x;
+	color:white;
+}
+#content .messege-us form{
+	margin-top:30px;
+}
+#content .messege-us h2{
+	text-align: center;
+	margin: 5px 0;
+}
+
+#content .messege-us .left{
+	float: left;
+}
+#content .messege-us .left input{
+	height:245px;
+	width: 460px;
+}
+#content .messege-us .right{
+	float: right;
+	position: relative;
+}
+#content .messege-us .right div{
+	margin-bottom: 15px;
+}
+#content .messege-us .right label{
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+#content .messege-us .right input{	
+	height: 30px;
+	width: 460px;
+}
+#content .messege-us .right .button{
+	margin-top: 19px;
+	padding-top:7px ;
+	height: 30px;
+	width:70px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	background: #00cc99;
+	text-align: center;
+}	
+#content .messege-us .right .button:hover{
+	background: #02ecb1;
+	cursor: pointer;
+}
+
+/*footer*/
+
+#footer{
+	height: 120px;
+	padding-top: 26px;
+	font-weight: 600;
+}
+
+#footer .logo{
+	float: left;
+}
+
+#footer .contact-us{
+	float: right;
+}
+
+#footer .contact-us p{
+	padding-bottom: 10px;
+}
+#footer .contact-us a{
+	color:#e12d80;
+}
