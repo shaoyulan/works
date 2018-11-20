@@ -110,7 +110,8 @@ input:focus{
 	line-height: 28px;
 }
 #social-media li{
-	float: left;  /*作業修正--刪除*/
+	float: left;
+	margin-right: 5px;
 }
 
 /*粉絲團右邊的的|*/
@@ -118,16 +119,11 @@ input:focus{
 	box-sizing: border-box;
 	padding-top: 2px;
 }
-#social-media .erect:after{
-	content:'';
+#social-media .erect{
 	display: inline-block;
-	height: 12px;
-	border-right: 1px solid #cccccc;
-	/*vertical-align: middle; 高度變更會因要一直Vertical-align而上下變長*/
-}
-
-#social-media a{
-	padding:0 5px; /*作業修正--新增*/
+	height: 14px;
+	border: 1px solid #cccccc;
+	border-width:1px;
 }
 
 #social-media .fb a{
