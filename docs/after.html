@@ -27,37 +27,35 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/after.css">
 </head>
 <body>
-	<div id="wrap">
-		<div id="header">
-			<div id="social-media" class="grey-bg clearfix">
+	<div class="wrap">
+		<div class="header">
+			<div class="social-media grey-bg clearfix">
 				<ul  class="clearfix">
-					<li class="fb"><a href="#"><img src="img/fb03.png" alt="FB粉絲團">粉絲團</a></li>
-					<li class="erect-wrap"><div class="erect"></div></li>
+					<li class="fb erect"><a href="#"><img src="img/fb03.png" alt="FB粉絲團">粉絲團</a></li>
 					<li class="twitter"><a href="#"><img src="img/twitter.png" alt="Twitter追隨我們">追隨我們</a></li>
 				</ul>
 			</div>
-			<div id="nav">
-				<div class="logo">
-					<h1><a class="header-logo" href="#">Hex School</a></h1>
-				</div>
-				<div class="nav">
-					<ul >
+			<!-- .nav .fl加上clearfix-->
+			<div class="nav clearfix"> 
+					<!-- .logo樣式直接寫到h1  減少div、、將h1改為h2-->
+					<h2 class="logo"><a class="header-logo" href="#">Hex School</a></h2>
+					<!-- .nav樣式直接寫道ul，減少div，加上clearfix-->
+					<ul class="nav clearfix">
 						<li><a href="#" class="active">首頁</a></li>
 						<li><a href="#">產品介紹</a></li>
 						<li><a href="#">聯絡我們</a></li>
 						<li class="clearfix"></li>
 					</ul>
-				</div>
 			</div>
 		</div> 
-		<div id="content">
+		<div class="content">
 			<div class="banner">
 				<div class="container rect">
-					<h1>六角學院</h1>
-					<h1>讓您奠定良好的前端基礎</h1>
+					<!-- 斷行用<br> -->
+					<h1>六角學院<br>讓您奠定良好的前端基礎</h1>
 				</div>
 			</div>
 			<div class="product">
@@ -105,37 +103,32 @@
 					<tr><td>字幕</td><td class="colored">有</td><td>不一定</td><td>版書</td></tr>
 				</table>
 			</div>
-			<div class="messege-us">
-				<h2>對我們的課程有興趣嗎?</h2>
-				<h2>歡迎留下您的資料</h2>
+			<div class="message-us">
+				<h2>對我們的課程有興趣嗎?<br>歡迎留下您的資料</h2>
 				<div class="form">
-					<form action="index.html clearfix">
-						<div class="left">
-							<input type="textarea">
-						</div>
-						<div class="right">
+					<form action="index.html" class="clearfix">
+						.<!-- left樣式直接寫到input上、修改命名-->
+						<input type="textarea" class="message-area">
+						<div class="personal-info clearfix">
+							<!-- label 和 input 改用一個 div 統一管理就好 -->
 							<div>
 								<label for="name">姓名</label><br>
 								<input type="text" placeholder="六角講師" id="name">
-							</div>
-							<div>
 								<label for="phone">電話</label><br>
 								<input type="tel" placeholder="0912345678" id="phone">
-							</div>
-							<div>
 								<label for="mail">信箱</label><br>
 								<input type="mail" placeholder="hexschool@mail.com" id="mail">
 							</div>
+							<!-- 送出按鈕改用float:right -->
 							<div class="button">送出</div>
 						</div>
 					</form>
 				</div><!-- end-of-form -->
 			</div>
 		</div> 
-		<div id="footer">
-			<div class="logo">
-				<img src="img/footer-logo_18.png" alt="logo">
-			</div>
+		<div class="footer">
+			<!-- .logo的樣式可以直接寫到img上 -->
+			<img src="img/footer-logo_18.png" alt="logo" class="logo">
 			<div class="contact-us">
 				<p>聯絡我們：<a href="mailto:hexschool@gmail.com">hexschool@gmail.com</a></p>
 				<p>電話：<a href="#">0999123456</a></p>

@@ -49,7 +49,7 @@ body,*{
 	box-sizing: border-box;
 }
 
-#wrap{
+.wrap{
 	width:1024px;
 	margin: 0 auto;
 }
@@ -71,6 +71,7 @@ h1{
 h2{
 	font-size: 1.5em;
 	font-weight: bold;
+	line-height: 1.2; /*作業新增  用<br>斷行的h2較擁擠*/
 }
 h3{
 	font-weight: bold;
@@ -80,7 +81,7 @@ img{
 	vertical-align: sub;
 }
 
-#nav li a{
+.nav li a{
 	font-weight: bolder;
 }
 
@@ -95,55 +96,56 @@ input:focus{
 	background: #EEEEEE;
 }
 
-.button, #content .product .intro > li, input{
+.button, .content .product .intro > li, input{
 	transition:linear .3s;
 }
 
 /*header*/
-#social-media{
+.social-media{
 	background-color: #f6f6f6;
 }
 
-#social-media ul{
+.social-media ul{
 	float: right;
 	margin-right: 5px;
 	line-height: 28px;
 }
-#social-media li{
+.social-media li{
 	float: left;
-	margin-right: 5px;
 }
 
 /*粉絲團右邊的的|*/
-#social-media .erect-wrap{
+.social-media .erect-wrap{
 	box-sizing: border-box;
 	padding-top: 2px;
 }
-#social-media .erect{
+.social-media .erect:after{  /*作業修改*/
+	content:'';
 	display: inline-block;
 	height: 14px;
-	border: 1px solid #cccccc;
-	border-width:1px;
+	border-right: 2px solid #cccccc;
 }
 
-#social-media .fb a{
+.social-media a{ /*作業新增*/
+	padding:0 5px;
+}
+.social-media .fb a{
 	color:#4460a0;
 }
 
-#social-media .twitter a{
+.social-media .twitter a{
 	color:#00aaec;
 }
 
-#nav{
-	height: 50px;
-}
-#nav .logo{
+/*取消 .nav 的高度設定*/
+
+.nav .logo{
 	float: left;
 }
-#nav .nav{
+.nav .nav{
 	float: right;
 }
-#nav .header-logo{
+.nav .header-logo{
 	display: block;
 	margin-top: 8px;
 	height: 36px;
@@ -152,13 +154,13 @@ input:focus{
 	text-indent: -999px;
 	overflow: hidden;
 }
-#nav li{
+.nav li{
 	float: left;
 	line-height: 50px;
 	margin:0 10px 0 25px;
 }
 
-#nav li a{
+.nav li a{
 	display: block;
 	height: 100%;
 	padding:0 8px;
@@ -166,53 +168,51 @@ input:focus{
 }
 
 
-#nav li a.active{
+.nav li a.active{
 	border-bottom: 3px solid #00cc99; 
 }
 
 /*content*/
-#content{
+.content{
 	width: 100%;
 }
-#content .banner{
+.content .banner{
 	margin-top: 3px;
 	padding: 120px 0;
 	height: 397px;
-	width: 1024px;
 	background: url(../img/banner_02.jpg) center;
 	background-size: cover;
 	box-sizing: border-box;
 	color:white;
 }
-#content .banner:hover{
+.content .banner:hover{
 	cursor: pointer;
 }
-#content .banner .rect{
+.content .banner .rect{
 	padding:35px 20px;
 	background:rgba(0,0,0,0.2);
 }
-#content h1{
+.content h1{
 	margin:5px 0;
 }
 
-#content .product{
-	width: 100%;
+.content .product{
 	margin: 65px 0 0 0;
 	box-sizing: border-box;
 	padding: 23px 0 0 18px;
 }
 
-#content .product ul{
+.content .product ul{
 	width: 100%;
 
 }
-#content .product .intro .img{
+.content .product .intro .img{
 	display: inline-block;
 	box-sizing: border-box;
 	width: 100%;
 	height: 137px;
 }
-#content .product .intro > li{
+.content .product .intro > li{
 	box-sizing: border-box;
 	float: left;
 	height: 325px;
@@ -224,26 +224,26 @@ input:focus{
 	border-top: 0;
 	box-shadow: 0 2px 1px 0px #dbdbdb;
 }
-#content .product .intro > li:hover{
+.content .product .intro > li:hover{
 	cursor:pointer;
 	box-shadow: 0 2px 20px 0px #dbdbdb;
 }
-#content .product .intro > li .vertical-align{
+.content .product .intro > li .vertical-align{
 	padding-top: 15px;
 }
-#content .product .intro > li h3{
+.content .product .intro > li h3{
 	line-height: 1.5;
 }
-#content .product .intro > li p{
+.content .product .intro > li p{
 	line-height: 1.5;
 	text-align: justify;
 }
 
 
-#content .product .intro .jquery  ul{
+.content .product .intro .jquery  ul{
 	padding-left: 6px;
 }
-#content .product .intro .jquery li{
+.content .product .intro .jquery li{
 	line-height: 1.5;
 	text-align: left;
 	padding-left: 9px;
@@ -251,25 +251,25 @@ input:focus{
 }
 
 
-#content .comparison{
+.content .comparison{
 	margin-top: 55px;
 }
-#content .comparison h2{
+.content .comparison h2{
 	text-align: center;
 }
 
-#content .comparison table{
+.content .comparison table{
 	width: 840px;
 	margin: 30px auto 0 auto;
 }
-#wrap #content .comparison tr:hover{
+.wrap .content .comparison tr:hover{
 	background: #E0E0E0;
 }
-#content .comparison th{
+.content .comparison th{
 	background: #f7f7f7;
 	font-weight: bolder;
 }
-#content .comparison td,th{
+.content .comparison td,th{
 	box-sizing: border-box;
 	width: 230px;
 	padding: 13px 0;
@@ -279,97 +279,93 @@ input:focus{
 	border-spacing: 0;
 	text-align: left;
 }
-#content .comparison table tr th:last-child{
+.content .comparison table tr th:last-child{
 	width: 150px;
 }
-#content .comparison table tr td:last-child{
+.content .comparison table tr td:last-child{
 	width: 150px;
 }
-#content .comparison table tr td:nth-child(1){
+.content .comparison table tr td:nth-child(1){
 	padding-left:21px;
 }
-#content .comparison table tr th:nth-child(1){
+.content .comparison table tr th:nth-child(1){
 	padding-left:21px;
 }
 
-#content .comparison table .colored{
+.content .comparison table .colored{
 	color:#42b392;
 }
 
-
-#content .messege-us{
+/*不要寫死高度，改用padding*/
+.content .message-us{
 	margin-top: 60px;
-	padding: 30px 20px 20px;
-	height:405px;
+	padding: 30px 20px 40px 20px;
 	background:url(../img/form-bg_15.jpg) repeat-x;
 	color:white;
 }
-#content .messege-us form{
+.content .message-us form{
 	margin-top:30px;
 }
-#content .messege-us h2{
+.content .message-us h2{
 	text-align: center;
 	margin: 5px 0;
 }
 
-#content .messege-us .left{
+.content .message-us .message-area{
 	float: left;
 }
-#content .messege-us .left input{
+.content .message-us .message-area{
 	height:245px;
 	width: 460px;
 }
-#content .messege-us .right{
+.content .message-us .personal-info{
 	float: right;
-	position: relative;
 }
-#content .messege-us .right div{
-	margin-bottom: 15px;
-}
-#content .messege-us .right label{
+
+.content .message-us .personal-info label{
 	display: inline-block;
 	margin-bottom: 5px;
 	font-weight: bold;
 }
-#content .messege-us .right input{	
+.content .message-us .personal-info input{	
+	display: block;
 	height: 30px;
 	width: 460px;
+	margin-bottom: 15px;
 }
-#content .messege-us .right .button{
-	margin-top: 19px;
-	padding-top:7px ;
+.content .message-us .personal-info .button{
 	height: 30px;
 	width:70px;
-	box-sizing: border-box;
-	position: absolute;
-	right: 0;
+	margin-top: 19px;
+	padding-top:7px ;
+	float: right;
 	background: #00cc99;
 	text-align: center;
 }	
-#content .messege-us .right .button:hover{
+.content .message-us .personal-info .button:hover{
 	background: #02ecb1;
 	cursor: pointer;
 }
 
 /*footer*/
 
-#footer{
+.footer{
 	height: 120px;
 	padding-top: 26px;
 	font-weight: 600;
 }
 
-#footer .logo{
+.footer .logo{
 	float: left;
 }
 
-#footer .contact-us{
+.footer .contact-us{
 	float: right;
 }
 
-#footer .contact-us p{
+.footer .contact-us p{
 	padding-bottom: 10px;
 }
-#footer .contact-us a{
+.footer .contact-us a{
 	color:#e12d80;
 }
