@@ -270,8 +270,8 @@ input:focus{
 }
 
 .content .comparison table{
-	width: 82%;
 	margin: 30px auto 0 auto;
+	font-size: 10px;
 }
 .wrap .content .comparison tr:hover{
 	background: #E0E0E0;
@@ -279,6 +279,7 @@ input:focus{
 .content .comparison th{
 	background: #f7f7f7;
 	font-weight: bolder;
+	padding-right: 10px;
 }
 .content .comparison td,th{
 	box-sizing: border-box;
