@@ -404,4 +404,17 @@ input:focus{
 	width: unset;
 	margin-bottom: 10px;
 }
+.content .message-us{
+	background-image: linear-gradient(to bottom,#016F54,#009872)
+}
+.content .message-us .message-area{
+	float: unset;
+	width: 100%;
+}
+.content .message-us .personal-info{
+	float: unset;
+	width: unset;
+
+}
+
 }
