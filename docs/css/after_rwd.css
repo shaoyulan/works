@@ -50,7 +50,7 @@ body,*{
 }
 
 .wrap{
-	width:1024px;
+	max-width:1024px;
 	margin: 0 auto;
 }
 
@@ -96,7 +96,7 @@ input:focus{
 	background: #EEEEEE;
 }
 
-.button, .content .product .intro > li, input{
+.button, .content .product .intro > li .box, input{
 	transition:linear .3s;
 }
 
@@ -202,34 +202,45 @@ input:focus{
 	padding: 23px 0 0 18px;
 }
 
-.content .product ul{
-	width: 100%;
-
-}
-.content .product .intro .img{
-	display: inline-block;
+.content .product .intro .img{ /*Rwd修改*/
+	display: block;
 	box-sizing: border-box;
-	width: 100%;
 	height: 137px;
+}
+
+.content .product .intro .img img[alt="html5"]{ /*Rwd修改*/
+	width: 42%;
+	height: auto;
+}
+.content .product .intro .img img[alt="rwd"]{ /*Rwd修改*/
+	width: 76%;
+	height: auto;
+}
+.content .product .intro .img img[alt="jquery"]{ /*Rwd修改*/
+	width: 39%;
+	height: auto;
 }
 .content .product .intro > li{
 	box-sizing: border-box;
 	float: left;
-	height: 325px;
-	width: 300px;
-	margin: 0 15px;
-	padding:13px ;
-	text-align: center;
-	border:0.3px solid #f1f1f1;
-	border-top: 0;
-	box-shadow: 0 2px 1px 0px #dbdbdb;
+	width: 33%;
+	padding:10px;
+
 }
-.content .product .intro > li:hover{
+.content .product .intro > li .box:hover{
 	cursor:pointer;
 	box-shadow: 0 2px 20px 0px #dbdbdb;
 }
 .content .product .intro > li .vertical-align{
 	padding-top: 15px;
+}
+.content .product .intro > li .box{
+	padding:10px;
+	text-align: center;
+	border:0.3px solid #f1f1f1;
+	border-top: 0;
+	box-shadow: 0 2px 1px 0px #dbdbdb;
+
 }
 .content .product .intro > li h3{
 	line-height: 1.5;
@@ -259,7 +270,7 @@ input:focus{
 }
 
 .content .comparison table{
-	width: 840px;
+	width: 82%;
 	margin: 30px auto 0 auto;
 }
 .wrap .content .comparison tr:hover{
@@ -312,14 +323,20 @@ input:focus{
 }
 
 .content .message-us .message-area{
-	float: left;
+
 }
 .content .message-us .message-area{
 	height:245px;
-	width: 460px;
+	width: 50%;
+	float: left;	
 }
 .content .message-us .personal-info{
 	float: right;
+	width:50%;
+}
+.content .message-us .personal-info div{
+	width: 95%;
+	margin: 0 auto;
 }
 
 .content .message-us .personal-info label{
@@ -330,7 +347,7 @@ input:focus{
 .content .message-us .personal-info input{	
 	display: block;
 	height: 30px;
-	width: 460px;
+	width: 100%;
 	margin-bottom: 15px;
 }
 .content .message-us .personal-info .button{
@@ -368,4 +385,23 @@ input:focus{
 }
 .footer .contact-us a{
 	color:#e12d80;
+}
+
+@media screen and(max-width: 768px){
+
+.wrap{
+	width:95%;
+}
+}
+
+@media only screen and (max-width: 480px){
+
+.content .product{
+	padding:0;
+}
+.content .product .intro > li{
+	float: unset;
+	width: unset;
+	margin-bottom: 10px;
+}
 }

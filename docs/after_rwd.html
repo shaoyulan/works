@@ -27,7 +27,7 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
-	<link rel="stylesheet" href="css/after.css">
+	<link rel="stylesheet" href="css/after_rwd.css">
 </head>
 <body>
 	<div class="wrap">
@@ -42,7 +42,7 @@
 			<div class="nav clearfix"> 
 					<!-- .logo樣式直接寫到h1  減少div、、將h1改為h2-->
 					<h2 class="logo"><a class="header-logo" href="#">Hex School</a></h2>
-					<!-- .nav樣式直接寫到ul，減少div，加上clearfix-->
+					<!-- .nav樣式直接寫道ul，減少div，加上clearfix-->
 					<ul class="nav clearfix">
 						<li><a href="#" class="active">首頁</a></li>
 						<li><a href="#">產品介紹</a></li>
@@ -61,32 +61,38 @@
 			<div class="product">
 				<ul class="intro clearfix">
 					<li>
-						<div class="img">
-							<img src="img/html_06.png" alt="Html5">
+						<div class="box">
+							<div class="img">
+								<img src="img/html_06.png" alt="Html5">
+							</div>
+							<h3>Html5基礎教學</h3>
+							<p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學原學習業界主流的開發方法。</p>
 						</div>
-						<h3>Html5基礎教學</h3>
-						<p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學原學習業界主流的開發方法。</p>
 					</li>
 					<li>
-						<div class="img vertical-align">
-							<img src="img/rwd_09.png" alt="Html5">
+						<div class="box">
+							<div class="img vertical-align">
+								<img src="img/rwd_09.png" alt="rwd">
+							</div>
+							<h3>響應式網站設計</h3>
+							<p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。</p>
 						</div>
-						<h3>響應式網站設計</h3>
-						<p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。</p>
 					</li>
 					<li class="jquery">
-						<div class="img">
-							<img src="img/jquery_09.png" alt="Html5">
+						<div class="box">
+							<div class="img">
+								<img src="img/jquery_09.png" alt="jquery">
+							</div>
+							<h3>jQuery實戰教學</h3>
+							<p>本課程有以下特色
+								<ul>
+									<li>瞭解變數的使用方法</li>
+									<li>學習並操作DOM</li>
+									<li>學習基本數學運算方法</li>
+									<li>套件的操作及運用</li>
+								</ul>
+							</p>
 						</div>
-						<h3>jQuery實戰教學</h3>
-						<p>本課程有以下特色
-							<ul>
-								<li>瞭解變數的使用方法</li>
-								<li>學習並操作DOM</li>
-								<li>學習基本數學運算方法</li>
-								<li>套件的操作及運用</li>
-							</ul>
-						</p>
 					</li>
 				</ul>
 				<div class="clearfix"></div>
@@ -107,7 +113,7 @@
 				<h2>對我們的課程有興趣嗎?<br>歡迎留下您的資料</h2>
 				<div class="form">
 					<form action="index.html" class="clearfix">
-						.<!-- left樣式直接寫到input上、修改命名-->
+						<!-- left樣式直接寫到input上、修改命名-->
 						<input type="textarea" class="message-area">
 						<div class="personal-info clearfix">
 							<!-- label 和 input 改用一個 div 統一管理就好 -->
@@ -118,9 +124,10 @@
 								<input type="tel" placeholder="0912345678" id="phone">
 								<label for="mail">信箱</label><br>
 								<input type="mail" placeholder="hexschool@mail.com" id="mail">
+							
+								<!-- 送出按鈕改用float:right -->
+								<div class="button">送出</div>
 							</div>
-							<!-- 送出按鈕改用float:right -->
-							<div class="button">送出</div>
 						</div>
 					</form>
 				</div><!-- end-of-form -->
