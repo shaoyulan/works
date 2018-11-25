@@ -395,13 +395,16 @@ input:focus{
 }
 
 @media only screen and (max-width: 480px){
-
+.nav .logo{
+	padding-left: 10px;
+}
 .content .product{
 	padding:0;
 }
 .content .product .intro > li{
 	float: unset;
 	width: unset;
+	padding: 0 20px 0 20px;
 	margin-bottom: 10px;
 }
 .content .message-us{
@@ -410,11 +413,22 @@ input:focus{
 .content .message-us .message-area{
 	float: unset;
 	width: 100%;
+	margin-bottom: 10px;
 }
 .content .message-us .personal-info{
 	float: unset;
 	width: unset;
 
 }
+.footer{
+	padding-left: 10px;
+}
+.footer .logo{
+	float: unset;
+	margin-bottom: 10px;
+}
+.footer .contact-us{
+	float: unset;
 
+}
 }
