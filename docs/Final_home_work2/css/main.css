@@ -1,0 +1,186 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*common setting*/
+*,html{
+	font-family: "微軟正黑體";
+	font-size: 16px;
+	font-weight: bolder;
+	box-sizing: border-box;
+	letter-spacing: 3px;
+}
+.clearfix:after{
+	content: '';
+	display: table;
+	clear:both;
+}
+.margin-top{
+	margin-top: 60px;
+}
+p{
+	font-weight: 100;
+	text-align: justify;
+}
+a{
+	text-decoration: none;
+}
+h1{
+	font-size: 2.5em;
+	font-weight: bold;
+}
+h2{
+	margin-bottom: 30px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color:#00cc99;
+}
+.header h2{
+	margin-bottom:unset;
+}
+.subtitle{
+	font-size: 0.6em;
+	color:#9b9b9b;
+}
+.header, .container, .selected-courses, .comparison{
+	padding:0 40px;
+}
+
+/*header*/
+.header{
+	background: rgba(164,164,164,0.3);
+	position: absolute;
+	width: 100%;
+}
+.header h2{
+	float: left;
+	padding: 18px 0;
+}
+.header-logo{
+	background-image: url(../images/common/hexschoo-logo.png);
+	display: inline-block;
+	width: 170px;
+	height: 36px;
+	text-indent: -999px;
+	overflow: hidden;
+}
+
+.header .nav{
+	float: right;
+}
+.header .nav >li{
+	float:left;
+	line-height: 75px;
+}
+.header .nav a{
+	padding:20px 10px;
+	color:#f5f5f5;
+}
+
+.header .nav .active{
+	border-bottom: 7px solid #00cc99;
+	color: #00cc99;
+}
+
+/*footer*/
+.footer{
+	background: #323228;
+	padding:35px 40px;
+	text-align: right;
+}
+
+.footer-logo,.footer .social-media li{
+	float: left;
+}
+.social-media li{
+	margin-left: 20px;
+}
+.footer-logo span{
+	letter-spacing: 0px;
+	color: white;
+}
+.footer .social-media{
+	float: right;
+}
+
+
+/*content*/
+.content .banner{
+	background: url(../images/index/banner-photo.jpg);
+	background-size: cover;
+	height: 560px;
+	padding-top: 207px;
+	color:#00cc99;
+}
+.content .banner span, .content .banner .sing-up-button{
+	color:white;
+}
+.content .banner .sing-up-button{
+	display: inline-block;
+	padding:13px 37px;
+	margin-top: 60px;
+	background: #00cc99;
+	border-radius: 5px;
+}
+.content .selected-courses li{
+	float: left;
+	text-align: center;
+	width: 33%;
+	padding:10px;
+}
+.content .selected-courses .box{
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+	padding:30px 20px;
+	transition: all linear .3s;
+}
+.content .selected-courses .box:hover{
+	box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
+}
+.content .selected-courses .box h4{
+	margin: 14px 0;
+}
