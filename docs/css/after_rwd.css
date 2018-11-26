@@ -403,8 +403,6 @@ input:focus{
 	padding:0;
 }
 .content .product .intro > li{
-	float: unset;
-	width: unset;
 	padding: 0 20px 0 20px;
 	margin-bottom: 10px;
 }
@@ -412,24 +410,22 @@ input:focus{
 	background-image: linear-gradient(to bottom,#016F54,#009872)
 }
 .content .message-us .message-area{
-	float: unset;
 	width: 100%;
 	margin-bottom: 10px;
 }
-.content .message-us .personal-info{
+.content .message-us .personal-info,.content .product .intro > li{
 	float: unset;
 	width: unset;
-
 }
+.footer .logo,.footer .contact-us,.content .message-us .message-area{
+	float: unset;	
+}
+
 .footer{
 	padding-left: 10px;
 }
 .footer .logo{
-	float: unset;
-	margin-bottom: 10px;
-}
-.footer .contact-us{
-	float: unset;
 
+	margin-bottom: 10px;
 }
 }
