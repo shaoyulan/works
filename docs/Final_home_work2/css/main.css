@@ -80,6 +80,10 @@ h2{
 	font-weight: bold;
 	color:#00cc99;
 }
+h3{
+	font-size: 1.17em;
+	font-weight: bold;
+}
 .header h2{
 	margin-bottom:unset;
 }
@@ -185,3 +189,21 @@ h2{
 .content .selected-courses .box h4{
 	margin: 14px 0;
 }
+.content .message-us{
+	padding-top:135px;
+	padding-bottom: 60px;
+	background: #ebebeb;
+}
+.content .message-us h3, .content .message-us .input-section{
+	float: left;
+}
+.content .message-us h3{
+	width: 35%;
+}
+.content .message-us .input-section{
+	width: 44%;
+}
+.content .message-us .input-section input{
+	display: block;
+}
+
