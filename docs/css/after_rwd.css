@@ -390,30 +390,7 @@ input:focus{
 	color:#e12d80;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px){
-
-.content .product .intro > li{
-	margin-bottom: 10px;
-
-}
-.content .product .intro .img{
-	width: 25%;
-	float: left;
-	margin-top: 25px;
-	height: unset;
-}
-.content .product .intro .jquery span{
-	float: left;
-	width: 50%;
-}
-.content .product .intro > li h3,.content .product .intro > li p{
-	margin: 5px 0;
-	width: 70%;
-	float: left;
-}
-
-
-}
+/*RWD*/
 @media only screen and (max-width: 768px){
 .nav .logo{
 	padding-left: 10px;
@@ -445,37 +422,42 @@ input:focus{
 }
 
 }
-@media only screen and (max-width: 480px){
-/*.nav .logo{
-	padding-left: 10px;
+@media only screen and (min-width: 481px) and (max-width: 768px){
+
+.content .product .intro > li{
+	margin-bottom: 10px;
+
 }
-.content .product{
-	padding:0;
-}*/
+.content .product .intro .img{
+	width: 25%;
+	float: left;
+	margin-top: 25px;
+	height: unset;
+}
+.content .product .intro .jquery span{
+	float: left;
+	width: 50%;
+}
+.content .product .intro > li h3,.content .product .intro > li p{
+	margin: 5px 0;
+	width: 70%;
+	float: left;
+}
+
+
+}
+
+@media only screen and (max-width: 480px){
+.nav .logo, .nav .nav{
+	float: unset;
+}
+
 .content .product .intro > li{
 	padding: 0 20px 0 20px;
 	margin-bottom: 10px;
 }
-/*.content .message-us{
+.content .message-us{
 	background-image: linear-gradient(to bottom,#016F54,#009872)
-}*/
-/*.content .message-us .message-area{
-	width: 100%;
-	margin-bottom: 10px;
-}
-.content .message-us .personal-info,.content .product .intro > li{
-	float: unset;
-	width: unset;
-}
-.footer .logo,.footer .contact-us,.content .message-us .message-area{
-	float: unset;	
 }
 
-.footer{
-	padding-left: 10px;
-}
-.footer .logo{
-
-	margin-bottom: 10px;
-}*/
 }
