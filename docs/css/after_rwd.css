@@ -459,5 +459,16 @@ input:focus{
 .content .message-us{
 	background-image: linear-gradient(to bottom,#016F54,#009872)
 }
-
+.content .comparison th:nth-of-type(2){
+	letter-spacing: -1px;
+}
+.content .comparison tr:nth-of-type(3) td:nth-of-type(1){
+	padding-right: 36px
+}
+.content .comparison tr:nth-of-type(5) td:nth-of-type(1){
+	padding-right: 20px
+}
+.content .comparison tr:nth-of-type(6) td:nth-of-type(1){
+	padding-right: 36px
+}
 }
