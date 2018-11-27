@@ -177,7 +177,6 @@ input:focus{
 	width: 100%;
 }
 .content .banner{
-	margin-top: 3px;
 	padding: 120px 0;
 	height: 397px;
 	background: url(../img/banner_02.jpg) center;
@@ -208,7 +207,7 @@ input:focus{
 	height: 137px;
 }
 
-.content .product .intro .img img[alt="html5"]{ /*Rwd修改*/
+.content .product .intro .img img[alt="Html5"]{ /*Rwd修改*/
 	width: 42%;
 	height: auto;
 }
@@ -254,9 +253,13 @@ input:focus{
 .content .product .intro .jquery  ul{
 	padding-left: 6px;
 }
-.content .product .intro .jquery li{
-	line-height: 1.5;
-	text-align: left;
+.content .product .intro .jquery span{
+	display: block;
+	padding-left: 8px;
+}
+
+.content .product .intro .jquery span:before{
+	content: '';
 	padding-left: 9px;
 	background: url(../img/list-stly-square-_07.jpg) no-repeat center left;
 }
@@ -271,7 +274,6 @@ input:focus{
 
 .content .comparison table{
 	margin: 30px auto 0 auto;
-	font-size: 10px;
 }
 .wrap .content .comparison tr:hover{
 	background: #E0E0E0;
@@ -388,11 +390,56 @@ input:focus{
 	color:#e12d80;
 }
 
-@media screen and(max-width: 768px){
-
-.wrap{
-	width:95%;
+@media only screen and (min-width: 481px) and (max-width: 768px){
+.nav .logo{
+	padding-left: 10px;
 }
+.content .product{
+	padding:0;
+}
+
+.content .product .intro > li{
+	margin-bottom: 10px;
+
+}
+.content .product .intro .img{
+	width: 25%;
+	float: left;
+	margin-top: 25px;
+	height: unset;
+}
+.content .product .intro .jquery span{
+	float: left;
+	width: 50%;
+}
+.content .product .intro > li h3,.content .product .intro > li p{
+	margin: 5px 0;
+	width: 70%;
+	float: left;
+}
+.content .message-us{
+	background-image: linear-gradient(to bottom,#016F54,#009872)
+}
+.content .message-us .message-area{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.content .message-us .personal-info,.content .product .intro > li{
+	float: unset;
+	width: unset;
+}
+.footer .logo,.footer .contact-us,.content .message-us .message-area{
+	float: unset;	
+}
+
+.footer{
+	padding-left: 10px;
+}
+.footer .logo{
+
+	margin-bottom: 10px;
+}
+
 }
 
 @media only screen and (max-width: 480px){
