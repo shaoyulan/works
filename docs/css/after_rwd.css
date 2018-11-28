@@ -115,10 +115,7 @@ input:focus{
 }
 
 /*粉絲團右邊的的|*/
-.social-media .erect-wrap{
-	box-sizing: border-box;
-	padding-top: 2px;
-}
+
 .social-media .erect:after{  /*作業修改*/
 	content:'';
 	display: inline-block;
@@ -389,6 +386,8 @@ input:focus{
 .footer .contact-us a{
 	color:#e12d80;
 }
+
+
 
 /*RWD*/
 @media only screen and (max-width: 768px){
