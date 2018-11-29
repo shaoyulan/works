@@ -130,6 +130,27 @@
 .header .nav li{
 	width: 33%;
 }
+.selected-courses img{
+
+}
+.content .selected-courses li{
+	float: unset;
+	width: unset;
+}
+.index .subtitle{
+	display: block;
+	padding:unset;
+	margin-top: 10px;
+}
+.content .selected-courses .more-class-button{
+	bottom: unset;
+	top:0;
+	padding:6px;
+}
+.content .message-us .flex-center{
+	display: unset;
+	align-items: unset;
+}
 .footer .container{
 	text-align: center;
 }
