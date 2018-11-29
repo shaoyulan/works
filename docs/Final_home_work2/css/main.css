@@ -106,15 +106,26 @@
 }
 @media only screen and (max-width: 1200px){
 
-/*.container, .header,.footer, .selected-courses, .comparison{
-	padding:0 7%;*/
-}	
+}
 @media only screen and (max-width: 480px){
+
 .container,.selected-courses, .comparison{
 	width: 100%;
 	margin-left:auto;
 	margin-right: auto;
 }
+
+.header{
+	text-align: center;
+}
+.header .nav{
+	display: inline-block;
+}
+.header h2, .header .nav{
+	float: unset;
+}
+
+
 }
 }
 
