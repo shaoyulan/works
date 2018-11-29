@@ -111,7 +111,7 @@
 }	
 @media only screen and (max-width: 480px){
 .container,.selected-courses, .comparison{
-	width: 95%;
+	width: 100%;
 	margin-left:auto;
 	margin-right: auto;
 }
