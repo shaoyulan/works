@@ -124,8 +124,27 @@
 .header h2, .header .nav{
 	float: unset;
 }
-
-
+.header ul{
+	width: 100%;
+}
+.header .nav li{
+	width: 33%;
+}
+.footer .container{
+	text-align: center;
+}
+.footer ul{
+	margin: 0 10px;
+}
+.footer img{
+	padding-bottom: 10px;
+}
+.footer .footer-logo, .footer ul.social-media{
+	float: unset;
+	display: inline-block;
+}
+.footer li{
+	margin:0 10px;
 }
 }
 
