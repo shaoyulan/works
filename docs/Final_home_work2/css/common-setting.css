@@ -150,7 +150,7 @@ input, .submit-button{
 }
 
 .header .nav .active{
-	border-bottom: 7px solid #00cc99;
+	border-bottom: 2px solid #00cc99;
 	color: #00cc99;
 }
 
@@ -180,3 +180,44 @@ input, .submit-button{
 	vertical-align: middle;
 }
 
+@media only screen and (max-width: 480px){
+.header{
+	text-align: center;
+}
+.header .nav{
+	display: inline-block;
+}
+.header .nav a{
+	padding:7px 10px;
+}
+.header h2{
+	padding:18px 0 0 0;
+}
+.header h2, .header .nav{
+	float: unset;
+}
+.header ul{
+	width: 100%;
+}
+.header .nav li{
+	width: 33%;
+	line-height: 34px;
+}
+
+.footer .container{
+	text-align: center;
+}
+.footer ul{
+	margin: 0 10px;
+}
+.footer img{
+	padding-bottom: 10px;
+}
+.footer .footer-logo, .footer ul.social-media{
+	float: unset;
+	display: inline-block;
+}
+.footer li{
+	margin:0 10px;
+}
+}
