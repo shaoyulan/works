@@ -107,12 +107,26 @@
 }
 @media only screen and (max-width: 480px){
 h1{
-	font-size: 2.4em;
+	font-size: 2.1em;
+}
+h2{
+	font-size: 1.8em;
+}
+.content .message-us h3{
+	width: unset;
+	font-size: 1.57em;
+	letter-spacing: -1px;
+}
+.content .message-us .submit-button{
+	float: unset;
+	display: inline-block;
+	width: 70.6%;
 }
 .container,.selected-courses, .comparison{
 	width: 90%;
 	margin-left:auto;
 	margin-right: auto;
+	text-align: center;
 }
 
 
@@ -137,7 +151,19 @@ h1{
 	display: unset;
 	align-items: unset;
 }
-
+.content .message-us .input-section {
+	width: unset;
+}
+.content .message-us .input-section input{
+	float: unset;
+	width: unset;
+}
+.content .comparison td, th{
+	width: unset;
+	height: unset;
+	line-height: 38px;
+	letter-spacing: -1px;
+}
 }
 
 
