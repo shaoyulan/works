@@ -150,7 +150,7 @@ input, .submit-button{
 }
 
 .header .nav .active{
-	border-bottom: 2px solid #00cc99;
+	border-bottom: 8px solid #00cc99;
 	color: #00cc99;
 }
 
@@ -189,6 +189,9 @@ input, .submit-button{
 }
 .header .nav{
 	display: inline-block;
+}
+.header .nav .active{
+	border-bottom: 2px;
 }
 .header .nav a{
 	padding:7px 10px;
