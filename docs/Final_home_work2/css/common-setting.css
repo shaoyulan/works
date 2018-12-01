@@ -181,6 +181,9 @@ input, .submit-button{
 }
 
 @media only screen and (max-width: 480px){
+.margin-top{
+	margin-top:30px ;
+}
 .header{
 	text-align: center;
 }
@@ -191,7 +194,7 @@ input, .submit-button{
 	padding:7px 10px;
 }
 .header h2{
-	padding:18px 0 0 0;
+	padding:10px 0 0 0;
 }
 .header h2, .header .nav{
 	float: unset;
