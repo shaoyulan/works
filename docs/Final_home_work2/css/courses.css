@@ -4,12 +4,30 @@
 	background-size: cover;
 	background-position: 0% 100%;
 	height: 560px;
-	padding-top: 207px;
+	padding-top: 180px;
+	position: relative; /**/
 	color:#00cc99;
+}
+.content .banner h1{ /**/
+	color:white;
+	font-size: 3.4em;
+}
+.content .banner h3{ /**/
+	font-size: 1.5em;
+	padding-top: 10px;
 }
 .content .banner span, .content .banner .sing-up-button{
 	color:white;
 }
+.content .banner .banner-img{
+	position: absolute;
+	top:105px;
+	right: 50px;
+}
+.content .banner .banner-img img{
+	padding:0 15px;
+}
+
 .content .banner .sing-up-button{
 	display: inline-block;
 	padding:13px 37px;
@@ -17,101 +35,88 @@
 	background: #00cc99;
 	border-radius: 5px;
 }
-.content .selected-courses li{
-	float: left;
-	text-align: center;
-	width: 33%;
-	padding:10px;
+.content > .container{
+	max-width: 640px; /**/
 }
-.content .selected-courses h2{
-	position:relative;
+.content .teacher-info{
+	justify-content: space-between;
 }
-.content .selected-courses .more-class-button{
-	position: absolute;
-    bottom: 0;
-    right: 0;
-	margin-right: 20px;
-	padding:8px;
-	border: 2px solid #00cc99;
-	border-radius: 4px;
-	font-size: 0.4em;
+.content .teacher-info h2{ /**/
+	margin:unset;
+	line-height: 1.2em;
 }
-.content .selected-courses .box{
-	box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
-	padding:30px 20px;
-	transition: all linear .3s;
+.content .teacher-info span{ /**/
+	color:#323228;
 }
-.content .selected-courses .box:hover{
-	box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
-	cursor:pointer;
+.content .teacher-info ul{ /**/
+	padding-left: 30px;
+	line-height: 1.4em;
+	color:var(--light-gray);
 }
-.content .selected-courses .box h4{
-	margin: 14px 0;
+.content .teacher-info li:before{ /**/
+	content: ' ';
+	padding-left: 30px; /*重點*/
+	background: url(../images/common/list-stly-square-_07.jpg) no-repeat center left;
 }
-.content .message-us{
-	padding-top:135px;
-	padding-bottom: 60px;
+.content .class-feature ol{ /**/
+	list-style-type: decimal;
+	padding-left: 20px;
+}
+.content .class-feature li{ /**/
+	padding-left: 20px;
+	line-height: 1.5;
+	color:#323223;
+}
+.content .course-outline li{ /**/
+	line-height: 50px;
+	padding-left: 35px;
+}
+.content .course-outline li:nth-child(2n+1){ /**/
 	background: #ebebeb;
 }
-.content .message-us h3, .message-us .input-section{
-	width: 50%;
+.content .course-outline li:nth-child(2n){ /**/
+	color: #9b9b9b;
 }
-.content .message-us .input-section input{
-	width: 89.89%;
-	height: 52px;
-	margin-bottom: 20px;
-	float: right;
-	padding-left: 10px
+.content .message-us .flex-center{  /**/
+	align-items: flex-end;
+	justify-content: center;
 }
-.content .message-us .flex-center{
-	display: flex;
-	align-items: center;
+.content .message-us{
+	padding:150px 0;
+	background: #ebebeb;
 }
-.content .message-us h3{
-	line-height: 60px;
+
+.content .message-us h3{ /**/
+	padding-right: 95px;
+	line-height: 50px;
 	margin-top: -17px;
+	color:#323223;
 }
 .content .message-us .submit-button{
-	width: 13.6%;
+	width: 21.2%;
 	float: right;
 	text-align: center;
 	background: #00cc99;
 	height: 48px;
 	line-height: 48px;
 }
-.content .comparison table{
-	margin: 0 auto;
-}
 
-.content .comparison td,th{
-	width: 235px;
-	height: 50px;
-	border-top:1px solid  lightgray;
-	border-bottom: 1px solid lightgray;
-	border-collapse: collapse;
-	line-height: 50px;
-	text-align: center;
-	letter-spacing: 0;
-}
-.content .comparison tr:first-child{
-	background: #ebebeb;
-}
-.content .comparison tr:hover{
-	background: #ebebeb;
-}
-.content .comparison .colored{
-	color:#6bdab8;
-}
+
 @media only screen and (max-width: 1200px){
 
 }
 @media only screen and (max-width: 480px){
-h1{
-	font-size: 2.1em;
+.container{ /**/
+	width:90%;
+	margin:0 auto;
 }
-h2{
+.content .banner h1{ /**/
 	font-size: 1.8em;
 }
+.content .banner h2{
+	font-size: 1.8em;
+}
+
 .content .banner{
 	height: unset;
 	padding: 120px 0 30px 0 ;
@@ -119,44 +124,45 @@ h2{
 .content .banner .sing-up-button{
 	margin-top: 30px;
 }
+.content .banner-img{
+	display: none;
+}
+
+.content .teacher-info.flex-center{ /**/
+	display: block;
+	text-align: center;
+}
+.content .teacher-info ul{ /**/
+	padding:20px 0 0 60px;
+}
+.content .teacher-info.flex-center li{ /**/
+	text-align: left;
+}
+.content .teacher-info li:before{  /**/
+	padding-left: 20px;
+}
+.content .class-feature li{
+	padding-bottom: 10px;
+}
 .content .message-us{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
 .content .message-us h3{
 	margin-bottom: 30px;
+	padding-right: unset; /**/
 	width: unset;
 	line-height: 40px;
 	font-size: 1.57em;
 	letter-spacing: -1px;
 }
 
-.container,.selected-courses, .comparison{
-	width: 90%;
-	margin-left:auto;
-	margin-right: auto;
-}
-
-.content .selected-courses li{
-	float: unset;
-	width: unset;
-}
-.content .selected-courses .more-class-button{
-	bottom: unset;
-	top:0;
-	padding:6px;
-}
 .index .subtitle{
 	display: block;
 	padding:unset;
 	margin-top: 10px;
 }
-.content .comparison td, th{
-	width: unset;
-	height: unset;
-	line-height: 38px;
-	letter-spacing: -1px;
-}
+
 .content .message-us .submit-button{
 	float: unset;
 	display: inline-block;
@@ -169,12 +175,7 @@ h2{
 	display: unset;
 	align-items: unset;
 }
-.content .message-us .input-section {
-	width: unset;
-}
-.content .message-us .input-section input{
-	float: unset;
-}
+
 
 }
 

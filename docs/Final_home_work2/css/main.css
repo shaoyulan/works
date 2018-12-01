@@ -63,10 +63,7 @@
 	float: right;
 	padding-left: 10px
 }
-.content .message-us .flex-center{
-	display: flex;
-	align-items: center;
-}
+
 .content .message-us h3{
 	line-height: 60px;
 	margin-top: -17px;

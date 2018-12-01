@@ -47,13 +47,16 @@ table {
 	border-spacing: 0;
 }
 
+:root{
+	--light-gray:#9b9b9b;
+}
+
 /*common setting*/
 *,html{
 	font-family: "微軟正黑體";
 	font-size: 16px;
 	font-weight: bolder;
 	box-sizing: border-box;
-	letter-spacing: 2px;
 }
 .clearfix:after{
 	content: '';
@@ -116,6 +119,10 @@ input, .submit-button{
 	margin-right: auto;
 }
 
+.flex-center{
+	display: flex;
+	align-items: center;
+}
 
 
 /*header*/
@@ -123,6 +130,7 @@ input, .submit-button{
 	background: rgba(164,164,164,0.3);
 	position: absolute;
 	width: 100%;
+	z-index: 1; /**/
 }
 .header h2{
 	float: left;
@@ -191,7 +199,7 @@ input, .submit-button{
 	display: inline-block;
 }
 .header .nav .active{
-	border-bottom: 2px;
+	border-bottom: 2px solid #00cc99;
 }
 .header .nav a{
 	padding:7px 10px;
