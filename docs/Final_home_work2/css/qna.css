@@ -50,8 +50,8 @@
 }
 .content > .container h4, .content > .container article{ /**/
 	line-height: 1.3;
-	text-indent: -31px;
-	padding-left: 41px;
+	text-indent: -30px;
+	padding-left: 36px;
 }
 .content .howto-pay ol{ /**/
 	text-indent: initial;
