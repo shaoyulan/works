@@ -23,6 +23,7 @@
 	margin-top: 52px;
 	text-align: left;
 	color:black;
+	overflow-x: hidden;
 	line-height: 50px;
 
 }
