@@ -10,7 +10,13 @@
 .content .banner span, .content .banner .sing-up-button{
 	color:white;
 }
-
+.content .banner .sing-up-button{
+	display: inline-block;
+	padding:13px 37px;
+	margin-top: 60px;
+	background: #00cc99;
+	border-radius: 5px;
+}
 .content .selected-courses li{
 	float: left;
 	text-align: center;
@@ -28,7 +34,7 @@
 	padding:8px;
 	border: 2px solid #00cc99;
 	border-radius: 4px;
-	font-size: 1rem;
+	font-size: 0.4em;
 }
 .content .selected-courses .box{
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.3);

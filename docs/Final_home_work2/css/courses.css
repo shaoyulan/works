@@ -28,13 +28,6 @@
 	padding:0 15px;
 }
 
-.content .banner .sing-up-button{
-	display: inline-block;
-	padding:13px 37px;
-	margin-top: 60px;
-	background: #00cc99;
-	border-radius: 5px;
-}
 .content > .container{
 	max-width: 640px; /**/
 }
