@@ -1,0 +1,211 @@
+/*QnA content*/
+.content .banner{
+	background: url(../images/qna/banner_01.jpg);
+	background-size: cover;
+	background-position: 0% 8%;
+	height: 560px;
+	padding-top: 207px;
+	text-align: center; /**/
+	color:white;
+}
+.content .banner span{ /**/
+	color:#00cc99;
+	font-size: 0.6em;
+}
+.content .search-bar{ /**/
+	height: 50px;
+	width: 60.6%;
+	display: inline-block;
+	background: white;
+	border-radius: 6px;
+	margin-top: 52px;
+	text-align: left;
+	position: relative;
+	color:black;
+	line-height: 50px;;
+}
+.content .search-bar i{ /**/
+	line-height: 50px;
+	font-size: 1.25rem;
+	color:black;
+}
+.content > .container{ /**/
+	max-width: 770px;
+}
+.content > .container a[href^=mailto]{ /**/
+	color:#00cc99;
+}
+.content > .container div ~*{ /**/
+	font-weight: lighter;
+}
+.content > .container article{ /**/
+	color:#9b9b9b;
+	margin-left: 36px;
+}
+.content > .container article:first-line{ /**/
+	text-indent: -5px;
+}
+.content > .container h4{ /**/
+	margin-top: 35px;
+}
+.content > .container h4, .content > .container article{ /**/
+	line-height: 1.3;
+	text-align:justify;
+	position: relative;
+}
+.content .frequently-asked h4:before,.howto-pay h4:before, .ask-refund h4:before{
+	content: 'Q：';
+	display: inline-block;
+}
+.content .frequently-asked article:before,.howto-pay article:before, .ask-refund article:before{
+	content: 'A：';
+	display: inline-block;
+	position: absolute;
+	left: -30px;
+}
+.content .howto-pay ol{ /**/
+	text-indent: initial;
+	margin-left: 19px;
+	list-style-type: decimal;
+}
+.content .ask-refund ul{  /**/
+	margin-left: 23px;
+}
+.content .ask-refund .black-text{ /**/
+	margin-left: -18px;
+	color:black;
+	text-indent: initial;
+}
+.content .ask-refund ul:nth-of-type(1){ /**/
+	margin-bottom:30px;
+}
+
+/*.content .ask-refund ul li{ 
+	padding-left: 20px;
+}*/
+.content .ask-refund ul:nth-of-type(1) li,.content .ask-refund ul li{ /*調整整段li為至*/
+	margin-left: -7px;
+	position: relative;
+	line-height: 1.4;
+}
+/*.content .ask-refund ul li{ 調整整段li為至
+	margin-left: -46px;
+}*/
+.content .ask-refund ul li:before{ /*調整list icon跟文字距離*/
+	font-family: "fontello";
+	content: '\e801';
+	position: absolute;
+	left: -11px;
+}
+
+.content .message-us{
+	padding-top:135px;
+	padding-bottom: 60px;
+	background: #ebebeb;
+}
+.content .message-us .flex-center{ /**/
+	align-items: unset;
+	justify-content: space-around;
+}
+.message-us .input-section{
+	width: 50%;
+}
+.content .message-us .input-section input{
+	width: 89.89%;
+	height: 52px;
+	margin-bottom: 20px;
+	float: right;
+	padding-left: 10px
+}
+
+.content .message-us h2{
+	line-height: 60px;
+	color:black;
+}
+.content .message-us .submit-button{ /**/
+	float: right;
+	padding:0 40px;
+	text-align: center;
+	background: #00cc99;
+	height: 48px;
+	line-height: 48px;
+}
+.content .message-us .submit-button:first-letter{
+	padding-right: 15px;
+}
+@media only screen and (max-width: 1200px){
+.container{
+	width: 90%;
+	margin-left:auto;
+	margin-right: auto;
+}
+.content .banner{
+	background-position: 50%;
+}
+}
+@media only screen and (max-width: 480px){
+
+.content .banner{
+	height: unset;
+	padding: 120px 0 30px 0 ;
+}
+.content .banner span{
+	font-size: 0.45em;
+}
+.content .banner .sing-up-button{
+	margin-top: 30px;
+}
+.content > .container h4, .content > .container article{
+	margin-left: 35px;
+}
+.content .frequently-asked h4:before, .howto-pay h4:before, .ask-refund h4:before{
+	position: absolute;
+	left: -33px;
+}
+.content .ask-refund .black-text{
+	margin: 0 0 5px -18px;
+}
+.content .ask-refund ul li{
+	margin-bottom: 5px;
+}
+.content .message-us{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.content .message-us h3{
+	margin-bottom: 30px;
+	width: unset;
+	line-height: 40px;
+	font-size: 1.57em;
+	letter-spacing: -1px;
+}
+
+.index .subtitle{
+	display: block;
+	padding:unset;
+	margin-top: 10px;
+}
+
+.content .message-us .submit-button{
+	float: unset;
+	display: inline-block;
+	width: 89.89%;
+}
+.content .message-us  .container{
+	text-align: center;
+}
+.content .message-us .flex-center{
+	display: unset;
+	align-items: unset;
+}
+.content .message-us .input-section {
+	width: unset;
+}
+.content .message-us .input-section input{
+	float: unset;
+}
+
+}
+
+
+
