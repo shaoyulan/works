@@ -1,4 +1,4 @@
-/*Index content*/
+/*QnA content*/
 .content .banner{
 	background: url(../images/qna/banner_01.jpg);
 	background-size: cover;
@@ -12,27 +12,21 @@
 	color:#00cc99;
 	font-size: 0.6em;
 }
-
 .content .search-bar{ /**/
 	height: 50px;
 	width: 60.6%;
 	display: inline-block;
-	position: relative;
 	background: white;
 	border-radius: 6px;
 	margin-top: 52px;
 	text-align: left;
+	position: relative;
 	color:black;
-	overflow-x: hidden;
-	line-height: 50px;
-
-}
-.content .banner .icon-search{ /**/
-	font-size: 1.875rem;
+	line-height: 50px;;
 }
 .content .search-bar i{ /**/
 	line-height: 50px;
-	font-size: 20px;
+	font-size: 1.25rem;
 	color:black;
 }
 .content > .container{ /**/
@@ -41,11 +35,12 @@
 .content > .container a[href^=mailto]{ /**/
 	color:#00cc99;
 }
-.content > .container p ~*{ /**/
+.content > .container div ~*{ /**/
 	font-weight: lighter;
 }
 .content > .container article{ /**/
 	color:#9b9b9b;
+	margin-left: 36px;
 }
 .content > .container article:first-line{ /**/
 	text-indent: -5px;
@@ -54,10 +49,19 @@
 	margin-top: 35px;
 }
 .content > .container h4, .content > .container article{ /**/
-	padding-left: 23px;
-	line-height: 1.5;
-	text-indent: -20px;
+	line-height: 1.3;
 	text-align:justify;
+	position: relative;
+}
+.content .frequently-asked h4:before,.howto-pay h4:before, .ask-refund h4:before{
+	content: 'Q：';
+	display: inline-block;
+}
+.content .frequently-asked article:before,.howto-pay article:before, .ask-refund article:before{
+	content: 'A：';
+	display: inline-block;
+	position: absolute;
+	left: -30px;
 }
 .content .howto-pay ol{ /**/
 	text-indent: initial;
@@ -65,10 +69,10 @@
 	list-style-type: decimal;
 }
 .content .ask-refund ul{  /**/
-	margin-left: 33px;
+	margin-left: 23px;
 }
 .content .ask-refund .black-text{ /**/
-	margin-left: -20px;
+	margin-left: -18px;
 	color:black;
 	text-indent: initial;
 }
@@ -80,17 +84,18 @@
 	padding-left: 20px;
 }*/
 .content .ask-refund ul:nth-of-type(1) li,.content .ask-refund ul li{ /*調整整段li為至*/
-	margin-bottom: 5px;
-	margin-left: -4px;
+	margin-left: -7px;
+	position: relative;
+	line-height: 1.4;
 }
 /*.content .ask-refund ul li{ 調整整段li為至
 	margin-left: -46px;
 }*/
 .content .ask-refund ul li:before{ /*調整list icon跟文字距離*/
-	content: '';
-	margin-left: 2px;
-	padding-left: 18px;
-	background: url(../images/common/list-stly-square-_07.jpg) no-repeat center;
+	font-family: "fontello";
+	content: '\e801';
+	position: absolute;
+	left: -11px;
 }
 
 .content .message-us{
@@ -135,23 +140,33 @@
 	margin-right: auto;
 }
 .content .banner{
-	background-position: 51%;
+	background-position: 50%;
 }
 }
 @media only screen and (max-width: 480px){
 
-html{
-	font-size: 11px;
-}
 .content .banner{
 	height: unset;
 	padding: 120px 0 30px 0 ;
 }
 .content .banner span{
-	font-size: 0.55em;
+	font-size: 0.45em;
 }
 .content .banner .sing-up-button{
 	margin-top: 30px;
+}
+.content > .container h4, .content > .container article{
+	margin-left: 35px;
+}
+.content .frequently-asked h4:before, .howto-pay h4:before, .ask-refund h4:before{
+	position: absolute;
+	left: -33px;
+}
+.content .ask-refund .black-text{
+	margin: 0 0 5px -18px;
+}
+.content .ask-refund ul li{
+	margin-bottom: 5px;
 }
 .content .message-us{
 	padding-top: 50px;
@@ -164,7 +179,6 @@ html{
 	font-size: 1.57em;
 	letter-spacing: -1px;
 }
-
 
 .index .subtitle{
 	display: block;
