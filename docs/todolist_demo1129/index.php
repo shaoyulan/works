@@ -7,28 +7,28 @@
 		<ul>
 			<li class="complete">
 				<div class="checkbox"></div>
-				<div class="content" contenteditable="true">wefweafwafwef</div>
+				<div class="content" >wefweafwafwef</div>
 				<div class="actions">
 					<div class="delete">x</div>
 				</div>
 			</li>
 			<li>
 				<div class="checkbox"></div>
-				<div class="content" contenteditable="true">waefwfewafwe</div>
+				<div class="content" >waefwfewafwe</div>
 				<div class="actions">
 					<div class="delete">x</div>
 				</div>
 			</li>
 			<li>
 				<div class="checkbox"></div>
-				<div class="content" contenteditable="true">wafwawefweaf</div>
+				<div class="content" >wafwawefweaf</div>
 				<div class="actions">
 					<div class="delete">x</div>
 				</div>
 			</li>
 			<li class="new">
 				<div class="checkbox"></div>
-				<div class="content" contenteditable="true"></div>
+				<div class="content" ></div>
 			</li>
 		</ul>
 	</div>

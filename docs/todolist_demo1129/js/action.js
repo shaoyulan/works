@@ -4,22 +4,53 @@ $(document).ready(function() {
 	// compile sources to make a ready-to-use holder
 	var todoTemplate = Handlebars.compile(sources);
 
-	//create
-	$('li.new .content').blur(function(e){
-		var todo = $(this).text();
-		todo = todo.trim();
+	//enter editor mode
+	$('#todo-list')
+		.on('dblclick','.content',function(e){
+			$(this).prop('contenteditable','true').focus();
+		})
+		//update and create
+		.on('blur','.content',function(e){
+			//判斷是否是class=new
+			var isNew = $(this).closest('li').is('.new')
+			if (isNew){
+				//create
+				$('li.new .content').blur(function(e){
+					var todo = $(this).text();
+					todo = todo.trim();
 
-		// 使用者有輸入資料才新增li
-		if (todo.length>0){
-			var todo ={
-				is_complete:false,
-				content:todo,
-			};
-			var li = todoTemplate(todo);
-			$(this).closest('li').before(li);
+					// 使用者有輸入資料才新增li
+					if (todo.length>0){
+						var todo ={
+							is_complete:false,
+							content:todo,
+						};
+						var li = todoTemplate(todo);
+						$(this).closest('li').before(li);
 
-		}
-		$(this).empty()
-		// clear new todo item
-	});
+					}
+					$(this).empty()
+					// clear new todo item
+				});
+			}else{
+				$(this).prop('contenteditable','false')
+			}
+			
+		})
+
+		//delete
+		.on('click','.delete',function(e){
+			var result = confirm('do you want to delete');
+			if (result){
+				$(this).closest('li').remove();
+			}
+		})
+
+		.on('click','.checkbox',function(e){
+			$(this).closest('li').toggleClass('complete');
+		});
+
+		$('#todo-list').find('ul').sortable({
+			items:'li:not(.new)',
+		});
 });
