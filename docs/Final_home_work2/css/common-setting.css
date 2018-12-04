@@ -134,13 +134,15 @@ input::placeholder{
 
 .content .banner .sing-up-button{
 	display: inline-block;
-	padding:13px 37px;
+	padding:13px 22px;
 	margin-top: 60px;
 	background: #00cc99;
 	border-radius: 5px;
 	font-size: 1.25rem;
 }
-
+.sing-up-button i{
+	padding-left: 30px;
+}
 /*header*/
 .header{
 	background: rgba(164,164,164,0.3);
