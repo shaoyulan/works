@@ -10,10 +10,8 @@
 }
 .content .banner h1{ /**/
 	color:white;
-	font-size: 3.4em;
 }
 .content .banner h3{ /**/
-	font-size: 1.5em;
 	padding-top: 10px;
 }
 .content .banner span, .content .banner .sing-up-button{
@@ -56,7 +54,6 @@
 	padding-left: 20px;
 }
 .content .class-feature li{ /**/
-	padding-left: 20px;
 	line-height: 1.5;
 	color:#323223;
 }
@@ -99,20 +96,12 @@
 .container{
 	width: 90%;
 }
-.content .banner h1{
-	font-size: 2.8em;
-}
+
 }
 @media only screen and (max-width: 480px){
 .container{ /**/
 	width:90%;
 	margin:0 auto;
-}
-.content .banner h1{ /**/
-	font-size: 1.8em;
-}
-.content .banner h2{
-	font-size: 1.8em;
 }
 
 .content .banner{

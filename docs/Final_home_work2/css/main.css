@@ -94,14 +94,16 @@
 	color:#6bdab8;
 }
 @media only screen and (max-width: 1200px){
-
+.container{
+	width: 90%;
+}
 }
 @media only screen and (max-width: 480px){
 h1{
-	font-size: 2.1em;
+	font-size: 2.2rem; /*額外設定*/
 }
-h2{
-	font-size: 1.8em;
+.container{
+	width: 95%;
 }
 .content .banner{
 	height: unset;
