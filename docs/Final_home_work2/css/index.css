@@ -1,5 +1,5 @@
 /*Index content*/
-.content .banner{
+.index .content .banner{
 	background: url(../images/index/banner-photo.jpg);
 	background-size: cover;
 	background-position: 0% 100%;
@@ -7,17 +7,11 @@
 	padding-top: 207px;
 	color:#00cc99;
 }
-.content .banner span, .content .banner .sing-up-button{
+.index .content .banner span, .content .banner .sing-up-button{
 	color:white;
 }
-.content .banner .sing-up-button{
-	display: inline-block;
-	padding:13px 37px;
-	margin-top: 60px;
-	background: #00cc99;
-	border-radius: 5px;
-}
-.content .selected-courses li{
+
+.index .content .selected-courses li{
 	float: left;
 	text-align: center;
 	width: 33%;
@@ -26,7 +20,7 @@
 .content .selected-courses h2{
 	position:relative;
 }
-.content .selected-courses .more-class-button{
+.index .content .selected-courses .more-class-button{
 	position: absolute;
     bottom: 0;
     right: 0;
@@ -34,29 +28,32 @@
 	padding:8px;
 	border: 2px solid #00cc99;
 	border-radius: 4px;
-	font-size: 0.4em;
+	font-size: 1rem;
 }
-.content .selected-courses .box{
+.index .content .selected-courses .more-class-button:hover{
+	cursor:pointer;
+}
+.index .content .selected-courses .box{
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
 	padding:30px 20px;
 	transition: all linear .3s;
 }
-.content .selected-courses .box:hover{
+.index .content .selected-courses .box:hover{
 	box-shadow: 3px 3px 15px rgba(0,0,0,0.3);
 	cursor:pointer;
 }
-.content .selected-courses .box h4{
+.index .content .selected-courses .box h4{
 	margin: 14px 0;
 }
-.content .message-us{
+.index .content .message-us{
 	padding-top:135px;
 	padding-bottom: 60px;
 	background: #ebebeb;
 }
-.content .message-us h3, .message-us .input-section{
+.index .content .message-us h3, .message-us .input-section{
 	width: 50%;
 }
-.content .message-us .input-section input{
+.index .content .message-us .input-section input{
 	width: 89.89%;
 	height: 52px;
 	margin-bottom: 20px;
@@ -64,11 +61,11 @@
 	padding-left: 10px
 }
 
-.content .message-us h3{
+.index .content .message-us h3{
 	line-height: 60px;
 	margin-top: -17px;
 }
-.content .message-us .submit-button{
+.index .content .message-us .submit-button{
 	width: 13.6%;
 	float: right;
 	text-align: center;
@@ -76,11 +73,11 @@
 	height: 48px;
 	line-height: 48px;
 }
-.content .comparison table{
+.index .content .comparison table{
 	margin: 0 auto;
 }
 
-.content .comparison td,th{
+.index .content .comparison td,th{
 	width: 235px;
 	height: 50px;
 	border-top:1px solid  lightgray;
@@ -90,37 +87,39 @@
 	text-align: center;
 	letter-spacing: 0;
 }
-.content .comparison tr:first-child{
+.index .content .comparison tr:first-child{
 	background: #ebebeb;
 }
-.content .comparison tr:hover{
+.index .content .comparison tr:hover{
 	background: #ebebeb;
 }
-.content .comparison .colored{
+.index .content .comparison .colored{
 	color:#6bdab8;
 }
 @media only screen and (max-width: 1200px){
-
+.index .container{
+	width: 90%;
+}
 }
 @media only screen and (max-width: 480px){
-h1{
-	font-size: 2.1em;
+.index h1{
+	font-size: 2.2rem; /*額外設定*/
 }
-h2{
-	font-size: 1.8em;
+.index .container{
+	width: 95%;
 }
-.content .banner{
+.index .content .banner{
 	height: unset;
 	padding: 120px 0 30px 0 ;
 }
-.content .banner .sing-up-button{
+.index .content .banner .sing-up-button{
 	margin-top: 30px;
 }
-.content .message-us{
+.index .content .message-us{
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
-.content .message-us h3{
+.index .content .message-us h3{
 	margin-bottom: 30px;
 	width: unset;
 	line-height: 40px;
@@ -128,48 +127,48 @@ h2{
 	letter-spacing: -1px;
 }
 
-.container,.selected-courses, .comparison{
+.index .container,.selected-courses, .comparison{
 	width: 90%;
 	margin-left:auto;
 	margin-right: auto;
 }
 
-.content .selected-courses li{
+.index .content .selected-courses li{
 	float: unset;
 	width: unset;
 }
-.content .selected-courses .more-class-button{
+.index .content .selected-courses .more-class-button{
 	bottom: unset;
 	top:0;
 	padding:6px;
 }
-.index .subtitle{
+.index .index .subtitle{
 	display: block;
 	padding:unset;
 	margin-top: 10px;
 }
-.content .comparison td, th{
+.index .content .comparison td, th{
 	width: unset;
 	height: unset;
 	line-height: 38px;
 	letter-spacing: -1px;
 }
-.content .message-us .submit-button{
+.index .content .message-us .submit-button{
 	float: unset;
 	display: inline-block;
 	width: 89.89%;
 }
-.content .message-us  .container{
+.index .content .message-us  .container{
 	text-align: center;
 }
-.content .message-us .flex-center{
+.index .content .message-us .flex-center{
 	display: unset;
 	align-items: unset;
 }
-.content .message-us .input-section {
+.index .content .message-us .input-section {
 	width: unset;
 }
-.content .message-us .input-section input{
+.index .content .message-us .input-section input{
 	float: unset;
 }
 

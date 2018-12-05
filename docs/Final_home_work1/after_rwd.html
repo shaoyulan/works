@@ -27,7 +27,12 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
+	<link rel="stylesheet" href="css/lightbox.css">
+	<link rel="stylesheet" href="css/themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/after_rwd.css">
+
 </head>
 <body>
 	<div class="wrap">
@@ -45,25 +50,57 @@
 					<!-- .nav樣式直接寫道ul，減少div，加上clearfix-->
 					<ul class="nav clearfix">
 						<li><a href="#" class="active">首頁</a></li>
-						<li><a href="#">產品介紹</a></li>
+						<li class="navbar-products">
+							<a href="#" class="dropdown">產品介紹</a>
+							<ul class="sub-nav">
+								<li><a href="#">Html5課程</a></li>
+								<li><a href="#">RWD課程</a></li>
+								<li><a href="#">jQuery課程</a></li>
+							</ul>
+						</li>
 						<li><a href="#">聯絡我們</a></li>
 						<li class="clearfix"></li>
 					</ul>
 			</div>
 		</div> 
 		<div class="content">
-			<div class="banner">
-				<div class="container rect">
-					<!-- 斷行用<br> -->
-					<h1>六角學院<br>讓您奠定良好的前端基礎</h1>
+			<div class="slider-wrapper theme-default">
+			    <div id="slider" class="nivoSlider">
+			        <a href="#"><img src="img/banner_02.jpg" alt="" /><span class="test">TEST</span></a>
+			        <img src="img/banner_03.jpg" alt="" title="This is an example of a caption" />
+			        <img src="img/banner_04.jpg"  alt="" data-transition="slideInLeft" />
+			        <img src="img/banner_05.jpg"alt="" title="#htmlcaption" />
+			    </div>
+			    <div id="htmlcaption" class="nivo-html-caption">
+			        <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+			    </div>
+			</div>
+			<!-- <div class="slider-wrapper theme-default">
+				<div id="slider" class="nivoSlider">
+				    <img src="img/banner_02.jpg" alt="" />
+				    <img src="img/banner_03.jpg" alt="" title="This is an example of a caption" />
+				    <img src="img/banner_04.jpg"  alt="" data-transition="slideInLeft" />
+				    <img src="img/banner_05.jpg"alt="" title="#htmlcaption" />
 				</div>
+				<div id="htmlcaption" class="nivo-html-caption">
+				    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+				</div>
+			</div> -->
+			<div class="banner">
+				<!-- <div id="htmlcaption" class="nivo-html-caption">     
+				    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
+				</div> -->
+				<!-- <div class="container rect">
+					斷行用<br>
+					<h1>六角學院<br>讓您奠定良好的前端基礎</h1>
+				</div> -->
 			</div>
 			<div class="product">
 				<ul class="intro clearfix">
 					<li>
 						<div class="box clearfix">
 							<div class="img">
-								<img src="img/html_06.png" alt="Html5">
+								<a href="img/lightbox/html5_biger.png" data-lightbox="image-1"><img src="img/html_06.png" alt="html5"></a>
 							</div>
 							<h3>Html5基礎教學</h3>
 							<p>主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學原學習業界主流的開發方法。</p>
@@ -72,7 +109,7 @@
 					<li>
 						<div class="box clearfix">
 							<div class="img vertical-align">
-								<img src="img/rwd_09.png" alt="rwd">
+								<a href="img/lightbox/rwd_biger.jpg" data-lightbox="image-1"><img src="img/rwd_09.png" alt="html5"></a>
 							</div>
 							<h3>響應式網站設計</h3>
 							<p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生了解行動版開發技巧。</p>
@@ -81,7 +118,7 @@
 					<li class="jquery">
 						<div class="box clearfix">
 							<div class="img">
-								<img src="img/jquery_09.png" alt="jquery">
+								<a href="img/lightbox/jquery_biger.png" data-lightbox="image-1"><img src="img/jquery_09.png" alt="html5"></a>
 							</div>
 							<h3>jQuery實戰教學</h3>
 							<p class="clearfix">
@@ -144,5 +181,25 @@
 			</div>
 		</div>
 	</div>
+	<!-- nivo slider -->
+	<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	<script type="text/javascript">
+	$(window).load(function() {
+	    $('#slider').nivoSlider();
+	});
+	</script>
+	
+	<!-- nav-bar -->
+	<script src="js/lightbox.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('.navbar-products').hover(function(e) {
+				$('.sub-nav').stop().slideToggle(400);
+				$(this).closest('.nav').find('a').add('border','white');
+				$(this).addClass('active');
+			});
+		});
+	</script>
 </body>
 </html>

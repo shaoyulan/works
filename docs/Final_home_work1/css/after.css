@@ -171,7 +171,9 @@ input:focus{
 .nav li a.active{
 	border-bottom: 3px solid #00cc99; 
 }
-
+.nav li:hover a{
+	border-bottom:unset;
+}
 /*content*/
 .content{
 	width: 100%;

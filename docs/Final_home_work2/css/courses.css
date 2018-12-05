@@ -5,13 +5,13 @@
 	background-position: 0% 100%;
 	height: 560px;
 	padding-top: 180px;
-	position: relative; /**/
+	position: relative; 
 	color:#00cc99;
 }
-.content .banner h1{ /**/
+.content .banner h1{ 
 	color:white;
 }
-.content .banner h3{ /**/
+.content .banner h3{ 
 	padding-top: 10px;
 }
 .content .banner span, .content .banner .sing-up-button{
@@ -27,47 +27,47 @@
 }
 
 .content > .container{
-	max-width: 640px; /**/
+	max-width: 640px; 
 }
 .content .teacher-info{
 	justify-content: space-between;
 }
-.content .teacher-info h2{ /**/
+.content .teacher-info h2{ 
 	margin:unset;
 	line-height: 1.2em;
 }
-.content .teacher-info span{ /**/
+.content .teacher-info span{ 
 	color:#323228;
 }
-.content .teacher-info ul{ /**/
+.content .teacher-info ul{ 
 	padding-left: 30px;
 	line-height: 1.4em;
 	color:var(--light-gray);
 }
-.content .teacher-info li:before{ /**/
+.content .teacher-info li:before{ 
 	content: ' ';
 	padding-left: 30px; /*重點*/
 	background: url(../images/common/list-stly-square-_07.jpg) no-repeat center left;
 }
-.content .class-feature ol{ /**/
+.content .class-feature ol{ 
 	list-style-type: decimal;
 	padding-left: 20px;
 }
-.content .class-feature li{ /**/
+.content .class-feature li{ 
 	line-height: 1.5;
 	color:#323223;
 }
-.content .course-outline li{ /**/
+.content .course-outline li{ 
 	line-height: 50px;
 	padding-left: 35px;
 }
-.content .course-outline li:nth-child(2n+1){ /**/
+.content .course-outline li:nth-child(2n+1){ 
 	background: #ebebeb;
 }
-.content .course-outline li:nth-child(2n){ /**/
+.content .course-outline li:nth-child(2n){ 
 	color: #9b9b9b;
 }
-.content .message-us .flex-center{  /**/
+.content .message-us .flex-center{  
 	align-items: flex-end;
 	justify-content: center;
 }
@@ -76,7 +76,7 @@
 	background: #ebebeb;
 }
 
-.content .message-us h3{ /**/
+.content .message-us h3{ 
 	padding-right: 95px;
 	line-height: 50px;
 	margin-top: -17px;
@@ -92,14 +92,16 @@
 }
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 768px){
 .container{
 	width: 90%;
 }
-
+.content .banner-img{
+	display: none;
+}
 }
 @media only screen and (max-width: 480px){
-.container{ /**/
+.container{ 
 	width:90%;
 	margin:0 auto;
 }
@@ -111,21 +113,19 @@
 .content .banner .sing-up-button{
 	margin-top: 30px;
 }
-.content .banner-img{
-	display: none;
-}
 
-.content .teacher-info.flex-center{ /**/
+
+.content .teacher-info.flex-center{ 
 	display: block;
 	text-align: center;
 }
-.content .teacher-info ul{ /**/
+.content .teacher-info ul{ 
 	padding:20px 0 0 60px;
 }
-.content .teacher-info.flex-center li{ /**/
+.content .teacher-info.flex-center li{ 
 	text-align: left;
 }
-.content .teacher-info li:before{  /**/
+.content .teacher-info li:before{  
 	padding-left: 20px;
 }
 .content .class-feature li{
@@ -137,7 +137,7 @@
 }
 .content .message-us h3{
 	margin-bottom: 30px;
-	padding-right: unset; /**/
+	padding-right: unset; 
 	width: unset;
 	line-height: 40px;
 	font-size: 1.57em;

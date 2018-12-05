@@ -169,6 +169,7 @@ input::placeholder{
 .header .nav{
 	float: right;
 }
+
 .header .nav >li{
 	float:left;
 	line-height: 75px;
@@ -178,7 +179,14 @@ input::placeholder{
 	color:#f5f5f5;
 	font-size: 0.9375rem;
 }
-
+.header .nav:hover a{
+	border:none;
+	color:white;
+}
+.header .nav a:hover{
+	border-bottom: 8px solid #00cc99;
+	color:#00cc99;
+}
 .header .nav .active{
 	border-bottom: 8px solid #00cc99;
 	color: #00cc99;
