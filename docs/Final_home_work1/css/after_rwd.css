@@ -142,7 +142,7 @@ input:focus{
 .nav .nav{
 	float: right;
 	position: relative;
-	z-index: 2; /*避免被nivo slider蓋住*/
+	z-index: 99; /*避免被nivo slider蓋住*/
 }
 .nav .header-logo{
 	display: block;
@@ -185,7 +185,8 @@ input:focus{
 	width: 260%;
 	size: 12px;
 	border-radius: 0 0 5px 5px;
-	opacity: 0.9;
+	opacity: 0.99;
+/*。*/
 }
 .nav .sub-nav li:hover{
 	background: #00cc99;
@@ -205,9 +206,23 @@ input:focus{
 	box-sizing: border-box;
 	color:white;*/
 }
-.content .nivoSlider{
-	z-index: 1;
+.content .nivo-imageLink .test{
+	visibility: visible;
+	opacity: 0;
+	animation: textslider 3.5s 1s;
+	background: rgb(173, 216, 230,0.8);
+	padding: 5px;
+	line-height: 59.3px;
 }
+
+@keyframes textslider {
+	0%   {opacity: 0;}
+	25%  {opacity: 1;}
+	50%  {opacity: 1;}
+	75%  {opacity: 1;}
+	100% {opacity: 0;}
+}
+
 .content .banner:hover{
 	cursor: pointer;
 }
@@ -220,7 +235,6 @@ input:focus{
 }
 
 .content .product{
-	margin: 65px 0 0 0;
 	box-sizing: border-box;
 	padding: 23px 0 0 18px;
 }
