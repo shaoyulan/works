@@ -35,6 +35,17 @@
 
 </head>
 <body>
+	<!-- FB comment box -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.2';
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- end-of FB comment box -->
+
 	<div class="wrap">
 		<div class="header">
 			<div class="social-media grey-bg clearfix">
@@ -172,6 +183,9 @@
 				</div><!-- end-of-form -->
 			</div>
 		</div> 
+			<!-- FB comment box  -->
+			<div class="fb-comments" data-href="https://shaoyulan.github.io/works/Final_home_work1/after_rwd.html" data-width="1024" data-numposts="5"></div>
+			<!-- end-of fb comment box -->
 		<div class="footer">
 			<!-- .logo的樣式可以直接寫到img上 -->
 			<img src="img/footer-logo_18.png" alt="logo" class="logo">
