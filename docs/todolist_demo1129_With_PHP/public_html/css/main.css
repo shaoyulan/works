@@ -1,0 +1,48 @@
+/*template*/
+.template{
+	display: none;
+}
+/*panel*/
+#panel {
+	margin:0 auto;
+	padding: 30px;
+	width: 600px;
+	background-color: #eee;
+}
+
+#todo-list ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+#todo-list li{
+	display: flex;
+	padding: 10px;
+}
+#todo-list li.complete .checkbox{
+	background-color: #777;
+}
+#todo-list li:hover{
+	background: #f8f8f8
+}
+#todo-list .content{
+	flex:1;
+}
+#todo-list li.complete .content{
+	text-decoration: line-through;
+}
+#todo-list .checkbox{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background:#ccc;
+	margin-right: 10px;
+	cursor:pointer;
+}
+#todo-list .content{
+
+}
+#todo-list .actions > *{
+	padding: 0 10px;
+ 	cursor:pointer;
+}
