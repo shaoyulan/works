@@ -1,0 +1,14 @@
+目前製作進度
+
+1.首頁 index.html
+2.商品頁
+
+  WOMEN product/product.html
+  
+  WOMEN/上身類 product/product_paging.html
+
+  WOMEN 上身類 (商品詳細頁) product/Product_detail.html
+
+  SALE  product/product_sale.html
+
+  SALE (特活動內容目錄頁) product/product_sale_paging.html

@@ -1,0 +1,11 @@
+id,active_stat,activity_text,img_url,title,price_org,price_dis,category_main,category_sub
+1,p_active_media,sale,images/men/accessories/a001a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,men,upper
+2,p_active_media bg_g,new,images/men/coat/ct001a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,men,upper
+3,,,images/men/home$inside/h002a-2.jpg,棉質條紋寬領長袖T恤-女,290,260,women,upper
+4,,,images/women/sweater/sw001a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,kid,upper
+5,,,images/women/shirt/s004a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,men,shoes
+6,,,images/women/sweater/sw002a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,women,upper
+7,,,images/women/coat/ct003a-3.jpg,棉質條紋寬領長袖T恤-女,290,260,men,upper
+8,,,images/women/sweater/sw004a-1.jpg,棉質條紋寬領長袖T恤-女,290,260,kid,upper
+9,,,"images/men/accessories/a001a-1.jpg
+",棉質條紋寬領長袖T恤-女,290,260,men,upper
