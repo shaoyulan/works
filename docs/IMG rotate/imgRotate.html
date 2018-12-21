@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>IMG Rotate</title>
+	<title>IMG Flipper</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style>
 		body{
-			padding-top: 500px;
+			text-align: center;
+		}
+		.arrow{
+			margin: 100px 0 200px 0;
+			font-size: 50px;
+		}
+		span{
+			transform: rotateX(45deg);
 		}
 		.wraper{
 			width: 85%;
@@ -36,6 +43,7 @@
 
 </head>
 <body>
+	<div class="arrow"> ↓ IMG Flipper Scroll down to see effect ↓ </div>
 	<div class="wraper">
 		<img src="1.jpg" alt="" class="">	
 	</div>
