@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xmas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<style>
+		body{
+			background:url('pure_bg.svg');
+			background-size: cover;
+			overflow: hidden;
+		}
+		.wrapper{
+			width: 100%;
+			height: 100vh;
+			background:url('whitedots.svg');
+			background-size:cover;
+		}
+		.snow{
+			position: absolute;
+			top:0;
+			left:0;
+			bottom: 0;
+			right: 0;
+			height: 100vh;
+			background: url('snowfall1.gif');
+		}
+		.giftbox{
+			width:15vw;
+			position: absolute;
+			right: 15%;
+			bottom: -3%;
+		}
+		.snower{
+			width: 25vw;
+		    position: absolute;
+		    right: -2%;
+		    bottom: -1%;
+		}
+		.gingerman{
+			width: 25vw;
+			position: absolute;
+			left: -3%;
+			bottom: -10%;
+		}
+		.bottomflower{
+			width: 22vw;
+		    position: absolute;
+		    left: 8%;
+		    bottom: -50%;
+		}
+		.upperball{
+			width: 15vw;
+		    position: absolute;
+		    right: 11%;
+		    top: -10%;
+		    animation: rotate 3s linear 0s infinite normal;
+		}
+
+		.hanger{
+			background: url(hanger.png);
+			position: absolute;
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 44vw;
+			height: 4.7vw;
+			left: 28%;
+			top: -2%
+		}
+		.lanternball{
+			width:14vw;
+			position: relative;
+			top: 53%;
+			transform-origin: 50% 0%;
+			transform: rotate(45deg);
+			animation:swing 3s ease-in-out 0s infinite alternate;
+		}
+		.starball{
+			width:14vw;
+			position: relative;
+			top: 73%;
+			right: -46%;
+			transform-origin: 50% 0%;
+			transform: rotate(45deg);
+			animation:swing-star 3s ease 0s infinite alternate ;
+		}
+		@keyframes rotate {
+		    from {transform: rotate(0deg);}
+		    to {transform: rotate(360deg);}
+		}
+
+		@keyframes swing{
+			from {transform: rotate(-30deg);}
+			to {transform: rotate(30deg);}
+		}
+		@keyframes swing-star{
+			from {transform: rotate(15deg);}
+			to {transform: rotate(-8deg);}
+		}
+
+		.candybar{
+			width: 10vw;
+			position: absolute;
+			left:-50%;
+			top:5%;
+		}
+		.yellowbulb{
+			display: inline-block;
+			width: 24px;
+			height: 47px;
+			position: relative;
+			top: -92%;
+			left: -8%;
+			animation:yellowch 10s ease 0s infinite alternate ;
+		}
+		.redbulb{
+			display: inline-block;
+			width: 24px;
+			height: 47px;
+			position: relative;
+			top: -87%;
+			left: -5%;
+			animation:redch 10s ease 0s infinite alternate ;
+		}
+		.bluebulb{
+			display: inline-block;
+			width: 24px;
+			height: 47px;
+			position: relative;
+			top: -91%;
+			left: -4%;
+			animation:bluech 10s ease 0s infinite alternate ;
+		}
+		@keyframes yellowch{
+			0%{background-image: url(yellowbulb.png);}
+			50%{background-image: url(yellowbulbchR.png);}
+			100%{background-image: url(yellowbulbchB.png);}
+		}
+		@keyframes redch{
+			0%{background-image: url(yellowbulbchR.png);}
+			50%{background-image: url(yellowbulbchB.png);}
+			100%{background-image: url(yellowbulb.png);}
+		}
+		@keyframes bluech{
+			0%{background-image: url(yellowbulbchB.png);}
+			50%{background-image: url(yellowbulb.png);}
+			100%{background-image: url(yellowbulbchR.png);}
+		}
+		.caption{
+			width:40vw;
+			opacity: 0;
+			position: absolute;
+			top:45%;
+			left:50%;
+			transform: translateX(-50%);
+		}
+		.name{
+			width:14vw;
+			opacity: 0;
+			position: absolute;
+			top:28%;
+			left:50%;
+			transform: translateX(-50%);
+		}
+		@media screen and (max-width: 2048px) {
+		  .hanger{
+		  	visibility:hidden;
+		  }
+		  .redbulb,.bluebulb,.yellowbulb,.lanternball,.starball{
+		  	visibility: visible;
+		  	position: absolute;
+		    top:0;
+		  }
+		  .redbulb{
+		  	left:45%;
+		  }
+		  .bluebulb{
+		  	left:53%;
+		  }
+		  .yellowbulb{
+		  	left:60%;
+		  }
+		  .starball{
+		  	right:-2%;
+		  }
+		}
+		@media only screen and (min-width: 769px) and (max-width: 1024px){
+			.caption{
+				width: 61vw;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			.lanternball,.starball{
+				width: 20vw;
+			}
+			.redbulb,.bluebulb,.yellowbulb{
+				visibility: hidden;
+			}
+			.gingerman,.snower{
+				width: 50vw;
+			}
+			.giftbox{
+				width: 20vw;
+			}
+			.caption{
+				width: 87vw;
+				top:33%;
+			}
+			.name{
+				width: 28vw;
+				top:15%;
+			}
+			.candybar{
+				width: 18vw;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="snow"></div>
+		<img src="snower.png" class="snower">
+		<img src="giftbox.png" class="giftbox animated">
+		<img src="bottomflower.png" class="bottomflower">
+		<img src="gingerman.png" class="gingerman">
+		<img src="upperball.png" class="upperball">
+		
+		<div class="hanger">
+			<img src="lanternball.png" class="lanternball">
+			<img src="starball.png" class="starball">
+			<div src="yellowbulb.png" class="yellowbulb"></div>
+			<div src="yellowbulbchR.png" class="redbulb"></div>
+			<div src="yellowbulbchB.png" class="bluebulb"></div>
+		</div>
+		
+		<img src="candybar.png" class="candybar">
+		<embed src="jinbell.mp3" type="audio/mp3" style="display: none">
+		<audio src="jinbell.mp3" autoplay="autoplay" type="audio/mp3"></audio>
+
+		<img src="caption.png" class="caption">
+		<img src="name.png" class="name">
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(e){
+			$('.gingerman').addClass('animated flipInX');
+			$('.snower').addClass('animated flipInX delay-1s');
+			$('.giftbox').addClass('animated jackInTheBox delay-2s');
+			$('.wrapper').fadeOut().fadeIn(1000);
+			setTimeout(function(e){
+				// $('.bottomflower').animate({bottom: -7%}, speed);
+				$('.candybar').animate({'left':'0'}).addClass('animated rollIn');
+			},500)
+			setTimeout(function(e){
+				// $('.bottomflower').animate({bottom: -7%}, speed);
+				$('.bottomflower').animate({'bottom': '-7%'})
+			},1000)
+
+			setTimeout(function(e){
+				// $('.bottomflower').animate({bottom: -7%}, speed);
+				$('.name').animate({'opacity': '1'})
+			},3000)
+
+			setTimeout(function(e){
+				// $('.bottomflower').animate({bottom: -7%}, speed);
+				$('.caption').animate({'opacity': '1'})
+			},4000)
+
+			$('.giftbox').on('mouseenter',function(e){
+				$(this).removeClass('jackInTheBox delay-2s');
+				$(this).addClass('shake');
+			});
+			$('.giftbox').on('mouseout',function(e){
+				$(this).removeClass('shake');
+			});
+
+		});
+	</script>
+</body>
+</html>
