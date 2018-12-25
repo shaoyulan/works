@@ -85,6 +85,9 @@
 			transform: rotate(45deg);
 			animation:swing-star 3s ease 0s infinite alternate ;
 		}
+		#noplay{
+			visibility: hidden;
+		}
 		@keyframes rotate {
 		    from {transform: rotate(0deg);}
 		    to {transform: rotate(360deg);}
@@ -191,6 +194,15 @@
 			}
 		}
 		@media only screen and (max-width: 768px) {
+			#noplay{
+				visibility: visible;
+				width: 50px;
+				height: 30px;
+				border-radius: 5px;
+				position: absolute;
+				top:10px;
+				right: 10px;
+			}
 			.lanternball,.starball{
 				width: 20vw;
 			}
@@ -215,6 +227,7 @@
 				width: 18vw;
 			}
 		}
+		
 	</style>
 </head>
 <body>
@@ -236,7 +249,7 @@
 		
 		<img src="candybar.png" class="candybar">
 
-		<embed src="jinbell.mp3" type="audio/mp3" style="visibility:hidden;opacity: 0" id="noplay">
+		<embed src="jinbell.mp3" type="audio/mp3"  id="noplay">
 
 		<!-- <audio controls id="aud" autoplay="autoplay" style="visibility:hidden;opacity: 0">
 		  <source src="jinbell.mp3" type="audio/mpeg"> -->
