@@ -236,9 +236,9 @@
 		
 		<img src="candybar.png" class="candybar">
 
-		<!-- <embed src="jinbell.mp3" type="audio/mp3" autoplay style="visibility:hidden;opacity: 0"> -->
+		<embed src="jinbell.mp3" type="audio/mp3" style="visibility:hidden;opacity: 0" id="noplay">
 
-		<audio controls id="aud" autoplay="autoplay" style="visibility: hidden;opacity: 0">
+		<audio controls id="aud" autoplay="autoplay" style="visibility:hidden;opacity: 0">
 		  <source src="jinbell.mp3" type="audio/mpeg">
 		</audio>
 
@@ -249,9 +249,12 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(e){
-			player = document.getElementById('aud');
-			player.src = 'jinbell.mp3';
+			player = document.getElementById('noplay');
 			player.play();
+			player.src = 'jinbell.mp3';
+			beeper = setInterval(function() { player.play(); } ,100);
+			// setTimeout(function(e){player.play();},100);
+			$('#noplay').remove();
 			$('.gingerman').addClass('animated flipInX');
 			$('.snower').addClass('animated flipInX delay-1s');
 			$('.giftbox').addClass('animated jackInTheBox delay-2s');
