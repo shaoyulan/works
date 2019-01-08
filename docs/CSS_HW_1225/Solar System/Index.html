@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Animation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+
+		:root{
+			--length:80px; /*調整地圖大小*/
+			--earthOrb:calc(var(--length)*2.5);
+
+			--earth:calc(var(--length)*1);
+			--moonOrb:calc(var(--length)*1.5);
+			--moon:calc(var(--length)*0.375);
+
+
+			--mercury:calc(var(--length)*0.15); /*新增星球 1. 設定大小 Class+Dist*/
+			--mercuryDist:20%; /*新增星球 2. 設定距離 +Dist*/
+
+			--venus:calc(var(--length)*0.1); /*新增星球 1. 設定大小 Class+Dist*/
+			--venusDist:18%; /*新增星球 2. 設定距離 Class+Dist*/
+		
+		}
+		html, body{
+			margin:0;
+			overflow: hidden;
+			height: 100%;
+		}
+		#universe{
+			height: 100%;
+			background: radial-gradient(#555,#000);
+		}
+		.starBg{
+			height: 100%;
+			background-image: url("stars.png");
+			animation:starFlash 3s infinite alternate;
+			/*使用重疊*/
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+		#stars{
+			-webkit-background-size: cover;
+			background-size: cover;	
+		}
+		#stars2{
+			background-size: contain;
+		}
+		#stars3{
+			background-size: contain;
+			background-position: 48% 48%;
+		}
+		/*blinging star*/
+		@keyframes starFlash{
+			from{opacity:1;}
+			to{opacity:0;}
+		}
+		#sun{
+			width: var(--length);
+			height: var(--length);
+			background: radial-gradient(#f5c313, #ec7e08);
+			position: relative;
+			margin:50% auto 0 auto;
+			transform: translateY(-50%);
+			border-radius: 100%;
+			box-shadow: 0 0 45px #f5c91a;
+			animation: sunLight 10s infinite alternate;
+		}
+		@keyframes sunLight{
+			from{box-shadow:0 0 45px #f5c91a;}
+			to{box-shadow: 0 0 90px #f5c91a}
+		}
+
+		/*地球軌道*/
+		#earthOrb{
+			height: var(--earthOrb);
+			width: var(--earthOrb);
+			top:calc(50% - var(--earthOrb)*0.5);
+			left:calc(50% - var(--earthOrb)*0.5);
+			position:absolute;
+			/*border:1px solid red;*/
+			animation:spin 30s linear infinite;
+		}
+		.earth{
+			width:var(--earth);
+			height:var(--earth);
+			position: absolute;
+			top:calc(50% - var(--earth) * 0.5);
+			left: calc(50% - var(--earth) * 0.5);
+			
+		}
+		.animation{
+			animation:spin 30s linear infinite;
+		}
+
+		 /*RWD 需求使用 .earthBox*/
+		.earthBox{
+			width: var(--moonOrb);
+			height: var(--moonOrb);
+			position: absolute;
+			top:calc(50% - var(--moonOrb) * 0.5);
+			left: calc(0px - var(--moonOrb) * 1.5) ;
+			/*border:1px solid red;*/
+		}
+
+		#moonOrb{
+			width: var(--moonOrb);
+			height: var(--moonOrb);
+			position: absolute;
+			/*border:1px solid red;*/
+			animation:spin 3s linear infinite;
+		}
+		#moon{
+			width: var(--moon);
+			height: var(--moon);
+			background: radial-gradient(#ddd,#888);
+			border-radius: 100%;
+		}
+
+		@keyframes spin{
+			from{transform:rotate(0);}
+			to{transform:rotate(360deg);}
+		}
+		@media screen and (max-width:480px) {
+			:root{
+				--length:40px;
+			};
+		}
+	</style>
+</head>
+<body>
+	<div id="universe">
+		<div id="stars " class="starBg"></div>
+		<div id="stars2" class="starBg"></div>
+		<div id="stars3" class="starBg"></div>
+
+		<div id="earthOrb">
+			<div id="sun"></div>
+
+			<div class="earthBox">
+				<img id="earth" class="earth animation" src="earth.png" alt="earth" >
+				<div id="moonOrb">
+					<div id="moon"></div>
+				</div>
+			</div>
+			
+
+			<div class= "ball" data-scale='0.056'  data-distance='20%'> 
+				<img id="mercury" class="mercury animation" src="mercury1.png" alt="mercury" >
+			</div>
+
+			<div class= "ball" data-scale='0.857'  data-distance='-18%' > 
+				<img id="venus" class="venus animation" src="Venus2.png" alt="venus" >
+			</div>
+
+			<div class= "ball" data-scale='0.151'  data-distance='-113%' > 
+				<img id="mars" class="mars animation" src="mars4.png" alt="mars" >
+			</div>
+
+			<div class= "ball" data-scale='0.1'  data-distance='-121%' > 
+				<img id="jupiter" class="jupiter animation" src="Jupiter5.png" alt="jupiter" >
+			</div>
+
+			<div class= "ball" data-scale='0.5'  data-distance='-144%' > 
+				<img id="saturn" class="saturn animation" src="saturn6.png" alt="saturn" >
+			</div>
+
+			<div class= "ball" data-scale='0.1'  data-distance='-154%' > 
+				<img id="uranus" class="uranus animation" src="uranus7.png" alt="uranus" >
+			</div>
+
+			<div class= "ball" data-scale='0.1'  data-distance='-162%' > 
+				<img id="neptune" class="neptune animation" src="neptune8.png" alt="neptune" >
+			</div>
+
+			<div class= "ball" data-scale='0.1'  data-distance='-170%' > 
+				<img id="pluto" class="pluto animation" src="pluto9.png" alt="pluto" >
+			</div>
+
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(e){
+			// 尋找各星球
+			var target = $('.ball'); 
+			console.log(target);
+			$.each(target,function(num,target){
+				var unit_name = $(target).find('img').attr('id');
+
+				// *****更新版 大小、距離於data-設定****** 
+				var scale = $(target).data('scale'); // 縮放比例
+				var size = 'calc(var(--length)*'+scale+')';
+				var distance = $(target).data('distance'); // 離邊界距離
+
+				$(target).find("."+unit_name).css({'width':size,'height':size,
+					'top':'calc(50% - '+size+' * 0.5)','left':distance,'position':'absolute'})
+
+				//*****原始版 寬高以:root var另外設定**** 
+				// 在img = unit_name的class加上CSS
+				// $(target).find("."+unit_name).css({'width':'var(--'+unit_name+')','height':'var(--'+unit_name+')',
+				// 	'top':'calc(50% - var(--'+unit_name+') * 0.5)','left':'var(--'+unit_name+'Dist)','position':'absolute'})
+			});
+		});
+	</script>
+</body>
+
+</html>
