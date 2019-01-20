@@ -16,7 +16,7 @@ body{
 
 .container{
 	display:block;
-	width: 1170px;
+	max-width: 1024px;
 	margin: 0 auto;
 }
 
@@ -34,12 +34,15 @@ body{
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 14px;
+	cursor:pointer;
 }
 
 .button.bordered{
 	border: 1px solid black;
 }
-
+.button:hover{
+	background-color: #c5d7e1;
+}
 .row{
 	margin: 0 -10px; /*清掉row左右原本的padding*/
 }
@@ -66,6 +69,9 @@ ul{
 
 img{
 	display: block;
+	width: 100%;
+	height: auto;
+
 }
 
 p {
@@ -147,11 +153,14 @@ p {
 	background: #595959;
 	border:none;
 }
-
+.padding-left{
+	padding-left: calc(33.33%/2);
+}
 .category{
 	position:relative;
 	margin-bottom: 20px;
 }
+
 
 .category img{
 	width: 100%;
@@ -170,7 +179,7 @@ p {
 }
 
 .category .title.light{
-	color:#222;
+	color:#ffffff;
 }
 
 .category .title.dark{
@@ -226,6 +235,7 @@ p {
 	text-align: center;
 	opacity: 0; /*cover 預設不顯示*/
 	transition: all 0.3s;
+	cursor:pointer;
 }
 
 .thumbnail .cover:hover{
@@ -284,6 +294,7 @@ p {
 .feature .info .price{
 	font-size: 26px;
 	font-weight: 100;
+	margin-bottom: 10px;
 }
 
 .feature .info .name{
