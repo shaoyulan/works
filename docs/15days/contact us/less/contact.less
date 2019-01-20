@@ -1,0 +1,51 @@
+@import "basic.less";
+.contact{
+	#content{
+		.title{
+			font-size: 18px;
+			letter-spacing: 2px;
+			margin-bottom: 30px;
+		}
+
+	}
+	.content{
+		padding:100px 0;
+	}
+	.office-info{
+		.address{
+			margin-bottom: 30px;
+		}	
+	}
+	.contact-form{
+		margin-top: 50px;
+		display: inline-block;
+		.col-6,.col-12{
+			margin-bottom: 15px;
+			padding: 0 15px;
+		}
+		input, textarea{
+			width:100%;
+			padding:6px 12px;
+			border: 1px solid #e5e5e5;
+		}
+		label{
+			margin-bottom: 5px;
+			display: inline-block;
+			text-transform: uppercase;
+			color:#7e7e7e;
+		}
+		textarea{
+			height: 95px
+		}
+		button{
+			margin-top: 0;
+			border:none;
+			background:#323232;
+			color:white;
+			&:hover{
+				background:#d6b161;
+				cursor: pointer;
+			}
+		}
+	}
+}

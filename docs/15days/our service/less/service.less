@@ -1,0 +1,85 @@
+@import "basic.less";
+
+
+.service{
+	#header{
+		position: absolute; /*use position to alter layout*/
+		width: 100%;
+	}
+	#content{
+		.header{
+			background-image: url(http://dummyimage.com/1920x1000/eee/ddd);
+			&.black, #breadcrumbs li{
+				.title{
+					color:black;
+				}
+			}
+		}
+
+		.services{
+			.row{
+				>div{
+					padding: 50px;
+					>div{
+					&:hover{
+						background-color: black;
+						color:white;
+						i{
+							color:@branding-color;
+						}
+					}
+					}
+				}
+			}
+		}
+		
+		.services, .feature, .pricing{
+			padding: 100px 0;
+		}
+		.feature{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.special-services{
+			padding:100px 0;
+			.title{
+				margin-bottom: 5px;
+				font-size: 16px;
+			}
+			.subtitle{
+				font-size: 18px;
+				font-weight: normal;
+				text-transform: uppercase;
+				margin: 0;
+			}
+		}
+
+		.big-dot{
+			li{
+				float: left;
+				margin-bottom: 10px;
+				width: 50%;
+				line-height: 1.5;
+				&:before{
+					padding-right: 10px;
+					font-family: "fontello"; /*using font-face. This is very useful trick*/
+					content:'\f10c';
+					color:#758575;
+				}
+			}
+		}
+
+		.special-offer{
+			padding: 60px 0;
+			.promo-info{
+				float: left;
+			}
+			.promo-button{
+				float: right;
+			}
+		}
+	}
+}
