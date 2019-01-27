@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    
+    <!-- FontAwsome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <title>Shao's Home</title>
+
+    <style>
+      *{
+        font-family: Microsoft JhengHei;
+      }
+      .breadcrumb{
+        background-color: transparent;
+      }
+      .btn{
+        border-width:2px;
+      }
+      .form-control{
+        border-width: 2px;
+      }
+      .header-carousel-item{
+        height: 400px;
+      }
+      .bg-cover{
+        -webkit-background-size: cover;
+        background-size: cover!important;
+        background-position: center center;
+      }
+      .carousel-caption{
+        background-color: rgba(0,0,0,.35);
+      }
+      @media screen and (min-width:768px) {
+        .text-md-dark{
+          color: #333;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+  <header>
+    
+    <div class="bg-secondary py-1">
+      <!-- 使用text-right使文字靠右 -->
+      <div class="container text-right">
+        <a href="" class="text-white"><i class="fab fa-facebook"></i></a>
+        <a href="" class="text-white"><i class="fab fa-twitter-square"></i></a>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#">員林市樂悠網</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                美味菜單
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">蘋果口味</a>
+                <a class="dropdown-item" href="#">沒肉不舒服</a>
+                <a class="dropdown-item" href="#">調味醬</a>
+              </div>
+            </li>
+          </ul>
+
+          <form class="form-inline">
+             <a href="" class="btn btn-outline-primary mr-1" data-toggle="modal" data-target="#login">登入</a>
+             <a href="" class="btn btn-primary" data-toggle="modal" data-target="#register">註冊</a>
+           </form>
+        </div>
+      </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <!-- 使用 header-carousel-item 讓圖片可以限制範圍的自適應 -->
+      <div class="carousel-inner">
+        <div class="carousel-item header-carousel-item active bg-cover" style='background:url(https://bit.ly/2RO3zND)'>
+          <div class="carousel-caption d-none d-md-block">
+              <h5>歡迎報名</h5>
+              <p>最受歡迎的線上學習課程</p>
+            </div>
+        </div>
+        <div class="carousel-item  header-carousel-item bg-cover" style='background:url(https://bit.ly/2FOZJ0h)'>
+        </div>
+        <div class="carousel-item  header-carousel-item bg-cover" style='background:url(https://bit.ly/2G2l31w)'>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+  
+  <!-- 為了加背景色在外層使用section -->
+  <section class="bg-info">
+    
+    <div class="container py-5 text-white">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="mb-2"><i class="fas fa-utensils fa-5x"></i></div>
+          <h3>忘卻不了的莓果香</h3>
+          <p>
+            沒有遺憾的愛過、支持過他們，在商言商，他們總是假設：喔，但相信我。可是已經晚了……請你以後不要在我面前說英文了。
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2"><i class="fas fa-mortar-pestle fa-5x"></i></div>
+          <h3>忘卻不了的莓果香</h3>
+          <p>
+            但是當有機會時，但因為你是誠實且對此公平的，雪季可以延續4個月甚至5個月。摩挲著你的顏面，至少你不能完全抱怨荊棘，假如我在萬里外接到你的死耗，小馬，裝一個農夫，可以恣嘗鮮味。
+          </p>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-2"><i class="fas fa-coffee fa-5x"></i></div>
+          <h3>忘卻不了的莓果香</h3>
+          <p>
+            那就結婚吧我沒有妳會死，什麼都別說了，我什麼都不要，但我可以肯定地告訴你，前世的五百次回眸，沒有妳我的人生沒有意義。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用container-fluid來滿版 -->
+  <section class="container-fluid py-5 bg-light text-white" style='position:relative'>
+    <div class="row">
+      <div class="col-md-5 bg-cover" style='
+      position:absolute;top:0;bottom:0;
+      background:url(https://bit.ly/2Rdyy0p)'>
+        
+      </div>
+      <div class="container ">
+        <!-- 使用justify將內容推到最右 -->
+        <div class="row justify-content-end text-md-dark">
+          <div class="col-md-7">
+            <h3>歡迎來到我的餐廳</h3>
+            <p>
+              遇到這些灰色道德地帶時，要到兩三年後才會比較有清楚的感受，而這正是為什麼西方公司會存活，作為一個年輕人，但是負責的人需要接受風險、喜歡冒險和願意負責。2，流感病毒攻心，春電展將開展，NBA明星周，低價電信資費戰，曼城主場連勝。
+            </p>
+            <a href="#" class="btn btn-outline-info">了解更多</a>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <h4>像含羞草似的嬌柔</h4>
+                <p>遍地烽火，台電影星空，Galaxy，鄧志偉揮巨炮，近兩年最大，國內油價連3漲，上學遇到洪七公。</p>
+              </div>
+              <div class="col-md-6">
+                <h4>老師可不可以補交</h4>
+                <p>歐洲和其他國家，現在世界已經變了，在這段感情中，讓情況越來越糟糕，台灣甚至更小、天然資源更少，身形高挑像是一個模特兒，只會讓事情更混亂，我依然盯著窗外圓山飯店的燈光。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center my-3">如何這麼美味</h2>
+      <!-- 要有row才行，col才會正常排版 -->
+      <div class="row">
+        <div class="col-md-6 my-5">
+          <!-- 用額外的一層來設定d-flex，盡量不要直接再col上做事 -->
+          <div class="d-flex">
+            <!-- 再貼上icon之前先用div包起來 -->
+            <div class="mr-3"><i class="fas fa-mug-hot fa-4x"></i></div>
+            <!-- 文字也是用div包起來 -->
+            <div>
+              工作，那麼你至少得吃一對兒鯨魚……我身邊的朋友們啊，沒有錢，但又找不到出路．如果多吃魚可以補腦讓人變聰明的話，珍惜生活上帝還讓你活著，年老的時候，然後選中一張百元大鈔。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-5">
+          <!-- 用額外的一層來設定d-flex，盡量不要直接再col上做事 -->
+          <div class="d-flex">
+            <!-- 再貼上icon之前先用div包起來 -->
+            <div class="mr-3"><i class="fas fa-drum fa-4x"></i></div>
+            <!-- 文字也是用div包起來 -->
+            <div>
+              工作，那麼你至少得吃一對兒鯨魚……我身邊的朋友們啊，沒有錢，但又找不到出路．如果多吃魚可以補腦讓人變聰明的話，珍惜生活上帝還讓你活著，年老的時候，然後選中一張百元大鈔。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-5">
+          <!-- 用額外的一層來設定d-flex，盡量不要直接再col上做事 -->
+          <div class="d-flex">
+            <!-- 再貼上icon之前先用div包起來 -->
+            <div class="mr-3"><i class="fas fa-dove fa-4x"></i></div>
+            <!-- 文字也是用div包起來 -->
+            <div>
+              工作，那麼你至少得吃一對兒鯨魚……我身邊的朋友們啊，沒有錢，但又找不到出路．如果多吃魚可以補腦讓人變聰明的話，珍惜生活上帝還讓你活著，年老的時候，然後選中一張百元大鈔。
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 my-5">
+          <!-- 用額外的一層來設定d-flex，盡量不要直接再col上做事 -->
+          <div class="d-flex">
+            <!-- 再貼上icon之前先用div包起來 -->
+            <div class="mr-3"><i class="fas fa-dice-d20 fa-4x"></i></div>
+            <!-- 文字也是用div包起來 -->
+            <div>
+              工作，那麼你至少得吃一對兒鯨魚……我身邊的朋友們啊，沒有錢，但又找不到出路．如果多吃魚可以補腦讓人變聰明的話，珍惜生活上帝還讓你活著，年老的時候，然後選中一張百元大鈔。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 這個區塊自行練習 -->
+  <section>
+    
+  </section>
+
+  <!-- 地圖表單區塊 -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe src="https://bit.ly/2DCDOah" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6">
+          <!-- 要做自定表單驗證 form要先有個id、novalidate -->
+          <form id='needs-validation' novalidate>
+            <!-- 會有一個form-group -->
+            <div class="form-group">
+              <label for="username">姓名*</label>
+              <input id='username'type="text" class="form-control" placeholder="請輸入姓名" required="">
+              <!-- 驗證沒過要顯示的文字 -->
+              <div class="invalid-feedback">
+                請輸入姓名
+              </div>
+            </div>
+
+            <!-- 會有一個form-group -->
+            <div class="form-group">
+              <label for="tel">電話*</label>
+              <input id='tel'type="tel" class="form-control" placeholder="請輸入電話" required>
+            </div>
+            
+            <!-- 會有一個form-group -->
+            <div class="form-group">
+              <label for="mail">郵件*</label>
+              <input id='mail'type="email" class="form-control" placeholder="請輸入郵件" required>
+            </div>
+            
+            <!-- 會有一個form-group -->
+            <div class="form-group">
+              <label for="number">人數*</label>
+              <input id='number'type="number" class="form-control" placeholder="請輸入人數" required>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" required>
+              <label class="custom-control-label" for="customRadio1">需要素食</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" required>
+              <label class="custom-control-label" for="customRadio2">不需要素食</label>
+            </div>
+            
+            <!-- 一組按鈕 -->
+            <div class="text-right">
+              <button type='reset' class="btn btn-secondary">取消</button>
+              <button type='submit' class="btn btn-primary">送出</button>
+            </div>
+          </form>
+          <!-- 表單驗證用 -->
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementById('needs-validation');
+              // Loop over them and prevent submission
+              forms.addEventListener('submit', function(event) {
+                if (forms.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                forms.classList.add('was-validated');
+              }, false);
+            }, false);
+          })();
+          </script>
+          <script>
+            (function(){
+              window.addEventListener('load',function(){
+                $('a[data-dismiss="modal"][data-toggle="modal"]').on('click',function(e){
+
+                  var target = $(this).data('target');
+                  console.log(target);
+                  $(target).on('shown.bs.modal',function(e){
+                    $('body').addClass('modal-open');
+                  });
+                });
+              });
+            }());
+          </script>
+        </div>
+      </div>
+    </div>
+  </section> <!-- EOF map/form -->
+  
+
+  <section class="container-fluid">
+    <div class="row">
+      <!-- 使用bg-cover -->
+      <div class="col-md-6 p-5 bg-cover text-white" style='background:url(https://bit.ly/2ThqgGq)'>
+        <!-- 避免內容過長，再加一層row -->
+        <div class="row">
+          <div class="col-md-9">
+            <small>加入我們</small>
+            <h3>你便乖乖的把琴抱進你的床去，你是不認識你父親的</h3>
+            <p>
+              短暫的激情是不值錢的，年代的人還需要摔打，別人一定會聽你，但它只是一環，80年代的人不要跟70年代，別人可以拷貝我的模式，一個成功的創業者，東西得一點點幹，也要注重過程，千萬別告訴別人，賺錢模式越多越說明你沒有模式。
+            </p>
+            <a href="" class="btn btn-outline-warning">加入我門</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 p-5 bg-cover text-white" style='background:url(https://bit.ly/2HBvagb)'>
+        <!-- 避免內容過長，再加一層row -->
+        <div class="row">
+          <div class="col-md-9">
+            <small>品嘗佳餚</small>
+            <h3>踏著浪，我和世界不一樣，太多堅持</h3>
+            <p>
+              一度剝落了的青春，寂寞的床偌大的房，我和我的倔強不能在shopping時候想你在路上會­遇見怎樣的穹蒼？戀人之間的時光，怎麼又是你，都騎虎難下了，唉呀，環境維護的話，發牢騷之前，打架了，大家不要吵架，我再也不逃了，我們回去了，謝謝，最恐怖的人，既然媽媽決定了，就算是死，辣辣的，一定很好吃。
+            </p>
+            <a href="" class="btn btn-outline-warning">參加計畫</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-warning text-white">
+          <h5 class="modal-title" id="exampleModalLongTitle">登入</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <!-- data-dismiss用來將目前modal關閉 -->
+          <a class='mr-auto' href="#" data-dismiss='modal'  data-toggle="modal" data-target="#register">切換到註冊</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+          <button type="button" class="btn btn-primary">儲存設定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="exampleModalLongTitle">註冊</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <!-- data-dismiss用來將目前modal關閉 -->
+          <a class='mr-auto' href="#" data-dismiss='modal'  data-toggle="modal" data-target="#login">切換到登入</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+          <button type="button" class="btn btn-primary">儲存設定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+</html>
