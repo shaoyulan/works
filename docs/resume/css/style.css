@@ -71,7 +71,24 @@ p{
 	display: table;
 	clear:both;
 }
-
+#text-nodeco{
+	text-decoration: none;
+}
+.d-flex{
+	display: flex;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+.protrait{
+	background: url(../0907.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: 9.8vmax;
+    border-radius: 50%;
+    width: 9.8vmax;
+    height: 9.8vmax;
+    max-width: 151px;
+}
 .bg{
 	position: absolute;
     top: 0;
@@ -89,23 +106,19 @@ p{
 }
 .intro{
 }
-.photo, .contact{
-	float: left;
-}
+
 .photo{
-	width: 40%;
+	width: 50%;
 	text-align: center;
-	padding-left: 175px;
 }
 .photo h2{
 	font-size: 1.5em;
 }
 .photo div,.photo h2{
-	margin-top: 10px;
+	margin: 0 auto 0 auto;
 }
 .contact{
-	width: 60%;
-	padding-left: 100px;
+	width: 50%;
 }
 .contact li{
 	margin-bottom: 23px;
@@ -244,6 +257,7 @@ h3{
 	width: 33.3333%;
 	padding:20px;
 	text-align: left;
+    min-height: 248px;
 }
 
 .works ul li .img{
@@ -297,7 +311,56 @@ h3{
 }
 
 
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .web-skill >ul >li{
+  	padding: 5px;
+  }
+  .web-skill >ul >li ul{
+  	padding-left: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro{
+  	display: block;
+  }
+  .photo{
+  	width: 100%;
+  	margin-bottom: 20px;
+  }
+  .photo div, .photo h2{
+  	margin: 25px auto;
+  }
+  .contact{
+  	width: 100%;
+  }
+  .contact li{
+  	margin-bottom: 23px;
+    color: black;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .web-skill .box{
+  	padding: 10px;
+  }
+  .container{
+  	width: 85%;
+  }
+}
+
+
+
 @media screen and (max-width: 480px) {
+  .contact li{
+  	margin-left: 0; 
+    transform: translateX(0%); 
+  }
   .web-skill >ul >li, .works ul li, .timeline .row .milestone{
   	width: 100%;
     margin-bottom: 10px;
@@ -317,25 +380,5 @@ h3{
   }
   .about .biology{
   	width: 100%;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-  .web-skill .box{
-  	padding: 10px;
-  }
-  .container{
-  	width: 85%;
-  }
-}
-
-
-@media screen and (max-width: 1024px) {
-  .web-skill >ul >li{
-  	padding: 5px;
-  }
-  .web-skill >ul >li ul{
-  	padding-left: 20%;
   }
 }
