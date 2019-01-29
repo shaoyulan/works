@@ -71,7 +71,7 @@ p{
 	display: table;
 	clear:both;
 }
-#text-nodeco{
+.text-nodeco{
 	text-decoration: none;
 }
 .d-flex{
@@ -100,6 +100,7 @@ p{
 	padding-top: 40px;
 }
 .container{
+	width: 90%;
 	max-width: 1024px;
 	margin: 50px auto 0 auto;
 	/*border:1px solid black;*/
@@ -187,7 +188,7 @@ h3{
     margin-right: 1%;
     margin-left: 1%;
     position: relative;
-    border: 1.2px solid #8ad7fa;
+    border: 1.2px solid #FB56BF;
     border-radius: 5px;
     padding: 15px;
     line-height: 22px;
@@ -257,7 +258,7 @@ h3{
 	width: 33.3333%;
 	padding:20px;
 	text-align: left;
-    min-height: 248px;
+	min-height: 248px;
 }
 
 .works ul li .img{
@@ -308,60 +309,10 @@ h3{
     line-height: 50px;
     background: #9692F6;
     color: #FFFFFF;
-    font-size: 14px;
 }
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-  .web-skill >ul >li{
-  	padding: 5px;
-  }
-  .web-skill >ul >li ul{
-  	padding-left: 20%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .intro{
-  	display: block;
-  }
-  .photo{
-  	width: 100%;
-  	margin-bottom: 20px;
-  }
-  .photo div, .photo h2{
-  	margin: 25px auto;
-  }
-  .contact{
-  	width: 100%;
-  }
-  .contact li{
-  	margin-bottom: 23px;
-    color: black;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-  .web-skill .box{
-  	padding: 10px;
-  }
-  .container{
-  	width: 85%;
-  }
-}
-
 
 
 @media screen and (max-width: 480px) {
-  .contact li{
-  	margin-left: 0; 
-    transform: translateX(0%); 
-  }
   .web-skill >ul >li, .works ul li, .timeline .row .milestone{
   	width: 100%;
     margin-bottom: 10px;
@@ -381,5 +332,47 @@ h3{
   }
   .about .biology{
   	width: 100%;
+  }
+  .footer{
+  	font-size: 0.875rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro{
+  	display: block;
+  }
+  .photo{
+  	width: 100%;
+  	margin-bottom: 20px;
+  }
+  .photo div, .photo h2{
+  	margin: 25px auto;
+  }
+  .contact{
+  	width: 100%;
+  }
+  .contact li{
+  	margin-bottom: 23px;
+    color: black;
+    /*margin-left: 50%;
+    transform: translateX(-50%);*/
+  }
+  .web-skill .box{
+  	padding: 10px;
+  }
+  .container{
+  	width: 85%;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .web-skill >ul >li{
+  	padding: 5px;
+  }
+  .web-skill >ul >li ul{
+  	padding-left: 20%;
   }
 }
