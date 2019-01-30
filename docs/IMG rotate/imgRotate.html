@@ -27,17 +27,19 @@
 			height: 719px;
 			background-color: red;
 			height: 300px;
-			transition: transform 1s;
+			transition: transform 3s;
 		}
 		img{
 			width: 100%;
 			height: auto;
-			transition: transform 1s;
+			opacity: 0;
+			transition:opacity 2s, transform 1s;
 			transform: rotateX(-90deg);
 
 		}
 		.flipped{
 			transform: rotateX(0deg);
+			opacity: 1;
 		}
 	</style>
 
@@ -65,8 +67,10 @@
 
 			for(var i =0; i< target.length;i++){
 				console.log(top);
-				if (top > (150+(height*i)-572) && top < (150+(height*i)-572+180)){
-					target[i].classList.add('flipped');
+				if(i!=0){
+					if (top > (150+(height*(i)-572)) && top < (150+(height*(i))-572+180)){
+						target[i].classList.add('flipped');
+					}
 				}
 			}
 		});
