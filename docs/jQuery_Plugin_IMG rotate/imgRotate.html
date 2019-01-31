@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IMG Flipper</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="imgRotater.css"> <!-- imgRotater CSS -->
+
+</head>
+<body>
+	<div class="arrow"> ↓ IMG Flipper Scroll down to see effect ↓ </div>
+	<div class="wraper">
+		<img src="1.jpg" alt="" class="target">
+		<img src="1.jpg" alt="" class="target">	
+		<img src="1.jpg" alt="" class="target">	
+	</div>
+	<script src='imgRotater.js'></script>
+	<script>
+		// .target 目標元件
+		// 3 當照片露出1/3時就觸發
+
+		$(document).ready(function(e){
+			$('.target').rotateMe(3);
+		});
+
+	</script>
+	<script>
+
+
+	</script>
+</body>
+</html>
