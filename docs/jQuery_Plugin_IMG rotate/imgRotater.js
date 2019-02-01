@@ -6,7 +6,8 @@
 			  target = this,                    // Img array
 			  height = target[0].clientHeight,  // Height of first img
 			  trigger = window.innerHeight,     // Height of inner window
-			  gap_cause_by_rotate = (height/2); // 翻轉90度造成的高度誤差，使topMargin出現誤差
+			  gap_cause_by_rotate = (height/2), // 翻轉90度造成的高度誤差，使topMargin出現誤差
+			  sense_range = 300;                // A range where Event will be trigger 
 
 		// When visit website, Effect may have to be triggered without any scroll
 		for(let i =0; i< target.length;i++){
@@ -28,7 +29,7 @@
 			for(let i =0; i< target.length;i++){
 				const topMargin = target[i].getBoundingClientRect().top,
 					  triggerLine = (height/visibility) + (topMargin-gap_cause_by_rotate);
-					if (trigger > triggerLine && trigger < triggerLine+200){
+					if (trigger > triggerLine && trigger < triggerLine+sense_range){
 						target[i].classList.add('flipped');
 					}
 			}
