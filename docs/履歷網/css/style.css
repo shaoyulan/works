@@ -1,0 +1,8 @@
+header,section{
+	height:100vh; 
+}
+header{
+	background: url(../img/header.jpg) center center;
+	background-attachment: fixed;
+	background-size: cover;
+}

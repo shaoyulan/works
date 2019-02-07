@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SessionStorage Todolist</title>
+	<style>
+		body{
+			background: url(https://bit.ly/2SehITN);
+		}
+		.wrap{
+			width: 500px;
+			min-height: 500px;
+			background: lightblue;
+			margin: 0 auto;
+		}
+		.panel{
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.time,.delete{
+			margin-right: 15px;
+			text-decoration: none;
+		}
+		input{
+			border: 2px solid rgb(73, 41, 10);
+			height: 50px;
+			padding:20px;
+		}
+		button{
+			cursor: pointer;
+			background: #e8a874;
+			height: 50px;
+		}
+		li{
+			margin-bottom: 10px;
+			background: white;
+			width: 90%;
+			padding: 5px;
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="panel">
+			<img src="images/logo.svg" alt="">
+			<div class="box">
+				<input type="text" class="input" placeholder="請輸入待辦事項">
+				<button class="submit">送出</button>
+			</div>
+		</div>
+		<div class="board">
+			<ul >
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		
+		let submit = document.querySelector('.submit'),
+			board = document.querySelector('.board');
+
+		function init(e){
+			// 清理畫面
+			let rows = document.querySelector('.board ul'),
+				todos = JSON.parse(localStorage.getItem('todolist')) || [],
+				row = '';
+			for (let i = 0; i < todos.length; i++) {
+				let todo = todos[i];
+				row += `<li>
+							<a href='#' class='delete' data-num=${i}>刪除</a>
+							<span class='time'>${todo.time}</span>${todo.message}
+						</li>`;
+			}
+			// 將資料更新至頁面
+			rows.innerHTML = row;
+		}
+
+		function insert(e){
+			let	date = new Date(),
+				time = date.getFullYear() +'-'+date.getMonth() + '-' + 
+				       date.getDate() + '-星期' + date.getDay(),
+				input = document.querySelector('.input').value,
+				todo = {
+					message:input,
+					time:time
+				},
+				todos = JSON.parse(localStorage.getItem('todolist')) || [];
+			todos.push(todo);
+			localStorage.setItem('todolist',JSON.stringify(todos));
+			init();
+		}
+
+		function del(e){
+			e.preventDefault();
+			// 了解e用
+			console.log(e);
+			let num=0,
+				todos=[];
+			if(e.target.nodeName == 'A'){
+				console.log('tt',e.target.nodeName);
+				num = e.target.dataset.num;
+				todos = JSON.parse(localStorage.getItem('todolist'));
+				todos.splice(num,1);
+				localStorage.setItem('todolist',JSON.stringify(todos));
+				init();
+			}
+			
+			
+		}
+
+		init();
+		submit.addEventListener('click',insert);
+		board.addEventListener('click',del);
+	</script>
+</body>
+</html>

@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Shao's Resume</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fontello.css">
 
@@ -119,13 +121,15 @@
 			<h3>Works</h3>
 			<ul class="clearfix">
 				<li>
-					<div class="box">
-						<div class="img">
-							<img src="HTML_sketch_export-master/assets/logo-work-1.png" alt="">
+					<a id="demo01" href="#animatedModal">
+						<div class="box">
+							<div class="img">
+								<img src="HTML_sketch_export-master/assets/logo-work-1.png" alt="">
+							</div>
+							<h4>前端課程介紹網</h4>
+							<p>使用Nivo Slider、light-box及masonry套件</p>
 						</div>
-						<h4>前端課程介紹網</h4>
-						<p>使用Nivo Slider、light-box及masonry套件</p>
-					</div>
+					</a>
 				</li>
 				<li>
 					<div class="box">
@@ -189,5 +193,24 @@
 			<div class="container">copyright 2019 藍劭宇 All right reserved</div>
 		</div>
 	</div>
+
+
+	<!--DEMO01-->
+	<div id="animatedModal">
+	    <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+	    <div  id="btn-close-modal" class="close-animatedModal"> 
+	        CLOSE MODAL
+	    </div>
+	        
+	    <div class="modal-content">
+	        <!--Your modal content goes here-->
+	    </div>
+	</div>
+	
+	<script src='js/jquery.min.js'></script>
+	<script src="js/animatedModal.min.js"></script>
+	<script>
+		$("#demo01").animatedModal();
+	</script>
 </body>
 </html>

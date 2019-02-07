@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- fontAwosome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+
+    <title>後台管理系統</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">後台管理系統</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">列表</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-3 main">
+      <div >
+        <section class="d-flex justify-content-between">
+          <div class="input-group mb-3 w-25">
+            <input type="text" class="form-control" placeholder="What to search for?" aria-label="Search for..." aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2">Go!</span>
+            </div>
+          </div>
+          <div>
+            <a class="btn btn-primary text-white " data-toggle="modal" data-target="#editModal" data-title="快速下單"><i class="fa fa-cart-plus mr-1"></i>快速下單</a>
+          </div>
+        </section>
+        
+        <section>
+          <table class="table  table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">品項</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">狀態</th>
+                <th scope="col">金額</th>
+                <th scope="col">操作</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <th scope="row">1</th>
+                <td>有機肥皂1盒</td>
+                <td>Mark <span class="badge badge-pill badge-danger">奧客</span></td>
+                <td>Mark@gmail.com</td>
+                <td>已出貨</td>
+                <td>NT$ 890</td>
+                <td>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-title="有機肥皂盒" data-backdrop='static'>
+                      編輯
+                   </button>
+                    <button type="button" class="btn btn-outline-secondary">查看</button>
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        其他
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">註記</a>
+                        <a class="dropdown-item" href="#">移動</a>
+                        <a class="dropdown-item" href="#">訊息</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#" data-toggle="modal" data-target="#removeModal" data-title="有機肥皂盒" data-backdrop='static'>刪除</a>
+                      </div>
+                  </div>
+                </td>
+              </tr>
+              <!-- 專屬於table的顏色 -->
+              <tr class="table-danger">
+                <th scope="row">2</th>
+                <td>(保溫)無泡泡沐浴乳 5罐</td>
+                <td>Thornton <span class="badge badge-pill badge-success">常客</span></td>
+                <td>Thornton@gmail.com</td>
+                <td class="text-danger">缺貨</td>
+                <td>NT$ 3,600</td>
+                <td>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary">編輯</button>
+                    <button type="button" class="btn btn-outline-secondary">查看</button>
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        其他
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">註記</a>
+                        <a class="dropdown-item" href="#">移動</a>
+                        <a class="dropdown-item" href="#">訊息</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">刪除</a>
+                      </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>防滑燈罩 100個</td>
+                <td>Larry </td>
+                <td>Larry@gmail.com</td>
+                <td>已出貨</td>
+                <td>NT$ 14,060</td>
+                <td>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-outline-secondary">編輯</button>
+                    <button type="button" class="btn btn-outline-secondary">查看</button>
+                    <button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        其他
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">註記</a>
+                        <a class="dropdown-item" href="#">移動</a>
+                        <a class="dropdown-item" href="#">訊息</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">刪除</a>
+                      </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">前一頁</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">下一頁</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      
+      <footer class="mt-5 py-3 text-secondary text-center footer">
+         後台管理系統
+      </footer>
+
+    </div>
+
+    
+
+    <!-- edit modal -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-primary">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- remove modal -->
+    <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+            <button type="button" class="btn btn-outline-danger">確認</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+      $(function(e){
+        $('#editModal').on('show.bs.modal',function(event){
+          let btn = $(event.relatedTarget),
+              title = btn.data('title'),
+              modal = $(this);
+              console.log(title);
+
+          modal.find('.modal-title').text(title);
+        });
+
+        $('#removeModal').on('show.bs.modal',function(event){
+          let btn = $(event.relatedTarget),
+              title = btn.data('title'),
+              modal = $(this);
+              console.log(title);
+
+          modal.find('.modal-title').text('確認刪除'+title);
+        });
+      });
+    </script>
+  </body>
+</html>
