@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/all - 複製 - 複製.css">
+
+    <title>BMI 計算機</title>
+  </head>
+  <body>
+    <header class="d-flex align-items-center">
+      <div class="container mx-auto">
+        <div class="row  d-flex no-gutters panel">
+          
+          <div class="bmi-img col-3 text-right">
+            <img src="img/BMICLogo.png" alt="">
+          </div>
+          <div class=" col-5 ">
+            <div class="input-area pl-lg-5">
+                <div>身高CM</div>
+                <input type="text" placeholder="請輸入身高" name="height" class="input-height" required>
+                <div>體重KG</div>
+                <input type="text" placeholder="請輸入體重" name="weight" class="input-weight" required>
+            </div>
+          </div>
+          <div class="col-4 input-btn d-flex justify-content-start align-items-center" data-status="normal">
+              <div class="circle d-flex flex-column align-items-center justify-content-center">
+                <!-- <input type="submit" class="submit"/> -->
+                <span class="index-result">看結果<small>BMI</small>
+  </span>      
+                <div class="img">
+                  <img src="img/icons_loop.png" alt="">
+                </div>
+              </div>
+            <div class="info"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="title text-center">BMI 記錄</h2>
+            <ul class="lists list-unstyled">
+              <li class="record" data-status="medium-fat">
+                <ul class="d-flex list-unstyled">
+                  <li class="result"></li>
+                  <li >BMI<span class="index">20.9</span></li>
+                  <li >weight<span class="weight">70kg</span></li>
+                  <li >height<span class="height">180cm</span></li>
+                  <li class="date">06-19-2017</li>
+                  <li class="delete">&#10006;</li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+        <img src="img/BMICLogo.png" alt="">
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+
+</html>

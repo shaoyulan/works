@@ -33,12 +33,29 @@ window.addEventListener('DOMContentLoaded',function(e){
 						'</ul>'+
 					'</div>'+
 				'</li>',
-				temp = document.querySelector('#temp').firstChild.nextSibling,
-				boxMother = document.querySelector('.attractions-boxs'),
-				holder = document.createElement('li'),
-				areaAry =[];
+			temp = document.querySelector('#temp').firstChild.nextSibling,
+			boxMother = document.querySelector('.attractions-boxs'),
+			holder = document.createElement('li'),
+			areaAry =[], // 儲存已巡迴過的區域
+			resultObj ={}, // 地區資料 key:第區; value:[{景點1},{景點2}...];
+			listPerPage =6, // 每頁顯示筆數
+			listInPaging = 3, // 分頁清單要顯示的筆數
+			pagList = document.querySelector('.pagination'), //分頁清單DOM
+			currPage = 0, // 目前所在頁數
+			currArea =''; //目前所在區域
 
+		// 轉換資料為obj
+		for (index in result){
+			// Obj 沒有該地區
+			if(!resultObj.hasOwnProperty(result[index].Zone)){
+				resultObj[result[index].Zone]=[];
+			}
+			// 資料新增入該地區
+			resultObj[result[index].Zone].push(result[index]);
+		}
 
+		// console.table(resultObj);
+		// 列印下拉選單
 		for (index in result) {
 			// 檢查是否有相同名稱
 			if(!areaAry.includes(result[index].Zone)){
@@ -55,23 +72,91 @@ window.addEventListener('DOMContentLoaded',function(e){
 			}
 		}
 
-		$(selectBar).on('change',function(e){
+		// 列印分頁清單
+		function pagination(area,pageNum){
+			let prev = document.getElementsByClassName('prev'),
+				next = document.getElementsByClassName('next'),
+				pageCount = Math.ceil(resultObj[area].length/listPerPage),
+				numberLink =document.querySelectorAll('.numberLink');
+			console.log(pageCount);
+			console.log(pageNum);
+
+			console.log('p',prev[0]);
+			console.log('n',next[0]);
+			// 目前頁面則不動作
+			// if(currPage == pageNum){
+			// 	return;
+			// }
+			// 預設狀態
+			prev[0].className = 'page-item prev';
+			next[0].className = 'next page-item';
+			console.log('p2',prev[0]);
+			console.log('n2',next[0]);
+
+
+			// 清空分頁清單
+			if(numberLink.length > 0){
+				// 假如沒回傳空陣列
+				// 巡迴清空數字分頁li
+				for(let i = 0; i< numberLink.length; i++){
+					numberLink[i].parentNode.removeChild(numberLink[i]);
+				}
+			}
+
+			for(let index = 1; index <= pageCount; index++){
+				let list = document.createElement('li');
+
+				// Pending : 將 list直接轉DOM
+				list.innerHTML = `<a class="page-link" href="#">${index}</a>`;
+				list.className = 'page-item numberLink';
+				// 將目標頁面設為active
+				if(index == pageNum){
+					list.className += ' active';
+				}
+				list.addEventListener('click',function(e){
+					e.stopPropagation();
+					// 綁定更新頁面事件
+					update(currArea,Number(e.target.text))
+					// pagination(currArea,Number(e.target.text))
+				})
+				pagList.insertBefore(list,pagList.lastChild.previousSibling);
+			}
+
 			
+
+			if(pageNum == pageCount){
+				next[0].className = 'next d-none';
+			}
+
+			if(pageNum ==1 ){
+				prev[0].className = 'prev d-none';
+			}
+			
+
+			// 更新目前頁數
+			currPage = pageNum;
+		}
+
+		// 列印資料畫面
+		function update(newArea,pageNum){
+			let a = 0,
+				inner ='',
+				titlePosition = $('.attractions-list h2').offset().top,
+				from = (pageNum-1)*listPerPage, // 開始頁數
+				to = (pageNum*listPerPage)-1, // 結束頁數
+				resultCount = resultObj[newArea].length-1, // 資料筆數
+				newTo = resultCount < to ? resultCount:to; // 新結束頁數
+
 			// 清空
 			boxMother.innerHTML ='';
 			// 更新標題
-			let newArea = e.target.value,
-				titlePosition = $('.attractions-list h2').offset().top;
-				console.log(titlePosition);
 			areaTitle.nodeValue = newArea;
-
-			let a = 0,
-				inner ='';
-			for (index in result) {
+			// 0-5:第一頁; 6-11:第二頁
+			for (let i = from; i<= newTo; i++) {
 				a++;
-				let attract = result[index];
+				let attract = resultObj[newArea][i];
 				// console.log(result[index].Name);
-				if(attract.Zone == newArea){
+				// if(attract.Zone == newArea){
 					template = temp.cloneNode(true);
 					let open = template.querySelector('.opening-time').firstChild.nextSibling.nextSibling,
 						location = template.querySelector('.addr').firstChild.nextSibling.nextSibling,
@@ -91,12 +176,31 @@ window.addEventListener('DOMContentLoaded',function(e){
 					area.nodeValue = attract.Zone;
 
 					boxMother.appendChild(template);
-				}
+				// }
 			}
+
+			// 更新清單
+			pagination(newArea,pageNum);
+
+			// 捲動至資料位置
 			
 			$('html').animate({
 				scrollTop:titlePosition,
 			},1500);
+			
+			
+		}
+
+		// 綁定清單變動
+		$(selectBar).on('change',function(e){
+			// 定義變數
+			let newArea = e.target.value;
+
+			// 呼叫頁面更新
+			update(newArea,1,e)
+			
+			// 更新目前區域
+			currArea = newArea;
 		});
 		
 
@@ -106,8 +210,18 @@ window.addEventListener('DOMContentLoaded',function(e){
 			$(selectBar).val(target).trigger('change');
 		});
 		
+		// 綁定上一頁 / 下一頁
+		$('.prev').on('click',function(e){
+			update(currArea,currPage-1);
+		})
+		$('.next').on('click',function(e){
+			update(currArea,currPage+1);
+		})
+
+
+
 		// 預設三民區
-		$(selectBar).val('三民區').trigger('change');
+		// $(selectBar).val('三民區').trigger('change');
 
 
 	}

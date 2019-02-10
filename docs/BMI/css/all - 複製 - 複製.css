@@ -1,0 +1,408 @@
+html,*{
+	font-family: Microsoft JhengHei;
+}
+header{
+	height: 300px;
+	width: 100%;
+	background: #424242;
+}
+header .bmi-img{
+	position: relative;
+	line-height: 183px;
+}
+header .bmi-img img{
+	position: relative;
+}
+section{
+	background: #F5F5F5;
+}
+.panel{
+	padding-left: 13%;
+}
+.input-area{
+	color: #FFD366;
+}
+.input-area input{
+	background: rgba(255,255,255,0.18);
+	border: 2px solid #FFD366;
+	border-radius: 10px;
+	padding:8px 16px;
+	outline: none;
+	color: white;
+}
+.input-area input{
+	font-size: 24px;
+	width: 250px;
+}
+.input-area input:nth-of-type(1){
+	margin-bottom: 23px;
+}
+
+/*預設是理想狀態 綠色*/
+.input-btn{
+	cursor: pointer;
+	position: relative;
+}
+.input-btn .submit{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 50%;
+	visibility: hidden;
+}
+.input-btn .circle{
+	width: 120px;
+	height:120px;
+	position: relative;
+	border-radius: 50%;
+	border: 6px solid #86D73E;
+	color:#86D73E;
+}
+
+.input-btn .img {
+	width: 30px;
+	height: 30px;
+	padding:8px;
+	border-radius: 50%;
+	background: #86D73E;
+	border: 3px solid #424242;
+	text-align: center;
+	vertical-align: middle;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.input-btn .img img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+.input-btn .index-result{
+	font-size: 2rem;
+	position: relative;
+}
+.input-btn  .index-result small{
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	transform: translate(-50%,80%);
+	font-size: 14px;
+}
+.input-btn .info{
+	font-size: 32px;
+	color: #86D73E;
+	margin-left: 18px;
+	/*position: absolute;
+	right: 0;
+	transform: translateX(calc(100% + 20px));*/
+}
+.input-btn .info:after{
+	content: '理想';
+}
+
+/*設定平常狀態*/
+[data-status="normal"].input-btn .circle, [data-status="normal"].input-btn .info{
+	color:#424242;
+
+}
+[data-status="normal"].input-btn .circle{
+	background: #FFD366;
+	border:#FFD366;
+}
+[data-status="normal"].input-btn small{
+	color:#FFD366;
+}
+[data-status="normal"].input-btn .img{
+	display: none;
+}
+
+[data-status="normal"].input-btn:hover .circle{
+	box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+[data-status="normal"].input-btn:active .circle{
+	background:#DEA921;
+	box-shadow: none;
+}
+
+
+/*過輕時*/
+[data-status="light-weight"].input-btn .circle{
+	color:#31BAF9;
+	border-color:#31BAF9;
+}
+[data-status="light-weight"].input-btn .circle .img{
+	background: #31BAF9;
+}
+[data-status="light-weight"].input-btn .info{
+	color:#31BAF9;
+}
+[data-status="light-weight"].input-btn .info:after{
+	content: '過輕';
+}
+
+/*過重時*/
+[data-status="over-weight"].input-btn .circle{
+	color:#FF982D;
+	border-color:#FF982D;
+}
+[data-status="over-weight"].input-btn .circle .img{
+	background: #FF982D;
+}
+[data-status="over-weight"].input-btn .info{
+	color:#FF982D;
+}
+[data-status="over-weight"].input-btn .info:after{
+	content: '過重';
+}
+
+/*輕度肥胖時*/
+[data-status="slight-fat"].input-btn .circle{
+	color:#FF6C02;
+	border-color:#FF6C02;
+}
+[data-status="slight-fat"].input-btn .circle .img{
+	background: #FF6C02;
+}
+[data-status="slight-fat"].input-btn .info{
+	color:#FF6C02;
+}
+[data-status="slight-fat"].input-btn .info:after{
+	content: '輕度肥胖';
+}
+
+/*中度肥胖時*/
+[data-status="medium-fat"].input-btn .circle{
+	color:#FF6C02;
+	border-color:#FF6C02;
+}
+[data-status="medium-fat"].input-btn .circle .img{
+	background: #FF6C02;
+}
+[data-status="medium-fat"].input-btn .info{
+	color:#FF6C02;
+}
+[data-status="medium-fat"].input-btn .info:after{
+	content: '中度肥胖';
+}
+
+/*重度肥胖時*/
+[data-status="over-fat"].input-btn .circle{
+	color:#FF1200;
+	border-color:#FF1200;
+}
+[data-status="over-fat"].input-btn .circle .img{
+	background: #FF1200;
+}
+[data-status="over-fat"].input-btn .info{
+	color:#FF1200;
+}
+[data-status="over-fat"].input-btn .info:after{
+	content: '重度肥胖';
+}
+
+
+.title{
+	font-size: 24px;
+	color: #424242;
+	margin-top: 48px;
+	margin-bottom: 36px;
+}
+.record{
+	position: relative;
+	width: 70%;
+	margin: 10px auto;
+}
+.record li{
+	width: 20%;
+	padding:21px 12px;
+	font-size: 12px;
+	color: #424242;
+}
+.record li.result{
+	text-align: center;
+}
+.record li.result,.record li .index, .record li .weight, .record li .height{
+	font-size: 1.25rem;
+	color: #4A4A4A;
+}
+.record li .index, .record li .weight, .record li .height{
+	margin-left: 7px;
+}
+
+.record li{
+	display: flex;
+	align-content:center;
+	line-height: 29.6px;
+	background: white;
+	
+}
+.lists{
+	position: relative;
+}
+.record:before{
+	content:'';
+	position: absolute;
+	width: 7px;
+	top:0;
+	bottom:0;
+	background: #86D73F;
+	box-shadow: 2px 0 3px 0 rgba(133,215,63,0.29);
+}
+.record .result:before{
+	content:'理想';
+}
+
+/*過輕時*/
+[data-status="light-weight"].record .result:before{
+	content:'過輕';
+}
+
+[data-status="light-weight"].record:before{
+	background: #31BAF9;
+	box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+}
+
+
+
+/*過重時*/
+[data-status="over-weight"].record .result:before{
+	content:'過重';
+}
+
+[data-status="over-weight"].record:before{
+	background: #FF982D;
+	box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+}
+
+/*輕度肥胖*/
+[data-status="slight-fat"].record .result:before{
+	content:'輕度肥胖';
+}
+
+[data-status="slight-fat"].record:before{
+	background: #FF6C02;
+	box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29);
+}
+
+/*中度肥胖*/
+[data-status="medium-fat"].record .result:before{
+	content:'中度肥胖';
+}
+
+[data-status="medium-fat"].record:before{
+	background: #FF6C02;
+	box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29);
+}
+
+/*重度肥胖*/
+[data-status="over-fat"].record .result:before{
+	content:'重度肥胖';
+}
+
+[data-status="over-fat"].record:before{
+	background: #FF1200;
+	box-shadow: 2px 0 3px 0 rgba(255,17,0,0.29);
+}
+
+.record .delete{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0%,-50%);
+	width: unset;
+	cursor: pointer;
+}
+footer{
+	background: #FFD366;
+	height: 80px;
+	margin-top:74px;
+	text-align: center;
+	line-height: 80px;
+}
+
+footer img{
+	width: 55px;
+	height: auto;
+	background: black;
+}
+
+@media screen and (max-width: 996px) {
+	html{
+		font-size: 13px;
+	}
+	.input-area{
+		text-align: center;
+	}
+	.input-area input{
+		width: 78%;
+	}
+	.input-btn .index-result{
+		font-size: 1.25rem;
+	}
+	header .bmi-img img{
+		width: 12vw;
+	}
+	.input-btn .circle{
+		width: 12vw;
+		height: 12vw;
+	}
+	.record{
+		width: 100%;
+	}
+	.record li{
+		padding: 15px 5px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.panel{
+		padding-left:0%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.bmi-img #bmi-img{
+		position: absolute;
+		top: -47px;
+		right: 0;
+	}
+	.input-btn .circle{
+		width: 25vw;
+		height: 25vw;
+	}
+	.record li{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.record .delete{
+		top: 13%;
+		background: none;
+	}
+	.input-btn{
+		flex-direction: column;
+		margin-top: 33px;
+	}
+	.input-btn .img{
+		right: -5px; 
+		bottom: -5px;
+		width: unset;
+		height: unset;
+	}
+	.input-btn .info{
+		font-size: 25px;
+	}
+}
+
+@media screen and (max-width: 476px) {
+	.record li.result{
+		font-size: 20px;
+	}
+}
+
+/*
+.panel{
+	display: flex;
+}*/

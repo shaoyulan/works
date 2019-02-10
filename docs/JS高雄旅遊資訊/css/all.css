@@ -211,6 +211,10 @@ header{
 	right: 0;
 }
 
+/*pagination*/
+.hide{
+	direction: 
+}
 @media screen and (max-width:996px ){
 	.area{
 		width: 82%;
