@@ -1,0 +1,260 @@
+/*override bootstrap*/
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+	color: #000;
+	background-color: rgba(255,255,255,0.4);
+}
+.works-section a{
+	color:white;
+	margin:2px;
+	transition: 1s;
+}
+.works-section a:hover{
+	color:white;
+	box-shadow: 0 0px 4px 0 white;
+}
+/*end override bootstrap*/
+
+/*override animated modal*/
+html,body{
+	/*avoid y-axis scrllBar after close modal*/
+	overflow: unset!important;
+	font-family: Microsoft JhengHei;
+}
+
+.modal-content{
+	border:none!important;
+}
+
+/*end override animated modal*/
+
+header{
+	height:100vh; 
+	position: relative;
+	overflow: hidden;
+}
+.arrow{
+	/*position: relative;*/
+}
+.fa-chevron-down{
+	animation-name: updown;
+	animation-duration: 1s;
+	animation-direction: alternate-reverse;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,-100%);
+	
+}
+@keyframes updown{
+	from{
+		bottom: 0px;
+	}
+	to{
+		bottom: -8px;
+	}
+}
+section{
+	min-height: 100vh;
+	position: relative;
+}
+nav{
+	height: 56px !important;
+}
+.content{
+	min-height: 100vh;
+	/*background: #CCC;*/
+	width: 100%;
+}
+.content-contact{
+	height: calc(100vh - 200px);
+	width: 100%;
+}
+header{
+	background: url(../img/header.jpg) center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.wrap{
+	background: rgba(0,0,0,0.2);
+	min-height: 100vh;
+	width: 100%;
+}
+
+header .container{
+	height: calc(100vh - 56px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: white;
+}
+header h1{
+	font-size: 5rem;
+}
+.about-section{
+	background:#d7e360;
+}
+.about-section .protrait{
+	background: url(../img/protrait.jpg);
+	background-size: cover;
+	background-position: center center;
+	min-height: 400px;
+}
+.about-section .intro{
+	text-align: justify;
+	line-height: 2rem;
+}
+.about-section .content,.skill-section .content,.works-section .content,.contact-section .content-contact{
+	margin-top: 5%;
+}
+.about-section h2,.skill-section h2,.works-section h2,.contact-section h2{
+	font-size: 3rem;
+	display: inline-block;
+	margin-left: 50%;
+	/*position: absolute;*/
+	/*left: 50%;*/
+	transform: translate(-50%,0%);
+	text-align: center;
+	border-bottom: dashed 7px;
+}
+.contact-section{
+	background:#cddc39;
+	height: calc(100vh - 200px);
+	position: relative;
+}
+.skill-section{
+	background:#ffef62;
+}
+.skill-section li{
+	list-style-type: none;
+}
+.circle-plate{
+	position: relative;
+}
+/*.circle-plate:hover .effect{
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	border-radius: 50%;
+	background:#ff8362;
+	opacity: 0.5;
+	border:5px solid #CCC;
+	animation-name: scale;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes scale {
+  from {transform: scale(1);}
+  to {
+  	transform: scale(1.1);
+  	opacity:0;
+  }
+}*/
+.works-section{
+	background: url(../img/header.jpg) center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.works-section h2{
+	color: white;
+}
+.works-section li:hover{
+	transition: linear .3s;
+	box-shadow:0 0 15px 0 white;
+}
+.works-section .works li{
+	margin-bottom: 45px;
+}
+.contact-section .contact-info {
+	list-style: none;
+}
+footer{
+	background: url(../img/header.jpg) bottom center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+footer{
+	height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+	/*about*/
+	.bio{
+		padding: 35px 0 20px 0;
+	}
+	/*work	*/
+	.works-section .nav{
+		display: flex;
+		justify-content: center;
+		margin-top: 48px;
+	}
+
+	/*skill section*/
+	.skill-section .skill-row,.skill-section .skill-row .skill-item{
+		display: flex;
+	}
+	.skill-section .skill-row{
+		margin-bottom: 25px;
+	}
+	.skill-section .skill-row .skill-item > div{
+		width: 33%;
+		padding:10px;
+	}
+	.skill-section .circle-plate{
+		margin-right: 10px;
+	}
+	.skill-section .skill-item span{
+		font-weight: bold;
+	}
+	/*.skill-section .skill-item p{
+		color:#ccc;
+	}*/
+}
+@media screen and (max-width: 574px) {
+	header,.wrap{
+		height: 50vh;
+	}
+	header .container{
+		height: calc(50vh - 56px);
+	}
+	.works-section .works li{
+		margin-bottom: 30px;
+	}
+	header h1{
+		font-size: 4rem;
+	}
+	/*about*/
+	.about-section .protrait{
+		background-position: bottom center;
+		min-height: 300px;
+	}
+
+	/*skill*/
+	.skill-section .skill-row{
+		justify-content: center;
+	}
+	.skill-section .skill-row .skill-item{
+		flex-direction: column;
+	}
+	.skill-section .skill-row .skill-item > div{
+		width: unset;
+		padding-left: 10px;
+	}
+	.skill-section .circle-plate{
+		width: 143px; 
+	}
+
+}
+
+
+
+
+.modal-content img{
+	max-width: 100%;
+}
