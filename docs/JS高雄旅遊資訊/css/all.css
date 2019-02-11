@@ -132,13 +132,14 @@ header{
 }
 .attractions-boxs{
 	padding:0;
+	display: flex;
+	flex-wrap: wrap;
 	
 }
 .attractions-boxs > li{
 	width: 50%;
 	min-height: 320px;
 	display: inline-block;
-	float: left;
 	margin-bottom:36px;
 	list-style: none;
 }
