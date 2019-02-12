@@ -8,7 +8,39 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
   <link rel="stylesheet" href="css/all.css">
+  <style>
 
+  @media screen and (max-width: 476px) {
+     .table-rwd thead{
+       display: none;
+     }
+     .table-rwd tbody tr,tfoot tr{
+       display: block;
+       margin:10px 0;
+       border :1px solid ;
+       /*text-align: right;*/
+     }
+     .table-rwd tbody tr td, tfoot tr td{
+       display: block;
+       /*padding-right: 10%;*/
+     }
+     .table-rwd tbody tr td:before{
+        content:attr(data-th)":";
+        display:block;
+        float:left;
+        width: 7rem;
+     }
+
+      /*讓靠齊一致*/
+     .text-right{
+        text-align: unset!important;
+     }
+     .table-rwd tbody tr td.hidden{
+        display: none;  
+     }
+  }
+   
+  </style>
   
   
 </head>
@@ -106,34 +138,37 @@
         <div class="card-body text-center">
           <div class="mt-2 d-flex flex-column">
             <a href='#' class="btn btn-sm btn-outline-secondary ml-auto ">訂單管理</a>
-            <table class="table mt-4">
-              <thead>
-                <tr>
-                  <th scope="col">來源</th>
-                  <th scope="col">姓名</th>
-                  <th scope="col">貨品</th>
-                  <th scope="col">價格</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Youtube</td>
-                  <td>喜多郎</td>
-                  <td>六角和牛排</td>
-                  <td>3,000</td>
-                </tr>
-                <tr>
-                  <td>Youtube</td>
-                  <td>喜多郎</td>
-                  <td>六角和牛排</td>
-                  <td>3,000</td>
-                </tr>
-                <tr>
-                  <td colspan="3" class="text-right">總營收</td>
-                  <td>6,000</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-responsive">
+              <table class="table mt-4 table-rwd">
+                <thead>
+                  <tr>
+                    <th scope="col">來源</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">貨品</th>
+                    <th scope="col">價格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-th="來源">Youtube</td>
+                    <td data-th="姓名">喜多郎</td>
+                    <td data-th="貨品">六角和牛排</td>
+                    <td data-th="價格">3,000</td>
+                  </tr>
+                  <tr>
+                    <td data-th="來源">Youtube</td>
+                    <td data-th="姓名">喜多郎</td>
+                    <td data-th="貨品">六角和牛排</td>
+                    <td data-th="價格">3,000</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="text-right hidden" >總營收</td>
+                    <td data-th="總營收">6,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+              
           </div>
         </div>
       </div>
@@ -202,87 +237,93 @@
           <a href="#" class="btn btn-outline-secondary">訂單管理</a>
         </div>
       </div>
+      
+      <!-- 
+        table-responsive on <table> cause table no longer take up 100% 
+        solution on stack overflow :
+          use .table-responsive to wrap <table>
+          https://bit.ly/2SsUWIr
+      -->
+        <table class="table table-rwd">
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>訂單數</th>
+              <th>退費數</th>
+              <th>出貨數</th>
+              <th>有問題貨品</th>
+              <th width="200">營業額</th>
+              <th width="200">淨利潤</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-th="日期">9/1</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤" class="text-right">168,000</td>
+            </tr>
+            <tr>
+              <td data-th="日期">9/2</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤" class="text-right">168,000</td>
+            </tr>
+            <tr>
+              <td data-th="日期">9/3</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤" class="text-right">168,000</td>
+            </tr>
+            <tr>
+              <td data-th="日期">9/4</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤" class="text-right">168,000</td>
+            </tr>
+            <tr>
+              <td data-th="日期">9/5</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤" class="text-right">168,000</td>
+            </tr>
+            <tr>
+              <td data-th="日期">9/6</td>
+              <td data-th="訂單數">300</td>
+              <td data-th="退費數">1</td>
+              <td data-th="出貨數">250</td>
+              <td data-th="有問題貨品">3</td>
+              <td data-th="營業額" class="text-right">256,000</td>
+              <td data-th="淨利潤"class="text-right">168,000</td>
+            </tr>
 
-      <table class="table">
-        <thead>
-          <tr>
-            <th>日期</th>
-            <th>訂單數</th>
-            <th>退費數</th>
-            <th>出貨數</th>
-            <th>有問題貨品</th>
-            <th width="200">營業額</th>
-            <th width="200">淨利潤</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>9/1</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-          <tr>
-            <td>9/2</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-          <tr>
-            <td>9/3</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-          <tr>
-            <td>9/4</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-          <tr>
-            <td>9/5</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-          <tr>
-            <td>9/6</td>
-            <td>300</td>
-            <td>1</td>
-            <td>250</td>
-            <td>3</td>
-            <td class="text-right">256,000</td>
-            <td class="text-right">168,000</td>
-          </tr>
-
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="6" class="text-right">月總營收</td>
-            <td class="text-right">3,750,500</td>
-          </tr>
-          <tr>
-            <td colspan="6" class="text-right">月總淨利潤</td>
-            <td class="text-right">2,140,500</td>
-          </tr>
-        </tfoot>
-      </table>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td data-th="月總營收" colspan="6" class="text-right">月總營收</td>
+              <td class="text-right">3,750,500</td>
+            </tr>
+            <tr>
+              <td data-th="月總淨利潤" colspan="6" class="text-right">月總淨利潤</td>
+              <td class="text-right">2,140,500</td>
+            </tr>
+          </tfoot>
+        </table>
 
     </div>
   </div>
