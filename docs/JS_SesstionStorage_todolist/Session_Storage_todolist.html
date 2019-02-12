@@ -121,9 +121,8 @@
 		}
 
 		function insert(e){
-			let vali = document.getElementsByTagName('form');
-			console.log(vali);
-			if(!vali[0].checkValidity()){
+			e.preventDefault();
+			if(!document.getElementsByTagName('form')[0].checkValidity()){
 				alert('You appear to have sent an empty memorandum!')
 				return;
 			}
