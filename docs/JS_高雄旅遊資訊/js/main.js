@@ -54,7 +54,6 @@ window.addEventListener('DOMContentLoaded',function(e){
 			resultObj[result[index].Zone].push(result[index]);
 		}
 
-		// console.table(resultObj);
 		// 列印下拉選單
 		for (index in result) {
 			// 檢查是否有相同名稱
@@ -78,21 +77,10 @@ window.addEventListener('DOMContentLoaded',function(e){
 				next = document.getElementsByClassName('next'),
 				pageCount = Math.ceil(resultObj[area].length/listPerPage),
 				numberLink =document.querySelectorAll('.numberLink');
-			console.log(pageCount);
-			console.log(pageNum);
 
-			console.log('p',prev[0]);
-			console.log('n',next[0]);
-			// 目前頁面則不動作
-			// if(currPage == pageNum){
-			// 	return;
-			// }
 			// 預設狀態
 			prev[0].className = 'page-item prev';
 			next[0].className = 'next page-item';
-			console.log('p2',prev[0]);
-			console.log('n2',next[0]);
-
 
 			// 清空分頁清單
 			if(numberLink.length > 0){
