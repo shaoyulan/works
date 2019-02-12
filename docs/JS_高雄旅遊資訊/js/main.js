@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded',function(e){
 	xhr.onload = function(){
-		let response = JSON.parse(xhr.responseText),
+		let response = JSON.parse(xhr.responseText), // 轉換資料型態
 			result = response.result.records,
 			selectBar = document.querySelector('#area'),
 			areaTitle = document.querySelector('.attractions-list').firstChild.nextSibling.firstChild,
@@ -78,11 +78,11 @@ window.addEventListener('DOMContentLoaded',function(e){
 				pageCount = Math.ceil(resultObj[area].length/listPerPage),
 				numberLink =document.querySelectorAll('.numberLink');
 
-			// 預設狀態
+			// 上下頁按鈕預設狀態
 			prev[0].className = 'page-item prev';
 			next[0].className = 'next page-item';
 
-			// 清空分頁清單
+			// 清空舊頁碼
 			if(numberLink.length > 0){
 				// 假如沒回傳空陣列
 				// 巡迴清空數字分頁li
@@ -91,6 +91,7 @@ window.addEventListener('DOMContentLoaded',function(e){
 				}
 			}
 
+			// 列印頁碼
 			for(let index = 1; index <= pageCount; index++){
 				let list = document.createElement('li');
 
@@ -101,26 +102,21 @@ window.addEventListener('DOMContentLoaded',function(e){
 				if(index == pageNum){
 					list.className += ' active';
 				}
+				// 綁定更新頁面事件
 				list.addEventListener('click',function(e){
 					e.stopPropagation();
-					// 綁定更新頁面事件
 					update(currArea,Number(e.target.text))
 					// pagination(currArea,Number(e.target.text))
 				})
 				pagList.insertBefore(list,pagList.lastChild.previousSibling);
 			}
-
-			
-
+			// 上下頁鈕是否隱藏
 			if(pageNum == pageCount){
 				next[0].className = 'next d-none';
 			}
-
 			if(pageNum ==1 ){
 				prev[0].className = 'prev d-none';
 			}
-			
-
 			// 更新目前頁數
 			currPage = pageNum;
 		}
@@ -143,8 +139,7 @@ window.addEventListener('DOMContentLoaded',function(e){
 			for (let i = from; i<= newTo; i++) {
 				a++;
 				let attract = resultObj[newArea][i];
-				// console.log(result[index].Name);
-				// if(attract.Zone == newArea){
+				// 設定景點資料
 					template = temp.cloneNode(true);
 					let open = template.querySelector('.opening-time').firstChild.nextSibling.nextSibling,
 						location = template.querySelector('.addr').firstChild.nextSibling.nextSibling,
@@ -162,16 +157,14 @@ window.addEventListener('DOMContentLoaded',function(e){
 					freeVisit.nodeValue = attract.Ticketinfo;
 					attraction.nodeValue = attract.Name;
 					area.nodeValue = attract.Zone;
-
+					// 將景點新增至頁面
 					boxMother.appendChild(template);
-				// }
 			}
 
 			// 更新清單
 			pagination(newArea,pageNum);
 
 			// 捲動至資料位置
-			
 			$('html').animate({
 				scrollTop:titlePosition,
 			},1500);
@@ -183,10 +176,8 @@ window.addEventListener('DOMContentLoaded',function(e){
 		$(selectBar).on('change',function(e){
 			// 定義變數
 			let newArea = e.target.value;
-
 			// 呼叫頁面更新
 			update(newArea,1,e)
-			
 			// 更新目前區域
 			currArea = newArea;
 		});
@@ -206,10 +197,6 @@ window.addEventListener('DOMContentLoaded',function(e){
 			update(currArea,currPage+1);
 		})
 
-
-
-		// 預設三民區
-		// $(selectBar).val('三民區').trigger('change');
 
 
 	}
