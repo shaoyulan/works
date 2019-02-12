@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -89,7 +89,7 @@
 			<div class="box">
 				<form name='memo'>
 					<input type="text" class="input" placeholder="Type something" required>
-					<div  class="send">submit</div>
+					<button  class="send">submit</button>
 				</form>
 			</div>
 		</div>
@@ -105,18 +105,18 @@
 			board = document.querySelector('.board');
 
 		function init(e){
-			// ÇåÀí®‹Ãæ
+			// æ¸…ç†ç•«é¢
 			let rows = document.querySelector('.board ul'),
 				todos = JSON.parse(localStorage.getItem('todolist')) || [],
 				row = '';
 			for (let i = 0; i < todos.length; i++) {
 				let todo = todos[i];
 				row += `<li>
-							<a href='#' class='delete' data-num=${i}>„h³ı</a>
+							<a href='#' class='delete' data-num=${i}>åˆªé™¤</a>
 							<span class='time'>${todo.time}</span><span class='newline'>${todo.message}<span>
 						</li>`;
 			}
-			// Œ¢ÙYÁÏ¸üĞÂÖÁí“Ãæ
+			// å°‡è³‡æ–™æ›´æ–°è‡³é é¢
 			rows.innerHTML = row;
 		}
 
@@ -129,7 +129,7 @@
 			}
 			let	date = new Date(),
 				time = date.getFullYear() +'-'+date.getMonth() + '-' + 
-				       date.getDate() + '-ĞÇÆÚ' + date.getDay(),
+				       date.getDate() + '-æ˜ŸæœŸ' + date.getDay(),
 				input = document.querySelector('.input').value,
 				todo = {
 					message:input,
