@@ -28,7 +28,8 @@
 			// Settings here
 			for(let i =0; i< target.length;i++){
 				const topMargin = target[i].getBoundingClientRect().top,
-					  triggerLine = (height/visibility) + (topMargin-gap_cause_by_rotate);
+					  triggerLine = (height/visibility) + (topMargin-gap_cause_by_rotate) + window.scrollY;
+					  // console.log('TL',navigator.clipboard.writeText('ok'));
 					if (trigger > triggerLine && trigger < triggerLine+sense_range){
 						target[i].classList.add('flipped');
 					}
