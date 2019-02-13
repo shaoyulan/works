@@ -1,8 +1,8 @@
 $(function(e){
 	let bmiArray = JSON.parse(sessionStorage.getItem('bmi')) || [],
-		temp = $('.record').clone(),
-		bmi=0,
-		lists = $('.lists');
+		temp = $('.record').clone(), // template for records
+		bmi=0, // bmi index
+		lists = $('.lists'); // 
 
 	function getBmiLevel(bmi){
 		let bmiLevel ='';
@@ -63,18 +63,22 @@ $(function(e){
 		}
 	}
 
+	// Delete 
 	function del(num){
 		bmiArray.splice(num,1);
 		Insert(bmiArray);
 		Update(bmiArray);
 	}
 	
+	// Generate Date
 	function today(){
 		let date = new Date(),
 			today = date.getDate()+'-'+(date.getMonth()+1)+'-'+date.getFullYear();
 		return today;
 	}
 
+
+	// When press the see result btn
 	$('.circle').on('click',function(e){
 		let height = $('.input-height').val().trim(),
 			weight = $('.input-weight').val().trim(),
@@ -93,9 +97,15 @@ $(function(e){
 		Insert(bmiArray); 
 	});
 
+	// when user though it's a shame
 	$('body').on('click','.delete',function(e){
 		let num = $(this).closest('.record').data('num');
 		del(num);
 	});
+
+	$(window).on('keypress',function(e){
+		console.log(e.target);
+	});
+
 	Update(bmiArray);
 });
