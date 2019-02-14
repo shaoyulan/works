@@ -323,3 +323,13 @@ footer h4:nth-of-type(2){
 		bottom: 40px;
 	}
 }
+@media screen and (max-width:576px ){
+	.attractions-boxs .info li{
+		 display: flex; 
+		 align-items: center; 
+	}
+	.attractions-boxs .info img{
+		width: 18px;
+		height: 18px;
+	}
+}
