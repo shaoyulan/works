@@ -140,7 +140,7 @@ window.addEventListener('DOMContentLoaded',function(e){
 			// 更新清單
 			pagination(newArea,pageNum);
 			// 捲動至資料位置
-			$('html').animate({
+			$('body').animate({
 				scrollTop:titlePosition,
 			},1500);
 		}
@@ -171,7 +171,7 @@ window.addEventListener('DOMContentLoaded',function(e){
 
 		// 回頂端
 		$('.gotop').on('click',function(e){
-			$('html').animate({
+			$('body').animate({
 				scrollTop:0,
 			},1500);
 		})
