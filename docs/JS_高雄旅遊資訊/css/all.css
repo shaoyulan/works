@@ -6,6 +6,13 @@
 	display: table;
 	clear: both;
 }
+body{
+	padding-right: 0!important;
+}
+html{
+	overflow-x: hidden;
+}
+
 html,*{
 	font-family: Microsoft JhengHei;
 	box-sizing: border-box;
