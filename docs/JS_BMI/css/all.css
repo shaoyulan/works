@@ -400,7 +400,11 @@ footer img{
 }
 
 @media screen and (max-width: 476px) {
+	.input-area input{
+		font-size: 13px;
+	}
 	.record li.result{
 		font-size: 20px;
 	}
+
 }
