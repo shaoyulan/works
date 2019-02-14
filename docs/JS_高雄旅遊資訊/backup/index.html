@@ -3,28 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>高雄旅遊資訊網</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="short icon" href="img/ksico.ico">
-	<meta name="description" content="高雄旅遊資訊網">
-	<meta name="keyword" content="高雄、旅遊、海灣">
-	<meta property="og:title" content="高雄旅遊資訊網">
-	<meta property="og:description" content="高雄旅遊資訊網">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<!-- All.css -->
 	<link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-	<!-- Settings -->
-	<button type="button" class="btn btn-primary modal-btn" data-toggle="modal" data-target="#exampleModal">
-	  設定
-	</button>
-
 	<header>
 		<div class="container header">
 			<h1>高雄旅遊資訊</h1>
@@ -196,60 +180,21 @@
 			</div>
 		</li>
 	</div>
-	
-	<div class="gotop"><img src="img/btn_goTop.png" alt="gotop"></div>
-
 
 	<!-- 分頁清單 -->
 	<div class="container">
 		<div class="d-flex justify-content-center">
 			<nav aria-label="Page navigation example">
 			  <ul class="pagination">
-			    <li class="page-item prev"><a class="page-link" href="#">&#10094; Prev</a></li>
+			    <li class="page-item prev"><a class="page-link" href="#">上一頁</a></li>
 			    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
-			    <li class="page-item next"><a class="page-link" href="#">Next &#10095;</a></li>
+			    <li class="page-item next"><a class="page-link" href="#">下一頁</a></li>
 			  </ul>
 			</nav>
 		</div>
 	</div>
 	
-	<footer>
-		<h4>高雄旅遊網</h4>
-		<h4>資料來源：高雄市政府</h4>
-	</footer>
 
-	
-
-	<!--Setting Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">選擇您的設定</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-			<!-- choices -->
-	        <nav aria-label="..." class="setting">
-	          <ul class="pagination pagination-lg">
-	            <li class="page-item ">
-	              <a class="page-link active" href="#" tabindex="-1" data-num="2">2</a>
-	            </li>
-	            <li class="page-item"><a class="page-link" href="#" data-num="4">4</a></li>
-	            <li class="page-item"><a class="page-link" href="#" data-num="6">6</a></li>
-	          </ul>
-	        </nav><!-- choices -->
-
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-	        <button type="button" class="btn btn-primary setting-save"  data-dismiss="modal">儲存</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -259,6 +204,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<!-- // main.js & data -->
+	<script src="js/json.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

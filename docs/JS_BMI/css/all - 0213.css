@@ -1,10 +1,6 @@
 html,*{
 	font-family: Microsoft JhengHei;
 }
-/*主要區塊*/
-.wraper{
-	min-height: calc(100vh - 80px);
-}
 header{
 	height: 300px;
 	width: 100%;
@@ -20,7 +16,6 @@ header .bmi-img img{
 section{
 	background: #F5F5F5;
 }
-/*輸入面板*/
 .panel{
 	padding-left: 13%;
 }
@@ -74,6 +69,8 @@ section{
 	height: 28%;
 	max-width: 30px;
 	max-height: 30px;
+	/*width: 30px;
+	height: 30px;*/
 	padding:8px;
 	border-radius: 50%;
 	background: #86D73E;
@@ -105,6 +102,9 @@ section{
 	font-size: 32px;
 	color: #86D73E;
 	margin-left: 18px;
+	/*position: absolute;
+	right: 0;
+	transform: translateX(calc(100% + 20px));*/
 }
 .input-btn .info:after{
 	content: '理想';
@@ -210,7 +210,7 @@ section{
 	content: '重度肥胖';
 }
 
-/*BMI紀錄*/
+
 .title{
 	font-size: 24px;
 	color: #424242;
@@ -314,7 +314,6 @@ section{
 	box-shadow: 2px 0 3px 0 rgba(255,17,0,0.29);
 }
 
-/*刪除X*/
 .record .delete{
 	position: absolute;
 	right: 0;
@@ -326,6 +325,7 @@ section{
 footer{
 	background: #FFD366;
 	height: 80px;
+	margin-top:74px;
 	text-align: center;
 	line-height: 80px;
 }
@@ -350,7 +350,7 @@ footer img{
 		font-size: 1.25rem;
 	}
 	header .bmi-img img{
-		width: 100%;
+		width: 12vw;
 	}
 	.input-btn .circle{
 		width: 12vw;
@@ -394,6 +394,12 @@ footer img{
 		flex-direction: column;
 		margin-top: 33px;
 	}
+	.input-btn .img{
+/*		right: -5px; 
+		bottom: -5px;
+		width: unset;
+		height: unset;*/
+	}
 	.input-btn .info{
 		font-size: 25px;
 	}
@@ -404,3 +410,8 @@ footer img{
 		font-size: 20px;
 	}
 }
+
+/*
+.panel{
+	display: flex;
+}*/

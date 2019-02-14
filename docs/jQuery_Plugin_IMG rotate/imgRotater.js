@@ -25,11 +25,11 @@
 				  innerHeight = window.innerHeight, // Height of current widow
 				  trigger = top + innerHeight;      // The ghost will catch prey(triggerLine)
 
+			// 假如超過第一個, 翻轉
 			// Settings here
 			for(let i =0; i< target.length;i++){
 				const topMargin = target[i].getBoundingClientRect().top,
 					  triggerLine = (height/visibility) + (topMargin-gap_cause_by_rotate) + window.scrollY;
-					  // console.log('TL',navigator.clipboard.writeText('ok'));
 					if (trigger > triggerLine && trigger < triggerLine+sense_range){
 						target[i].classList.add('flipped');
 					}

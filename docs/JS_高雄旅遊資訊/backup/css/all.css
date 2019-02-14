@@ -1,5 +1,6 @@
+@import url(normalize.css);
 :root{
-	--down-traingle:'\25bc'; /*倒三角形*/
+	--down-traingle:'\25bc';
 }
 .clearfix:after{
 	content:'';
@@ -34,7 +35,6 @@ header{
 	font-weight: 400;
 	color: white;
 }
-/*下拉選單*/
 #area{
 	height: 48px;
     width: 100%;
@@ -56,11 +56,9 @@ header{
 	transform: translate(-100%,-50%);
 	z-index: 999;
 }
-/*虛線水平線*/
 .dashed-border{
 	border-bottom: 1px dashed #559AC8;
 	position: relative;
-	margin-bottom: 65px;
 }
 .dashed-border:before{
 	content:'';
@@ -82,15 +80,13 @@ header{
 	transform:translate(-50%,50%);
 	color:#559AC8;
 }
-
-/*熱門區域*/
 .area{
 	width: 800px;
 	margin: 0 auto;
 	border-radius: 5px;
 	box-shadow: 0 1px 3px 0px rgba(0,0,0,.2);
 	padding: 20px 26px 18px 26px;
-	transform: translateY(-24%);
+	transform: translateY(-20%);
 	position: relative;
 	z-index: 999;
 	background: white;
@@ -127,7 +123,6 @@ header{
 	padding-top:14px;
 }
 
-/*主要區塊*/
 .attractions-list h2{
 	text-align: center;
     font-size: 36px;
@@ -221,39 +216,6 @@ header{
 .hide{
 	direction: 
 }
-.pagination li a {
-	border:none;
-	font-size: 14px;
-	color: #4A4A4A;
-}
-
-.gotop{
-	position: fixed;
-	right: 28px;
-	bottom:195px;
-	cursor: pointer;
-}
-
-.modal-btn{
-	position: fixed;
-    right: 2%;
-    top: 2%;
-}
-footer{
-	height: 90px;
-	background: #559AC8;
-	text-align:center;
-	padding:24px 0 23px 0;
-}
-footer h4:nth-of-type(1){
-	font-size: 14px;
-	color: #FFFFFF;
-	margin-bottom: 15px;
-}
-footer h4:nth-of-type(2){
-	font-size: 14px;
-	color: #FFD366;
-}
 @media screen and (max-width:996px ){
 	.area{
 		width: 82%;
@@ -263,7 +225,7 @@ footer h4:nth-of-type(2){
 		display: inline-block;
 		width: 95%;
 	}
-	/*最小高度*/
+	/*避免破版*/
 	.attractions-boxs > li{
 		min-height: 350px;
 	}
