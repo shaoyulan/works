@@ -7,6 +7,7 @@
 	clear: both;
 }
 body{
+	overflow: unset!important;
 	padding-right: 0!important;
 }
 html{
