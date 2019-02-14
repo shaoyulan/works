@@ -50,6 +50,11 @@ section{
 	border-radius: 50%;
 	visibility: hidden;
 }
+.input-btn .circle-wraper{
+	height: 100%;
+    display: flex;
+    align-items: center;
+}
 .input-btn .circle{
 	width: 120px;
 	height:120px;
@@ -60,8 +65,12 @@ section{
 }
 
 .input-btn .img {
-	width: 30px;
-	height: 30px;
+	width: 28%;
+	height: 28%;
+	max-width: 30px;
+	max-height: 30px;
+	/*width: 30px;
+	height: 30px;*/
 	padding:8px;
 	border-radius: 50%;
 	background: #86D73E;
@@ -341,7 +350,7 @@ footer img{
 		font-size: 1.25rem;
 	}
 	header .bmi-img img{
-		width: 12vw;
+		width: 100%;
 	}
 	.input-btn .circle{
 		width: 12vw;
@@ -386,10 +395,10 @@ footer img{
 		margin-top: 33px;
 	}
 	.input-btn .img{
-		right: -5px; 
+/*		right: -5px; 
 		bottom: -5px;
 		width: unset;
-		height: unset;
+		height: unset;*/
 	}
 	.input-btn .info{
 		font-size: 25px;
@@ -401,3 +410,8 @@ footer img{
 		font-size: 20px;
 	}
 }
+
+/*
+.panel{
+	display: flex;
+}*/

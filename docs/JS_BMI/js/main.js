@@ -34,6 +34,7 @@ $(function(e){
 		return bmiLevel;
 	}
 
+	// 儲存結果
 	function Insert(bmiArray){
 		sessionStorage.setItem('bmi',JSON.stringify(bmiArray));
 	}
@@ -95,16 +96,22 @@ $(function(e){
 		});
 		Update(bmiArray,e); 
 		Insert(bmiArray); 
+
+		// 清空
+		$('.input-height, .input-weight').val('');
+
 	});
 
-	// when user though it's a shame
+	// delete
 	$('body').on('click','.delete',function(e){
 		let num = $(this).closest('.record').data('num');
 		del(num);
 	});
 
-	$(window).on('keypress',function(e){
-		console.log(e.target);
+	$(window).on('keydown',function(e){
+		if(e.keyCode == '13'){
+			$('.circle').click();
+		}
 	});
 
 	Update(bmiArray);
