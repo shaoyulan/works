@@ -232,10 +232,11 @@ header{
 	right: 28px;
 	bottom:195px;
 	cursor: pointer;
+	z-index: 500;
 }
 
 .modal-btn{
-	position: fixed;
+	position: absolute;
     right: 2%;
     top: 2%;
 }
@@ -309,5 +310,9 @@ footer h4:nth-of-type(2){
 	}
 	.attractions-boxs li .img-holder{
 		height: 200px;
+	}
+	.gotop{
+		right: 5px;
+		bottom: 40px;
 	}
 }
