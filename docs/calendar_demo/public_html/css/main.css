@@ -1,0 +1,128 @@
+#calendar {
+	margin:0 auto;
+	width:90%;
+}
+
+#header{
+	font-size:2.4rem;
+	font-weight: bold;
+}
+
+.day,.date-block{
+	float:left;
+	width:calc(100%/7);
+}
+
+.date-block{
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+	height:15vh;
+	padding:4px;
+}
+
+.date-block.empty{
+	background-color: #eee;
+}
+
+#dates{
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+/* info panel */
+
+#info-panel{
+	display: none;
+	position:fixed;
+	background-color: white;
+	border:1px solid #ccc;
+	width:280px;
+}
+
+/* switch */
+#info-panel.open{
+	display: block;
+}
+
+#info-panel label{
+	font-size: .8rem;
+	color: #aaa;
+}
+
+#info-panel .close{
+	position:relative;
+	right:10px;
+	top:10px;
+	cursor:pointer;
+}
+
+#info-panel .title, #info-panel .time-picker{
+	border-bottom: 1px solid #ccc;
+}
+
+#info-panel .title, #info-panel .time-picker, #info-panel .description{
+	padding:10px;
+}
+.error-msg{
+	display: none;
+}
+.error-msg.open{
+	display: block;
+}
+.selected-date{
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+#description{
+	width:100%;
+}
+
+#info-panel button {
+	display: none;
+	border:none;
+	padding: 10px;
+	cursor:pointer;
+	color:white;
+}
+
+#info-panel.new button.create, #info-panel.new button.cancel{
+	display: inline;
+	width:50%;
+	float:left;
+} 
+
+#info-panel.update button.update, #info-panel.update button.cancel, #info-panel.update button.delete{
+	display: inline;
+	width:50%;
+	float:left;
+} 
+
+#info-panel.update button.delete{
+	width:100%;
+}
+
+#info-panel button.create, #info-panel button.update{
+	background-color: #74be00;
+}
+
+#info-panel button.delete{
+	background-color:#c21717;
+}
+
+
+.event{
+	border-radius:12px;
+	padding:0 6px;
+	background-color: orange;
+	color:white;
+	margin-bottom: 2px;
+}
+
+.event .title{
+	float:left;
+}
+
+.event .from{
+	float:right;
+}
