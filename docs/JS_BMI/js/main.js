@@ -2,7 +2,7 @@ $(function(e){
 	let bmiArray = JSON.parse(sessionStorage.getItem('bmi')) || [],
 		temp = $('.record').clone(), // template for records
 		bmi=0, // bmi index
-		lists = $('.lists'); // 
+		lists = $('.lists'); // 下方BMI主要區塊
 
 	function getBmiLevel(bmi){
 		let bmiLevel ='';
@@ -60,7 +60,7 @@ $(function(e){
 		// 是否是使者按下計算
 		if(e){
 			// input-btn的狀態永遠是bmiArray最後一個的
-			$('.input-btn').attr('data-status',getBmiLevel(bmiArray[bmiArray.length-1].bmi))
+			$('.input-btn').attr('data-status',getBmiLevel(bmiArray[bmiArray.length-1].bmi));
 		}
 	}
 

@@ -162,6 +162,7 @@ window.addEventListener('DOMContentLoaded',function(e){
 			// 資料新增入該地區
 			resultObj[result[index].Zone].push(result[index]);
 		}
+		console.log(resultObj);
 
 		// 列印下拉選單
 		for (index in resultObj) {
