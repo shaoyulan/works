@@ -79,10 +79,13 @@ window.addEventListener('DOMContentLoaded',function(e){
 
 		// 轉場效果
 		function viewChange(target,step,callback) {
+							
+
 			if(target == 0 && !content.style.opacity )
 				content.style.opacity = '1';
 		    function animateScroll(timeStamp){    
 		    	// timeStamp : 由JS自動傳入
+		    	console.log( content.style.opacity);
 		        content.style.opacity = Number(content.style.opacity)+step;
 		        if((Number(content.style.opacity) > target && step<0) || (Number(content.style.opacity) < target && step >0) ) {
 		            window.requestAnimationFrame(animateScroll);
@@ -110,16 +113,11 @@ window.addEventListener('DOMContentLoaded',function(e){
 				newTo = resultCount < to ? resultCount:to; // 當資料筆數較少
 
 			// 轉場效果
-			viewChange(0,-0.025,function(){
-				viewChange(1,0.05);
-				// 捲動至資料位置
-				$('html,body').animate({
-					scrollTop:titlePosition,
-				},1500);
-			});
+			viewChange(0,-0.5);
 			// 更新標題
 			areaTitle.nodeValue = newArea;
 			// 0-5:第一頁; 6-11:第二頁
+			let UI;
 			for (let i = from; i<= newTo; i++) {
 				// a++;
 				let attract = resultObj[newArea][i];
@@ -146,6 +144,16 @@ window.addEventListener('DOMContentLoaded',function(e){
 					if(!attract.Ticketinfo){freeVisit.parentNode.style.display = 'none'} //無門票資訊時
 					// 將景點新增至頁面
 					content.appendChild(template);
+					// 已將資料新增完，淡出效果
+					if(i == newTo){
+						(function(){
+							viewChange(1,0.05);
+							// 捲動至資料位置
+							$('html,body').animate({
+								scrollTop:titlePosition,
+							},1500);
+						})();
+					}
 			}
 			// 更新清單
 			pagination(newArea,pageNum);
