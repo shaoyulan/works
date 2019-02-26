@@ -1,0 +1,151 @@
+@import 'variable';
+@import 'modules';
+@import 'reset';
+
+
+
+.index{
+	font-size: 18px;
+	font-family: Microsoft JhengHei;
+	.container{
+		max-width: $width;
+		margin: 0 auto;
+	}
+	header{
+		margin-top:30px;
+		margin-bottom: 30px;
+		.container{
+			display: flex;
+			justify-content: space-between;
+			.brand-logo{
+				display: flex;
+				height: 42px; /*how to make it auto adjust to content height*/
+				img:nth-of-type(1){
+					width:40px;
+					margin-right: 8.27px;
+				}
+				img:nth-of-type(2){
+					width:171.22px;
+				}
+			}
+			.nav{
+				display: flex;
+				align-items: center;
+				li{
+					margin-right:60px;
+				}
+				li:nth-of-type(4){
+					margin-left:20px;
+				}
+				a{
+					color:$main-color;
+					font-weight: 700;
+				}
+			}
+		}
+		
+	}
+	.content{
+		.product-section{
+			.products{
+				display: flex;
+				justify-content:center;
+				font-weight: bold;
+				color:white;
+				transform: translateY(-50%);
+			}
+			// general 
+			li{
+				overflow:hidden;
+				box-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+				border: 3px solid white;
+				position: relative;
+				.bg-img{
+					width: 259px;
+					height: 256px;
+					transition:.3s linear;
+				}
+				span{
+					position:absolute;
+				    font-size: 24px;
+				    writing-mode: vertical-rl;
+				    display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    /*cover*/
+				    @include abs-fullcover;
+				    opacity: $cover-opacity;
+				    background: $main-color;
+					
+				}
+				&:hover .bg-img{
+					@include bg-rotate;
+				}
+			}
+			// specific
+			@for $i from 1 through length($img-url){
+				/**** use #{i} ****/
+				li:nth-of-type(#{$i}){
+					color:nth($cover-font-color,$i);
+					.bg-img{
+						&:after{
+							background: url(nth($img-url,$i));
+							@include psudeo-bg;
+						}
+					}
+					span{
+						background: nth($cover-color,$i);
+					}
+				}
+			} 
+
+			.header-photo{
+				width: 100%;
+				height:496px;
+				margin: 0 auto;
+				background: url(https://bit.ly/2OhbMHr) center center;
+				background-size: cover;
+			}
+		}
+
+		.why-choice, .why-eat{
+			background: $third-color;
+			height: 420px;
+			margin-bottom: 105px;
+			.container{
+				display: flex;
+				align-items:center;
+				.img{
+					background: url(https://bit.ly/2R5tqwD) center;
+					background-size:cover;
+					height: 460px;
+					width: 460px;
+					transform:translateY(-20px);
+				}
+				.reason{
+					flex: 0 0 50%;
+					writing-mode:vertical-rl;
+					.title{
+						font-size: 38px;
+						color:$main-color;
+						transform: translateY(-38%);
+						margin-left: 30px;
+						p{
+							height: 36px;
+							background: black;
+							width: 1px;
+						    display: inline-block;
+						}
+					}
+					p{
+						height: 280px;
+						line-height: 2;
+						letter-spacing: 1px;
+						color:$secondary-color;
+					}
+				}
+			}
+			
+		}
+	}
+}

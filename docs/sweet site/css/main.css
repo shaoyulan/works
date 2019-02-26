@@ -1,0 +1,238 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  text-decoration: none; }
+
+.index {
+  font-size: 18px;
+  font-family: Microsoft JhengHei; }
+  .index .container {
+    max-width: 940px;
+    margin: 0 auto; }
+  .index header {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    .index header .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .index header .container .brand-logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 42px;
+        /*how to make it auto adjust to content height*/ }
+        .index header .container .brand-logo img:nth-of-type(1) {
+          width: 40px;
+          margin-right: 8.27px; }
+        .index header .container .brand-logo img:nth-of-type(2) {
+          width: 171.22px; }
+      .index header .container .nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+        .index header .container .nav li {
+          margin-right: 60px; }
+        .index header .container .nav li:nth-of-type(4) {
+          margin-left: 20px; }
+        .index header .container .nav a {
+          color: #3F5D45;
+          font-weight: 700; }
+  .index .content .product-section {
+    /**** use i ****/
+    /**** use i ****/
+    /**** use i ****/ }
+    .index .content .product-section .products {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    .index .content .product-section li {
+      overflow: hidden;
+      -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+      border: 3px solid white;
+      position: relative; }
+      .index .content .product-section li .bg-img {
+        width: 259px;
+        height: 256px;
+        -webkit-transition: .3s linear;
+        -o-transition: .3s linear;
+        transition: .3s linear; }
+      .index .content .product-section li span {
+        position: absolute;
+        font-size: 24px;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        /*cover*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.8;
+        background: #3F5D45; }
+      .index .content .product-section li:hover .bg-img {
+        -webkit-transform: rotate(20deg) scale(1.5);
+        -ms-transform: rotate(20deg) scale(1.5);
+        transform: rotate(20deg) scale(1.5); }
+    .index .content .product-section li:nth-of-type(1) {
+      color: #3F5D45; }
+      .index .content .product-section li:nth-of-type(1) .bg-img:after {
+        background: url("https://bit.ly/2Dwoxd7");
+        content: '';
+        background-position: center center;
+        background-size: cover;
+        display: block;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        filter: blur(5px); }
+      .index .content .product-section li:nth-of-type(1) span {
+        background: #FFE180; }
+    .index .content .product-section li:nth-of-type(2) {
+      color: white; }
+      .index .content .product-section li:nth-of-type(2) .bg-img:after {
+        background: url("https://bit.ly/2Qodh3Z");
+        content: '';
+        background-position: center center;
+        background-size: cover;
+        display: block;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        filter: blur(5px); }
+      .index .content .product-section li:nth-of-type(2) span {
+        background: #3F5D45; }
+    .index .content .product-section li:nth-of-type(3) {
+      color: white; }
+      .index .content .product-section li:nth-of-type(3) .bg-img:after {
+        background: url("https://bit.ly/2zL5jN7");
+        content: '';
+        background-position: center center;
+        background-size: cover;
+        display: block;
+        height: 100%;
+        -webkit-filter: blur(5px);
+        filter: blur(5px); }
+      .index .content .product-section li:nth-of-type(3) span {
+        background: #3F5D45; }
+    .index .content .product-section .header-photo {
+      width: 100%;
+      height: 496px;
+      margin: 0 auto;
+      background: url(https://bit.ly/2OhbMHr) center center;
+      background-size: cover; }
+  .index .content .why-choice, .index .content .why-eat {
+    background: #EAF0ED;
+    height: 420px;
+    margin-bottom: 105px; }
+    .index .content .why-choice .container, .index .content .why-eat .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .index .content .why-choice .container .img, .index .content .why-eat .container .img {
+        background: url(https://bit.ly/2R5tqwD) center;
+        background-size: cover;
+        height: 460px;
+        width: 460px;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        transform: translateY(-20px); }
+      .index .content .why-choice .container .reason, .index .content .why-eat .container .reason {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl; }
+        .index .content .why-choice .container .reason .title, .index .content .why-eat .container .reason .title {
+          font-size: 38px;
+          color: #3F5D45;
+          -webkit-transform: translateY(-38%);
+          -ms-transform: translateY(-38%);
+          transform: translateY(-38%);
+          margin-left: 30px; }
+          .index .content .why-choice .container .reason .title p, .index .content .why-eat .container .reason .title p {
+            height: 36px;
+            background: black;
+            width: 1px;
+            display: inline-block; }
+        .index .content .why-choice .container .reason p, .index .content .why-eat .container .reason p {
+          height: 280px;
+          line-height: 2;
+          letter-spacing: 1px;
+          color: #8DA291; }
