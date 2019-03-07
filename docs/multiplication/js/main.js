@@ -8,14 +8,12 @@ window.addEventListener('DOMContentLoaded',function(e){
 			calculator__box__left.className = 'calculator__box__left';
 			calculator__box__right = document.createElement('div');
 			calculator__box__right.className = 'calculator__box__right';
+			// Number Title
+			numberTitle = document.createElement('div');
+			numberTitle.className = 'calculator__box__numberTitle';
+			numberTitle.textContent = i+1;
+			calculator__box__left.appendChild(numberTitle);
 		for(let r=1; r<10; r++){
-				if(r==1){
-						numberTitle = document.createElement('div');
-						numberTitle.className = 'calculator__box__numberTitle';
-						numberTitle.textContent = i+1;
-						calculator__box__left.appendChild(numberTitle);
-				}
-				
 				numberRow = document.createElement('div');
 				numberRow.className = 'calculator__box__numberRow';
 				numberRow.textContent = i+1 + ' x ' + r + ' = ' + (i+1)*r ;
