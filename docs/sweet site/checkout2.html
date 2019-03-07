@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sweet Store</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="short icon" href="">
+	<meta name="description" content="">
+	<meta name="keyword" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	
+	<!-- font awoseome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- custome css -->
+	<link rel="stylesheet" href="css/all.css">
+
+</head>
+<body class="checkout">
+	<header >
+		<div class="col-container l-header">
+			<div class="col-row">
+				<a class="brand-logo l-header__brandLogo">
+					<i class="fas fa-bars l-header__brandLogo--hamberger"></i>
+					<img src="images/logo-dark.svg" alt="" width="40">
+					<img src="images/logotype-lg-dark.svg" alt="" >
+					<i class="fas fa-shopping-cart l-header__brandLogo--mobileCart"></i>
+				</a>
+
+				<ul class="nav l-header__menu">
+					<li class="l-header__menu__item l-header__menu--active"><a href="index.html">首頁</a></li>
+					<li class="l-header__menu__item" ><a href="sweets.html">甜點</a></li>
+					<li class="l-header__menu__item"><a href="login.html">登入</a></li>
+					<li class="l-header__menu__item"><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="content ">
+		<div class="col-container">
+			<div class="col-row h-justify-content-lg-center">
+				<div class="delevery ">
+					<div class="form-card">
+						<div class="title">
+							<h2>付款</h2>
+							<ul>
+								<li><div class="circle"></div></li>
+								<li><div class="circle"></div></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="e-form__group">
+							<label for="firstName">信用卡卡號</label>
+							<input type="text" placeholder="1234-5678-9019">
+						</div>
+						<div class="name h-align-items-end h-mt-0">
+							<div class="e-form__group">
+								<label for="firstName">持卡人姓名</label>
+								<input type="text" placeholder="王">
+							</div>
+							<div class="e-form__group">
+								<label for="LastName"></label>
+								<input type="text" placeholder="宇">
+							</div>
+						</div>
+						<div class="e-form__group">
+							<label for="effectDate">有效期限</label>
+							<div class="addr">
+								<select >
+									<option value="1" selected="">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+								</select>
+								<select >
+									<option value="2108" selected="">2108</option>
+									<option value="2108">2108</option>
+									<option value="2108">2108</option>
+								</select>
+							</div>
+							
+						</div>
+						<div class="e-form__group secCode">
+							<label for="secCode">背面末三碼</label>
+							<input type="text" placeholder="222" id="secCode">
+						</div>
+						
+					</div>
+					<div class="form-btn e-hover--pt--wt">
+						<a href="checkout3.html">下一步</a>
+					</div>
+				</div>
+				<div class="checkout-info h-lg-none">
+					<div class="order-abstract m-listCard">
+						<h2 class="title m-listCard__title">訂單摘要</h2>
+						<ul class="m-listCard__list_group">
+							<li class="sub-total m-listCard__list__item">
+								<div>小計</div>
+								<div>NT$ 2,700</div>
+							</li>
+							<li class="price m-listCard__list__item">
+								<div>運費</div>
+								<div>NT$ 300</div>
+							</li>
+							<li class="grand-total m-listCard__list__item">
+								<div>總計</div>
+								<div>NT$ 3,000</div>
+							</li>
+						</ul>
+					</div>
+					<div class="item-info-list m-listCard">
+						<h2 class="title m-listCard__title">購物清單</h2>
+						<ul class="item-list m-listCard__list_group">
+							<li class="m-listCard__list__item">
+								<img src="https://bit.ly/2zBDAxX" alt="" width="120" height="80">
+								<div class="item-info-group">
+									<div class="item-info">焦糖碼卡龍 (2)</div>
+									<div class="item-price">NT$500</div>
+								</div>
+							</li>
+							<li class="m-listCard__list__item">
+								<img src="https://bit.ly/2zBDAxX" alt="" width="120" height="80">
+								<div class="item-info-group">
+									<div class="item-info">焦糖碼卡龍 (2)</div>
+									<div class="item-price">NT$500</div>
+								</div>
+							</li>
+							<li class="m-listCard__list__item">
+								<img src="https://bit.ly/2zBDAxX" alt="" width="120" height="80">
+								<div class="item-info-group">
+									<div class="item-info">焦糖碼卡龍 (2)</div>
+									<div class="item-price">NT$500</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mail-us">
+		<div class="col-container l-mailUs">
+			<div class="col-row">
+				<div class="l-mailUs__caption">
+					<img src="images/logo-light.svg" alt="" width="40px">
+					訂閱妳我的甜蜜郵件
+				</div>
+				<div class="l-mailUs__input">
+					<i class="fas fa-envelope"></i>
+					<input type="text">
+					<i class="fas fa-arrow-right e-hover--pt--wt"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="col-container l-footer">
+			<div class="col-row">
+				<div class="l-footer__info">
+					<img class="l-footer__info__img" src="images/logotype-lg-dark.svg" alt="" width="171">
+					<p class="l-footer__info__contact">
+						07-134-5678<br>
+						sweetaste@email.com<br>
+						800台中市西區五全路9999號<br>
+					</p>
+					<div class="social-media">
+						<i class="fab fa-facebook-square fa-2x"></i>
+						<i class="fab fa-facebook-square fa-2x"></i>
+					</div>
+				</div>
+				<div class="l-footer__info__otherInfo">
+					<div class="l-footer__info__otherInfo__caption">
+						今天是個<p></p><br>&nbsp;&nbsp;吃甜點的好日子。
+					</div>
+					<div class="l-footer__info__otherInfo__copyright">
+						© 2018 Sweetaste* All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

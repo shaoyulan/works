@@ -1,0 +1,237 @@
+// Header
+header{
+	// sticky top
+	position: sticky;
+	background: white;
+	top: -1px;
+	z-index: 9999;
+	transition: .3s all linear;
+	padding: 30px 0;
+	@include pad {
+		position: absolute;
+		width: 100%;
+		padding: 10px 0;
+	}
+	&.header--scroll{
+		padding: 10px 0;
+		box-shadow: 0 3px 10px #ddd;
+	}
+	.l-header{
+		@include pad {
+			width: 90%;
+			position: relative;
+			flex-direction: column;
+			justify-items: center;
+		}
+		.l-header__brandLogo{
+			display: flex;
+			height: 42px; /*how to make it auto adjust to content height*/
+			@include pad {
+				max-width: 100%;
+				flex:0 0 100%;
+				// vertical-align
+				display: flex;
+				align-items: center;
+			}
+			.l-header__brandLogo--hamberger,
+			.l-header__brandLogo--mobileCart{
+				display:none;
+			    padding: 10px;
+				@include pad {
+					display: inline-block;
+				} 
+			}
+			img:nth-of-type(1){
+				width:40px;
+				margin-right: 8.27px;
+				@include pad {
+					display: none;
+				}
+			}
+			img:nth-of-type(2){
+				width:171.22px;
+				@include pad {
+					margin:0 auto;
+				}
+			}
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		.l-header__menu{
+			display: flex;
+			flex: 0 0 34%;
+			align-items: center;
+			justify-content: space-around;
+			transition: .3s all linear;
+			overflow:hidden;
+			@include pad {
+				max-width: 100%;
+				flex:00 100%;
+				flex-wrap:wrap;
+				align-content: center;
+				text-align: center;
+				// hide nav
+				max-height: 0px;
+
+				.l-header__menu--active {
+					a{
+						background: $main-color;
+						color:$third-color;
+					}
+					
+				}
+				// show menu
+				&.l-header__menu--mobileShow{
+					max-height: 150px;
+				}
+			}
+			.l-header__menu__item {
+				word-break: keep-all;
+				a{
+					padding:0.5rem 1rem;
+					&:hover{
+						background:$main-color;
+						color:$third-color;
+					}
+				}
+				@include pad {
+					max-width: 100%;
+					flex:0 0 100%;
+					margin: 0 auto;	
+					a{
+						display: block;
+						padding: 12px 0;
+					}
+				}
+				
+			}
+			.l-header__menu__item:nth-of-type(2){
+				@include pad {
+					border-bottom: 1px solid #ddd;
+					border-top: 1px solid #ddd;
+				}
+			}
+			.l-header__menu__item:nth-of-type(4){
+				margin-left:20px;
+				@include pad {
+					display: none;
+				}
+			}
+			a{
+				color:$main-color;
+				font-weight: 700;
+			}
+
+		}
+	}
+	&.show-nav{
+		height: 168px;
+		overflow: auto;
+	}
+}
+
+// Mail us
+.mail-us{
+	margin-top:60px;
+	background:$main-color;
+	.l-mailUs{
+		padding:30px 0;
+		@include pad {
+			flex-direction: column;
+			align-items: center;
+		}
+		.col-row{
+			@include pad{
+				justify-content: center;
+			}
+		}
+		.l-mailUs__caption{
+			display: flex;
+			align-items: center;
+			color:white;
+			@include pad {
+				margin-bottom: 20px;
+			}
+			img{
+				margin-right: 20px;
+			}
+		}
+		.l-mailUs__input{
+			background-color:$third-color;
+			display: flex;
+			input{
+				border: 0;
+				outline: none;
+				background: $third-color;
+				width:260px;
+				@include iphone {
+					width:unset;
+				}
+			}
+			i{
+				padding:16px 20px;
+				color:$main-color;
+				@include iphone {
+					padding: 12px 12px;
+				}
+
+			}
+			i:nth-of-type(2){
+				background: $bright-yellow;
+			}
+		}
+	}
+}
+
+// Footer
+footer{
+	padding:30px 0;
+	background: $light-blue;
+	color:$main-color;
+	.l-footer{
+		// display: flex;
+		// justify-content: space-between;
+		@include pad {
+			width: 90%;
+			flex-direction: column;
+		}
+		.l-footer__info{
+			@include pad {
+				align-items: center;
+			}
+		}
+		.l-footer__info__img{
+			margin-bottom: 115px;
+			@include pad {
+				margin-bottom: 0;
+			}
+		}
+		.l-footer__info__contact{
+			margin-bottom: 30px;
+			line-height: 1.5;
+			@include pad {
+				margin: 10px 0;
+				line-height: 2;
+			}
+		}
+		.l-footer__info__otherInfo{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@include pad {
+				margin-top: 15px;
+			}
+			.l-footer__info__otherInfo__caption{
+				writing-mode: vertical-rl;
+				@include fontsize($footer);
+				p{
+					@include vertical-line;
+				}
+				@include pad {
+					display: none;
+				}
+			}
+		}
+	}
+}

@@ -7,3 +7,143 @@
 	bottom: 0;
 	right: 0;
 }
+
+// 產品Box
+@mixin box($img-sources) {
+	@for $i from 1 through length($img-sources){
+		li:nth-of-type(#{$i}){
+			&:hover{
+				.product-img{
+					filter:brightness(1.07);
+				}
+			}
+			.product-img{
+				background: url(nth($img-sources,$i));
+				@include psudeo-bg;
+				height: 315px;
+				position: relative;
+				
+				&:after{
+					content:'本日精選';
+					height: 106px;
+					width:36px;
+					position: absolute;
+					top:0;
+					left: 20px;
+					writing-mode: vertical-rl;
+					color:white;
+					background:$main-color;
+					line-height: 36px;
+				}
+				&:before{
+					content:'\f004';
+					height: 18px;
+					width:20px;
+					position: absolute;
+					right:22px;
+					top:19px;
+				}
+			}
+
+		}
+	}
+	
+	.product-intro{
+		display: flex;
+		padding:14px 0;
+		.name{
+			flex:0 0 60%;
+		}
+		.price{
+			flex:0 0 40%;
+		}
+	}
+	.add-cart{
+		background-color: $light-blue;
+		padding:16px 0;
+		&:hover{
+			cursor: pointer;
+			background-color: $main-color;
+			color:white;
+
+		}
+	}
+}
+
+// Pagination 樣式
+@mixin pagination-style {
+	border-left:1px solid $third-color;
+	border-top:1px solid $third-color;
+	border-bottom:1px solid $third-color;
+	&:last-of-type{
+		border-right:1px solid $third-color;
+	}
+}
+
+// 卡片面板
+.form-card{
+	margin: 0 auto;
+	background:$main-color;
+	padding:rem(50px) rem(30px) rem(30px) rem(30px);
+	@include iphone {
+		width:100%;
+	}
+	h2{
+		font-size: 2rem;
+		margin-bottom: 40px;
+		font-weight: bold;
+	}
+}
+.form-btn{
+	background: $bright-yellow;
+	padding: 20px 0;
+	color:$main-color;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+	@include hover(pointer)
+}
+
+// Input Label
+.e-form__group{
+	margin-top: rem(16px);
+	padding:0 rem(4px);
+	label{
+		font-size: 1.11rem
+	}
+	input, select{
+		width: 100%;
+		margin-top: rem(8px);
+		height: rem(56px);
+		background: $third-color;
+		color:$secondary-color;
+		padding-left:rem(20px);
+		border:none;
+	}
+}
+
+// List Card
+.m-listCard{
+	margin-bottom: 20px;
+	&__title {
+		padding: 21px 100px;
+	    font-size: 1.33rem;
+	    color: white;
+	    margin: 0;
+	    background: $third-color;
+	    color:$secondary-color;
+	}
+	&__list_group {
+		background:white;
+		padding:16px 20px;
+		font-size: 0.88rem;
+		border:1px solid $third-color;
+		.m-listCard__list__item{
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 8px;
+			color:$secondary-color;
+			font-weight: bold;
+		}
+	}
+}

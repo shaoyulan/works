@@ -1,0 +1,44 @@
+@function rem($px) {
+	@return ($px / 1px) / ($base-font-size / 1px) * 1rem;
+}
+@function pct($px) {
+	@return ($px / 1px) / ($width / 1px) * 100%;
+}
+
+// Flex 垂直/水平 置中	Flex V/H Center
+@mixin flex-align($vertical,$horizontal){
+	display: flex;
+	@if $vertical != 'n'{
+		align-items:$vertical; 
+	}
+	@if $horizontal != 'n'{
+		justify-content:$horizontal; 
+	}
+}
+
+// Hover 時滑鼠效果	Hover Pointer
+@mixin hover($style:pointer,$background:none,$color:none){
+	&:hover{
+		cursor:$style;
+		@if $background != none{
+			background:$background;
+		}
+		@if $color != none{
+			color:$color;
+		}
+	}
+}
+
+// 清除浮動
+@mixin clearfix{
+	&:after{
+		content:'';
+		display: table;
+		clear:both;
+	}
+	&:before{
+		content:'';
+		display: table;
+		clear:both;
+	}
+}
