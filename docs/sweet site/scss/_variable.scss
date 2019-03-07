@@ -58,13 +58,11 @@ html,body,* {
 			padding:0 5%;
 		}
 	}
-	// .content{
-	// 	@include pad {
-	// 		margin-top: 62px;
-	// 	}
-	// }
-}	
 
+}	
+a{
+	color:$main-color;
+}
 h1{
 	font-size: 24px;
 	font-weight: bold;

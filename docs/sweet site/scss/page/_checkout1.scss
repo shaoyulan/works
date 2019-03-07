@@ -1,0 +1,195 @@
+
+.checkout {
+	.content .col-container{
+		@include pad {
+			margin-top: 62px;
+		}
+		.col-row{
+			// max-width: pct(780px); 
+			// flex: 0 0 pct(780px);
+			@include desktop-below {
+				max-width:100%;
+				flex: 0 0 100%;
+			}
+			.delevery{
+				max-width: 58.9%;
+				flex: 0 0 59%;
+				@include pad {
+					max-width:100%;
+					flex: 0 0 100%;
+				}
+				color:$third-color;
+				.form-card{
+					
+					padding:rem(30px) rem(40px);
+					.title{
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						h2{
+							margin: 0;
+						}
+						ul{
+							display: flex;
+							width: 36.95%;
+							justify-content: space-between;
+							position: relative;
+							li{
+								height: 1.11rem;
+								width: 1.11rem;
+								border-radius: 50%;
+								border:1px solid $third-color;
+								background: $main-color;
+								z-index:10;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								.circle{
+									width: 70%;
+									height: 70%;
+									background:$third-color;
+									border-radius: 50%;
+								}
+							}
+							// Horizontal Line
+							&:before{
+								content: '';
+								display: block;
+								position: absolute;
+								left: 0;
+								right: 0;
+								height: 1px;
+								background: white;
+								top: 50%;
+								transform: translateY(-50%);
+							}
+						}
+						
+					}
+					.name{
+						display: flex;
+						margin-top: rem(30px);
+						.e-form__group{
+							width: 50%;
+						}
+					}
+					label{
+						// font-size: 1.11rem;
+					}
+					input{
+						// max-width: 186px;
+						// height: 56px;
+					}
+					input[type="tel"]{
+						display: block;
+						max-width: unset;
+						width: 100%;
+					}
+					.addr{
+						display: flex;
+						justify-content: space-between;
+						select{
+							width: calc(50% - 0.2222rem);
+						}
+					}
+					.road{
+						max-width: unset;
+						width: 100%;
+					}
+					.secCode{
+						width: 50%;
+					}
+					.envoice-choice{
+
+						
+						display: flex;
+						height: rem(56px);
+						.eEnvoice, .pEnvoice{
+							flex:1;
+							line-height: rem(56px);
+							text-align: center;
+							color:$third-color;
+							font-weight: bold;
+							background:$main-color;
+							border:1px solid $third-color;
+							&.selected{
+								background: $third-color;
+								color:$main-color;
+							}
+							
+						}
+					}
+					.envoice-choice-wraper{
+						position: relative;
+						.eEnvoice__group{
+							position: absolute;
+							top: 0;
+							opacity: 1;
+						}
+						.pEnvoice__group{
+							opacity: 0;
+						}
+					}
+					.label{
+						display: flex;
+						justify-content: space-between;
+						span{
+							display: flex;
+							input{
+								width: unset;
+								height: unset;
+								margin: 0;
+							}
+						}
+						
+					}
+
+				}
+				
+			}
+			.checkout-info{
+				flex: 0 0 38.5%;
+				.order-abstract{
+					.grand-total{
+						color:$secondary-color;
+					}
+				}
+				.item-info-list{
+					.m-listCard__list_group{
+						// 購物清單
+						&.item-list{
+							padding:0 rem(20px) rem(16px) rem(20px);
+							li{
+								margin-top: rem(16px);
+								margin-bottom: 0px;
+							}
+						}
+						.m-listCard__list__item{
+							// 購物清單
+							img{
+								max-width: rem(120px);
+								max-height: 80px;
+								object-fit: cover;
+							}
+							// 購物清單
+							.item-info-group{
+								padding: 12px 0 16px 0;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								.item-info{
+									font-size: 0.88rem;
+									margin-bottom: 2px;
+								}
+								.item-price{
+									font-size: 1.11rem;
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}

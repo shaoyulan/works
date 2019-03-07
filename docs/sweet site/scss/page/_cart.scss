@@ -1,0 +1,175 @@
+
+
+.cart {
+	.content .container{
+		margin: 60px auto;
+		@include flex-align(n,space-around) 
+		@include desktop-below {
+			flex-wrap: wrap;
+			margin-bottom: 0;
+		}
+		.cart-list{
+			flex: 0 0 66%;
+			max-width: 609px;
+			text-align: center;
+			@include desktop-below {
+				flex: 0 0 90%;
+				max-width: 100%;
+			}
+			.title{
+				color: $main-color;
+				background: $third-color;
+				padding:16px 0;
+				margin-bottom: 33px;
+			}
+			ul{
+				li{
+					display: flex;
+					align-items: center;
+					margin-bottom: 20px;
+					padding-bottom: 20px;
+					color:$secondary-color;
+					border-bottom: 1px solid $third-color;
+					@include desktop-below {
+						// Enable children's full height
+						align-items: unset;
+					}
+					img{
+						width: 110px;
+						height:110px;
+						margin-right: 39px;
+						@include desktop-below {
+							margin-right: 6vmin;
+							width:55%;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+					& > div{
+						margin-right: 39px;
+						@include desktop-below {
+							margin-right: 6vmin;
+						}
+					}
+					.pad-group{
+						flex: 1;
+						display: flex;
+						@include desktop-below {
+							flex-direction: column;
+							justify-content: space-around;
+						}
+						.info{
+							text-align: left;
+							margin-right: 35px;
+							word-break: keep-all;
+							.item-name{
+								font-size: 1.11rem;
+								margin-bottom: 3px;
+							}
+							.price{
+								font-size: 0.88rem;
+							}
+						}
+						.count {
+							display: flex;
+							font-size: 0.88rem;
+							div{
+								@include pagination-style
+								padding:13px 19px;
+								@include desktop-below {
+									padding: 2vmin 3vmin;
+								}
+							}
+							div:first-of-type, div:last-of-type{
+								@include hover(pointer,$third-color)
+							}
+						}
+
+					}
+					.sub-total{
+						color:$main-color;
+						font-weight: bold;
+						@include desktop-below {
+							display: none;
+						}
+					}
+					.delete{
+						@include hover(pointer,none,$main-color)
+						@include desktop-below {
+							display: none;
+						}
+					}
+				}
+				.pad-subtotal{
+					display: none;
+					@include desktop-below {
+						display: flex;
+						justify-content: flex-end;
+						font-size: 1.111rem;
+						font-weight: bold;
+						color:$main-color;
+					}
+				}
+
+			}
+		}
+		.cart-breif{
+			flex: 0 0 32%;
+			max-width: 289px;
+			@include desktop-below {
+				flex: 0 0 90%;
+				max-width: 100%;
+			}
+			.brief-panel.brief-panel{
+				.form-card.form-card{
+					padding:16px 18px;
+					color:white;
+					@include desktop-below {
+						background: unset;
+						color: $main-color;
+					}
+					h2{
+						font-size: 1.33rem;
+						text-align: center;
+						margin-bottom: 16px;
+						@include desktop-below {
+							background: $third-color;
+							padding: 16px 0;
+						}
+					}
+					p{
+						background: white;
+						height: 1px;
+					}
+					li{
+						display: flex;
+						justify-content: space-between;
+						padding: 4px 0;
+						font-size: 0.88rem;
+					}
+					li:last-of-type{
+						font-size: 1.11rem;
+						margin-top: 8px;
+						font-weight: bold;
+					}
+				}
+				.form-btn{
+					// @include hover(pointer, $bright-yellow, $main-color)
+					@include desktop-below {
+						display: none;
+					}
+				}
+			}
+			
+		}
+	}
+	.pad-checkout {
+		display: none;
+		@include pad {
+			display: block;
+		}
+	}
+	.mail-us{
+		margin:0;
+	}
+}

@@ -1,0 +1,142 @@
+
+
+.login {
+	.content{
+		.container{
+			margin:60px auto;
+			padding:0 80px;
+			@include flex-align(center,n)
+			@include pad {
+				flex-direction: column;
+			}
+			@include iphone {
+				padding:0;
+				margin-bottom: 0;
+			}
+			.form{
+				flex: 0 0 50%;
+				text-align: center;
+				@include pad {
+					order:2;
+				}
+				@include iphone {
+					width:100%;
+				}
+				.form-card{
+					width: 390px;
+					@include iphone {
+						width: 100%;
+					}
+					.input-group{
+						display: flex;
+					    justify-content: flex-start;
+					    align-items: center;
+					    background: $third-color;
+					    margin-bottom: 25px;
+					    i{
+					    	margin:0 20px;
+					    }
+					}
+					h2{
+						font-size: 2rem;
+						color:white;
+						margin-bottom: 40px;
+						font-weight: bold;
+						@include pad {
+							display: none;
+						}
+					}
+					input{
+						padding:18px 0 16px 0;
+						width: 100%;
+						border:none;
+						outline:none;
+						background:$third-color;
+					}
+					.checkbox{
+						text-align: left;
+						color:white;
+						input{
+							width: 16px;
+							height: 16px;
+							margin-left: 0;
+							margin-right: 8px;
+						}
+					}
+				}
+				.form-btn{
+					background: $bright-yellow;
+					padding: 20px 0;
+					color:$main-color;
+					font-weight: bold;
+					font-size: 24px;
+					@include hover(pointer)
+				}
+				
+			}
+			.social-wraper{
+				flex:0 0 50%;
+				@include pad {
+					order:1;
+					width: 390px;
+				}
+				@include iphone {
+					width:100%;
+				}
+				.pad-title{
+					display: none;
+					@include pad {
+						display: block;
+						font-size: 2rem;
+						color: white;
+						font-weight: bold;
+						background:$main-color;
+						text-align: center;
+					    padding: 30px 0;
+					}
+				}
+				.social-media{
+					background: $third-color;
+					padding:40px 30px;
+					@include pad {
+						display: flex;
+						div[class="google"]{
+							border-left:1px solid $third-color;
+							border-right:1px solid $third-color;
+						}
+					}
+					.title{
+						@include flex-align(center,center);
+						font-size: 24px;
+						color:$secondary-color;
+						margin-bottom: 36px;
+						@include pad {
+							display: none;
+						}
+						p{
+							width: 30px;
+							height: 1px;
+							background:$secondary-color;
+							margin:0 5px;
+						}
+					}
+					.fb, .google, .yahoo{
+						background: white;
+						text-align: center;
+						height: 56px;
+						margin-bottom: 16px;
+						@include flex-align(center,center)
+						@include hover(pointer)
+						img{
+							width: 40%;
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.mail-us{
+		margin:0;
+	}
+}

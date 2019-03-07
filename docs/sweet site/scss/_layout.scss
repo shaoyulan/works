@@ -150,7 +150,8 @@ header{
 			display: flex;
 			align-items: center;
 			color:white;
-			@include pad {
+			margin-right:15px;
+			@include iphone5 {
 				margin-bottom: 20px;
 			}
 			img{

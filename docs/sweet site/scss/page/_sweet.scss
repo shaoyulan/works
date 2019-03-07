@@ -1,0 +1,121 @@
+
+
+.sweets {
+
+	.full-img{
+		img{
+			width: 100%;
+			max-height: 496px;
+			margin-bottom: 60px;
+			@include iphone {
+				margin-top: 62px;
+				margin-bottom: 0px;
+			}
+		}
+	}
+	
+	.sweets-boxes{
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		@include iphone {
+			flex-direction: column;
+		}
+		.categories{
+			flex:0 0 32%;
+			font-weight: bold;
+			color:$main-color;
+			@include fontsize($categories);
+			li{
+				padding:16px 0;
+				&:hover{
+					cursor:pointer;
+					background:$bright-yellow!important;
+					color:white;
+				}
+
+			}
+			li:nth-of-type(1){
+				background: $main-color!important;
+				color: white;
+			}
+			li:nth-of-type(2){
+				background: $third-color;
+			}
+		}
+		.boxes{
+			flex:0 0 66%;
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				// 抵銷box padding 使box貼齊右側
+				margin-right: -10px;
+				@include iphone {
+					margin-right: 0px; 
+				}
+				li{
+					flex:0 0 50%;
+					margin-bottom: 20px;
+					@include pad {
+						flex:0 0 100%;
+						// slidable card
+						border-radius: 10px;
+						box-shadow: 0px 1px 42px #ddd;
+						margin: 5px 6px;
+					}
+					@include iphone {
+						margin: 15px 0;
+					}
+					.box{
+						padding:0 10px;
+						.product-img.far{
+							@include iphone {
+								height: 208px;
+							}
+						}
+					}
+				}
+				@include box($sweets-img-url)
+			}
+			.pagination{
+				justify-content: flex-end;
+				flex-wrap: nowrap;
+				@include iphone {
+					justify-content: center;
+					margin-top: 15px;
+				}
+				li{
+					flex:none;
+					padding:25px;
+					margin-bottom: 0;
+					color: $main-color;
+					border-left:1px solid #ddd;
+					border-top:1px solid #ddd;
+					border-bottom:1px solid #ddd;
+					@include iphone {
+					    padding: 14px;
+					    margin: 0 3px;
+					}
+					&:hover{
+						cursor:pointer;
+						background:$main-color;
+						color:white;
+					}
+				}
+				li:nth-of-type(2){
+					background-color: $main-color;
+					color:white;
+				}
+				li:last-of-type{
+					border-right:1px solid #ddd;
+				}
+			}
+		}
+	}
+
+	.mail-us{
+		@include iphone {
+			margin-top: 30px;
+		}
+	}
+}
