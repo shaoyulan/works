@@ -1,0 +1,48 @@
+.col-container {
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin:0 auto;
+}
+
+
+@mixin desktop{
+	@media (max-width:1280px){
+		@content
+	}
+}
+@mixin desktop-top{
+	@media (max-width:1023px){
+		@content
+	}
+}
+@mixin desktop-below{
+	@media (max-width:992px){
+		@content
+	}
+}
+@mixin pad{
+	@media (max-width:768px){
+		@content
+	}
+}
+@mixin iphone{
+	@media (max-width:568px){
+		@content
+	}
+}
+@mixin mobile480{
+	@media (max-width:480px){
+		@content
+	}
+}
+@mixin iphone5{
+	@media (max-width:320px){
+		@content
+	}
+}

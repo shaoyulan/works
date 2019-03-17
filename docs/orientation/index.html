@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Orientation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="short icon" href="">
+	<meta name="description" content="">
+	<meta name="keyword" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<style>
+		body{
+			text-align: center;
+			font-size: 3rem;
+			margin: 0;
+		}
+		span{
+			display: block;
+			margin:auto;
+			/*height: calc(100vh / 6)*/
+		}
+		span:nth-of-type(2n){
+			background: lightblue;
+		}
+		span:nth-of-type(odd){
+			background: lightgreen;
+		}
+	</style>
+</head>
+<body>
+	<!-- HTML5 控制裝置陀螺儀 ( 三軸 ) -->
+	<!-- https://www.oxxostudio.tw/articles/201506/html5-device-orientation.html -->
+	<span>Alpha</span>
+	<span id="alpha"></span>
+	<span>Beta</span>
+	<span id="beta"></span>
+	<span>Gamma</span>
+	<span id="gamma"></span>
+	
+	<script>
+		function get(selector){
+			return document.querySelector(selector);
+		}
+
+		let	alphaSpan = get('#alpha'),
+			betaSpan = get('#beta'),
+			gammaSpan = get('#gamma');
+
+		window.addEventListener('deviceorientation', function(event) {
+		
+			alphaSpan.textContent = Math.round(event.alpha);
+			betaSpan.textContent =  Math.round(event.beta);
+			gammaSpan.textContent =  Math.round(event.gamma);
+		}, false);
+		// Math.round
+	</script>
+</body>
+</html>

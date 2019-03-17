@@ -1,0 +1,24 @@
+// Fadeout
+.fade{
+	opacity: 0;
+	max-height:0px;
+	&.faded{
+		transition: 1s all linear;
+		opacity:1;
+		max-height:1000px;
+	}
+}
+
+.e-hover{
+	&:hover{
+		cursor:pointer!important;
+	}
+}
+// Hover pointer/white text
+.e-hover--pt--wt{
+	transition: .3s all linear;
+	&:hover{
+		cursor:pointer!important;
+		color:white!important;
+	}
+}

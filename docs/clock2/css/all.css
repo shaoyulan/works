@@ -1,0 +1,71 @@
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.clock {
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  background: #3D5A45;
+  border-radius: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .clock .clock__panel {
+    height: 87%;
+    width: 87%;
+    background: #293B29;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .clock .clock__panel .clock__panel__rail {
+      height: 252px;
+      width: 252px;
+      border: 1px solid black;
+      border-radius: 50%;
+      position: relative; }
+      .clock .clock__panel .clock__panel__rail .dot {
+        height: 1px;
+        width: 1px;
+        background: white;
+        border-radius: 50%;
+        position: absolute; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(1) {
+        top: 0;
+        left: 128.5px; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(2) {
+        top: 0;
+        left: 131px; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(3) {
+        top: 0;
+        left: 133.5px; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(4) {
+        top: 0;
+        left: 136px; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(5) {
+        top: 0;
+        left: 138.5px; }
+      .clock .clock__panel .clock__panel__rail .dot:nth-of-type(6) {
+        top: 0;
+        left: 141px; }

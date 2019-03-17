@@ -1,0 +1,64 @@
+$width:1110px;
+
+// Font Size
+$base-font-size:16px;
+
+//General
+html,body,* {
+	font-size: $base-font-size;
+	box-sizing: border-box;
+	@include desktop-below {
+		font-size: 16px;
+	}
+	@include pad {
+		font-size: 16px;
+	}
+	@include iphone {
+		font-size: 12px;
+	}
+	font-family: Microsoft JhengHei;
+	.container{
+		max-width: $width;
+		margin: 0 auto;
+		padding:0 2%;
+		@include pad {
+			padding:0 5%;
+		}
+	}
+}	
+
+@mixin vertical-h2{
+	@include fontsize($whychoice-title);
+	color:$main-color;
+	writing-mode: vertical-rl;
+	word-break: keep-all;
+}
+
+
+@mixin psudeo-bg{
+	content:'';
+	background-position: center center;
+	background-size: cover;
+	display: block;
+	height:100%;
+	
+}
+
+@mixin bg-rotate{
+	transform:rotate(20deg) scale(1.5);
+
+}
+
+// vertical line
+@mixin vertical-line{
+	height: 36px;
+	background: black;
+	width: 1px;
+    display: inline-block;
+    @include pad {
+    	width: 36px;
+    	height: 1px;
+    	vertical-align: middle;
+    }
+}
+

@@ -1,0 +1,50 @@
+$clock-border-color:#3D5A45;
+$clock-background:#293B29;
+body{
+	height: 100vh;
+	// flex center
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.clock{
+	width: 350px;
+	height: 350px;
+	margin: 0 auto;
+	background:$clock-border-color;
+	border-radius:80px;
+	// flex center
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.clock__panel{
+		height: 87%;
+		width:87%;
+		background:$clock-background;
+		border-radius:50%;
+		// flex center
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.clock__panel__rail{
+			height: 252px;
+			width:252px;
+			border:1px solid black;
+			border-radius:50%;
+			position: relative;
+			.dot{
+				height: 1px;
+				width: 1px;
+				background: white;
+				border-radius:50%;
+				position: absolute;
+			}
+			@for $i from 1 through 6 {
+				.dot:nth-of-type(#{$i}){
+					top:0;
+					left: 126px + $i * 2.5px;
+				}
+			}
+		}
+	}
+}

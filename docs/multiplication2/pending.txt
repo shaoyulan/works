@@ -1,0 +1,17 @@
+// 如何以不將數字畫分左右兩邊的方式用flex的排版，讓數字自動從 ...x 3 就換行
+
+// keyword : 
+
+做一個自適應正方形
+https://jsfiddle.net/3z887swo/4/ [解決]
+https://stackoverflow.com/questions/19068070/how-to-style-a-div-to-be-a-responsive-square
+
+如何讓內容總是在...x3時換下一行
+
+// Learned：
+孩子的padding top 取決於parent的width
+https://www.nowcoder.com/questionTerminal/431c1d2970a344e09e3be53621e78c69
+
+HTML <template> 可以用來當作樣版
+
+物件跟陣列屬於參考形別，其內容是可以改變的

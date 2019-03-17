@@ -1,0 +1,15 @@
+.col-container {
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.col-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 auto; }
